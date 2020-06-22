@@ -1,4 +1,42 @@
 img {
-    width: 140px;
-    height: 80px;
+    width: 160px;
+    height: 70px;
+}
+
+.navbar {
+    background-color: rgba(151, 151, 151, 0.315)!important;
+}
+
+.navbar-nav {
+    margin-left: 340px;
+}
+
+.nav-link {
+    color: white!important;
+    filter: drop-shadow(2px 4px 2px black);
+    margin-right: 18px;
+}
+
+.nav-link:hover{
+    color: rgb(0, 12, 116)!important;
+}
+
+
+
+.vl {
+    border-left: 1px solid white;
+    height: 34px;
+    filter: drop-shadow(2px 4px 2px black);
+  }
+
+
+.social {
+    margin-right: 10px;
+}
+
+.fab {
+    margin-right: 22px;
+    margin-top: 18px;
+    color: white;
+    filter: drop-shadow(2px 4px 2px black);
 }

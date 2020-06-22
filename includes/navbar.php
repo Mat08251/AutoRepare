@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div id="logo">
         <img src="images/logo.png" alt="logo-du-garage">
     </div>
@@ -9,23 +9,23 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Accueil</a>
+                <a class="nav-link" href="index.php">Accueil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="php/services.php">Services</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Vente de produit Auto</a>
+                <a class="nav-link" href="php/venteDeProduit.php">Vente de produit Auto</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Vente de véhicule</a>
+                <a class="nav-link" href="php/venteDeVehicule.php">Vente de véhicule</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="php/contact.php">Contact</a>
             </li>
         </ul>
-        <hr/>
-        <ul>
+        <div class="vl"></div>
+        <ul class="social">
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-twitter"></i>
             <i class="fab fa-instagram"></i>

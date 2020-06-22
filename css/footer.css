@@ -1,0 +1,14 @@
+footer {
+    background-color: #514747;
+}
+.logo-footer {
+    width: 160px;
+    height: 70px;
+    margin-left: 20px;
+}
+
+.infos {
+    display: flex;
+    text-align: center;
+    color: white;
+}

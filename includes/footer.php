@@ -5,15 +5,15 @@
         </div>
         <div class="infos mr-auto col-md-9">
             <div class="adresse">
-                <i class="fas fa-map-marker-alt"><span class="font-weight-bold">Adresse:</span></i>
+                <i class="iconInfo fas fa-map-marker-alt"></i><span class="font-weight-bold">Adresse:</span>
                 <p>6 rue Pierre Denaiffe ZAC de, 08110 Carignan</p>
             </div>
             <div class="telephone">
-                <i class="fas fa-phone"><span class="font-weight-bold">Téléphone:</span></i>
+                <i class="iconInfo fas fa-phone"></i><span class="font-weight-bold">Téléphone:</span>
                 <p>06 35 10 13 18</p>
             </div>
             <div class="heure">
-                <i class="far fa-clock"><span class="font-weight-bold">Heure d'ouverture:</span></i>
+                <i class="iconInfo far fa-clock"></i><span class="font-weight-bold">Heure d'ouverture:</span>
                 <p>Du Lundi au Vendredi de:<br>
                     8h00-12h00, 13h30-18h00</br>
                     Et le Samedi de:</br>

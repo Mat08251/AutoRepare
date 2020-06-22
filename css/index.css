@@ -2,3 +2,26 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.texte-descriptif {
+    margin: auto;
+    margin-left: 50px;
+}
+
+.exemple-travaux  {
+    margin: auto;
+    margin-left: 120px;
+}
+
+.exemple {
+    margin-bottom: 10px;
+}
+
+.descriptif-garage {
+    display: flex;
+}
+
+.exemple-travaux {
+    display: flex;
+    flex-direction: column;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
         <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -20,6 +20,25 @@
 <?php include 'includes/navbar.php' ?>
     <div class="container-fluid">
     <p>test test</p>
+    <div class="descriptif-garage">
+        <p class="texte-descriptif col-md-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a type 
+            specimen book. It has survived not only five centuries, but also the leap into 
+            electronic typesetting, remaining essentially unchanged. It was popularised in 
+            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+            and more recently with desktop publishing software like Aldus PageMaker including 
+            versions of Lorem Ipsum.
+        </p>
+        <div class="exemple-travaux col-md-6">
+            <i class="exemple fas fa-chevron-right">Vidange</i>
+            <i class="exemple fas fa-chevron-right">Entretien du véhicule</i>
+            <i class="exemple fas fa-chevron-right">Contrôle technique</i>
+            <i class="exemple fas fa-chevron-right">Vente de produit Auto</i>
+            <i class="exemple fas fa-chevron-right">Vente de véhicule</i>
+            <i class="exemple fas fa-chevron-right">Petites et grosses réparations</i>
+        </div>
+    </div>
     </div>
     <?php include 'includes/footer.php' ?>
 </body>

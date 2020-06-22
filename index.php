@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="css/footer.css">
         <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -16,8 +17,10 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include 'includes/navbar.php' ?>
-    <?php include 'includes/footer.php' ?>
+<?php include 'includes/navbar.php' ?>
+    <div class="container-fluid">
     <p>test test</p>
+    </div>
+    <?php include 'includes/footer.php' ?>
 </body>
 </html>

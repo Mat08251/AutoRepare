@@ -1,9 +1,20 @@
+body {
+    margin: 0%!important;
+    padding: 0%!important;
+}
+
 footer {
     background-color: #514747;
+    width: 100%;
 }
+
+.footer1 {
+    display: flex;
+}
+
 .logo-footer {
     width: 160px;
-    height: 70px;
+    height: 100px!important;
     margin-left: 20px;
 }
 
@@ -11,4 +22,41 @@ footer {
     display: flex;
     text-align: center;
     color: white;
+    margin-top: 20px;
+}
+
+.adresse {
+    margin-left: 20px;
+}
+
+.telephone {
+    margin-left: 120px;
+}
+
+.heure {
+    margin-left: 170px;
+}
+
+hr {
+    border: 1.5px solid #8A8A8A!important;
+    width: 90%;
+}
+
+.footer2 {
+    display: flex;
+}
+
+.copyright {
+    color: white;
+    margin-left: 40px;
+}
+
+.social-footer {
+    margin-left: 750px;
+}
+
+.icon-footer {
+    margin-right: 22px;
+    color: white;
+    filter: drop-shadow(2px 4px 2px black);
 }

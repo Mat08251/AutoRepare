@@ -1,7 +1,7 @@
 <footer>
-    <div class="footer1 row">
+    <div class="footer1">
         <div class="logo-footer col-2">
-            <img src="images/logo.png" alt="logo-du-garage">
+            <img src="images/logo.png" alt="logo-du-garage" style="width: 170px; height: 80px;">
         </div>
         <div class="infos mr-auto col-md-9">
             <div class="adresse">
@@ -21,6 +21,17 @@
             </div>
         </div>
     </div>
+
+    <hr>
+
     <div class="footer2">
+        <div class="copyright">
+            <p>Auto Repare <i class="far fa-copyright"></i> 2020 réalisé par Mathieu Duguet</p>
+        </div>
+        <ul class="social-footer">
+            <i class="icon-footer fab fa-facebook-f"></i>
+            <i class="icon-footer fab fa-twitter"></i>
+            <i class="icon-footer fab fa-instagram"></i>
+        </ul>
     </div>
 </footer>

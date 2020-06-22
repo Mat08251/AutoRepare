@@ -26,9 +26,9 @@
         </ul>
         <div class="vl"></div>
         <ul class="social">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
+            <i class="icon fab fa-facebook-f"></i>
+            <i class="icon fab fa-twitter"></i>
+            <i class="icon fab fa-instagram"></i>
         </ul>
     </div>
 </nav>

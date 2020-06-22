@@ -1,3 +1,8 @@
+body {
+    margin: 0%!important;
+    padding: 0%!important;
+}
+
 img {
     width: 160px;
     height: 70px;
@@ -5,6 +10,7 @@ img {
 
 .navbar {
     background-color: rgba(151, 151, 151, 0.315)!important;
+    width: 100%;
 }
 
 .navbar-nav {
@@ -34,7 +40,7 @@ img {
     margin-right: 10px;
 }
 
-.fab {
+.icon {
     margin-right: 22px;
     margin-top: 18px;
     color: white;

@@ -17,5 +17,6 @@
 <body>
     <?php include 'includes/navbar.php' ?>
     <p>test test</p>
+    <?php include 'includes/footer.php' ?>
 </body>
 </html>

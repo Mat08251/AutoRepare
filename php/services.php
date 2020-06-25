@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/navbar.css" style="width:20px">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="stylesheet" href="../css/footer.css">
         <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -15,8 +17,76 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include 'includes/navbar.php' ?>
-    <p>test test</p>
-    <?php include 'includes/footer.php' ?>
+    <!--Navbar-->
+    <?php include '../includes/navbar.php' ?>
+
+    <!--photo d'accueil-->
+    <div class="image_top_page">
+        <img class="test" src="../images/image5.jpg" alt="photo_d'accueil_page">
+    </div>
+
+    <!--descriptif haut de la page-->
+    <div class="container">
+        <h2 class="titre_debut_page col-md-12">Nos services proposés au garage</h2>
+
+        <hr class="barre_sous-titre">
+
+        <div class="descriptif-service col-md-12">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type
+                   specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                     the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                      and more recently with desktop publishing software like Aldus PageMaker including
+                      versions of Lorem Ipsum.
+            </p>
+        </div>
+    </div>
+
+    <!--liste des services proposés-->
+    <div class="container">
+        <h4 class="titreRubrique">Se que notre Garage vous propose en type de réparation de votre véhicule</h4>
+        <div class="rubrique col-md-12">
+            <div class="proposition col-md-6">
+                <i class="fas fa-caret-right">Nous réalisons l'entretien de votre véhicule (révision)</i><p>
+                <a href="">Se renseigner</a>
+                </p>
+                <i class="fas fa-caret-right">Nous réalisons la vidange de votre véhicule</i><p>
+                <a href="">Se renseigner</a>
+                </p>
+                <i class="fas fa-caret-right">Nous réalisons le contrôle technique de votre véhicule</i><p>
+                <a href="">Se renseigner</a>
+                </p>
+                <i class="fas fa-caret-right">Nous réalisons les petites comme les grosses réparations de votre véhicule</i><p>
+                <a href="">Se renseigner</a>
+                </p>
+            </div>
+            <div class="photo col-md-6">
+                <img src="placeholder 350x150" alt="">
+            </div>
+        </div>
+
+        <!--description des services-->
+        <div class="description_service col-md-12">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book. It has survived not only five centuries, but also the leap into
+                 electronic typesetting, remaining essentially unchanged. It was popularised in
+                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus PageMaker including
+                versions of Lorem Ipsum.
+            </p>
+        </div>
+    </div>
+
+    <!--bouton de contact-->
+    <div class="bouton_contact col-md-12">
+        <button type="button" class="btn btn-primary btn-lg">Me contacter</button>
+    </div>
+
+    <!--Footer-->
+    <?php include '../includes/footer.php' ?>
 </body>
 </html>

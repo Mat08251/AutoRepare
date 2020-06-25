@@ -1,7 +1,7 @@
 <footer>
     <div class="footer1">
         <div class="logo-footer col-2">
-            <img src="images/logo.png" alt="logo-du-garage" style="width: 170px; height: 80px;">
+            <img src="../images/logo.png" alt="logo-du-garage" style="width: 170px; height: 80px;">
         </div>
         <div class="infos mr-auto col-md-9">
             <div class="adresse">
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <hr>
+    <hr class="barre_de_separation">
 
     <div class="footer2">
         <div class="copyright">

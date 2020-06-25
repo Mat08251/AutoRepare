@@ -26,3 +26,66 @@ body {
     flex-direction: column;
 }
 
+.titre-service {
+    color: black;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    filter: drop-shadow(-1px 6px 2px black);
+}
+
+.service {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.banniere-contact {
+    background-image: url("../images/imageContact.jpg")!important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 380px;
+}
+
+.bouton-contact {
+   margin-left: 580px;
+   margin-top: 100px;
+   padding-top: 140px;
+   padding-bottom: 56px;
+}
+
+
+
+.map-responsive {
+    overflow:hidden;
+    padding-bottom:25.25%;
+    position:relative;
+    height:0;
+    }
+    
+.map-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+
+.info-banniere {
+    display: flex;
+    background-color: #7978785e;
+    color: white;
+}
+
+.adresse-banniere {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.telephonne-banniere {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.heure-banniere {
+ margin-left: 50px;
+ margin-top: 10px;
+}

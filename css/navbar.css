@@ -9,6 +9,8 @@ img {
 }
 
 .navbar {
+    position: relative;
+    z-index: 4;
     background-color: rgba(151, 151, 151, 0.315)!important;
     width: 100%;
 }

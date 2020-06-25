@@ -40,7 +40,42 @@
     <title>Document</title>
 </head>
 <body>
-<?php include 'includes/navbar.php' ?>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div id="logo">
+            <img src="images/logo.png" alt="logo-du-garage">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="php/services.php">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="php/venteDeProduit.php">Vente de produit Auto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="php/venteDeVehicule.php">Vente de véhicule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="php/contact.php">Contact</a>
+                </li>
+            </ul>
+            <div class="vl"></div>
+            <ul class="social">
+                <i class="icon fab fa-facebook-f"></i>
+                <i class="icon fab fa-twitter"></i>
+                <i class="icon fab fa-instagram"></i>
+            </ul>
+        </div>
+    </nav>
+    <!--Fin de la Navbar-->
     
         <!--slide-->
         <div class="rev_slider_wrapper">
@@ -126,16 +161,72 @@
     </div>
 
     <div class="banniere-contact">
-        <div class="card bg-dark text-white">
-            <img src="..." class="card-img" alt="...">
-            <div class="card-img-overlay">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text">Last updated 3 mins ago</p>
+                <div class="bouton-contact">
+                    <a href="php/contact.php"><button type="button" class="btn btn-primary btn-lg">Me Contacter</button></a>
+                </div>
+                <div class="info-banniere col-md-12">
+                    <div class="adresse-banniere col-md text-center">
+                        <i class="iconInfo fas fa-map-marker-alt"></i><span class="font-weight-bold">Adresse:</span>
+                        <p>6 rue Pierre Denaiffe ZAC de, 08110 Carignan</p>
+                    </div>
+                    <div class="telephonne-banniere col-md text-center">
+                        <i class="iconInfo fas fa-phone"></i><span class="font-weight-bold">Téléphone:</span>
+                        <p>06 35 10 13 18</p>
+                    </div>
+                    <div class="heure-banniere col-md text-center">
+                        <i class="iconInfo far fa-clock"></i><span class="font-weight-bold">Heure d'ouverture:</span>
+                        <p>Du Lundi au Vendredi de:<br>
+                            8h00-12h00, 13h30-18h00</br>
+                            Et le Samedi de:</br>
+                            8h00-12h00
+                        </p>
+                    </div>
+                </div>
+    </div>
+
+    <div class="map-responsive">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2583.434665933933!2d5.150063615309478!3d49.646108779372526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ea614dfe9f599f%3A0xd433a02635edb930!2sAutos%20R%C3%A9pare!5e0!3m2!1sfr!2sfr!4v1592918158903!5m2!1sfr!2sfr" width="400" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    
+    <!--Début du footer-->
+    <footer>
+    <div class="footer1">
+        <div class="logo-footer col-2">
+            <img src="images/logo.png" alt="logo-du-garage" style="width: 170px; height: 80px;">
+        </div>
+        <div class="infos mr-auto col-md-9">
+            <div class="adresse">
+                <i class="iconInfo fas fa-map-marker-alt"></i><span class="font-weight-bold">Adresse:</span>
+                <p>6 rue Pierre Denaiffe ZAC de, 08110 Carignan</p>
+            </div>
+            <div class="telephone">
+                <i class="iconInfo fas fa-phone"></i><span class="font-weight-bold">Téléphone:</span>
+                <p>06 35 10 13 18</p>
+            </div>
+            <div class="heure">
+                <i class="iconInfo far fa-clock"></i><span class="font-weight-bold">Heure d'ouverture:</span>
+                <p>Du Lundi au Vendredi de:<br>
+                    8h00-12h00, 13h30-18h00</br>
+                    Et le Samedi de:</br>
+                    8h00-12h00</p>
             </div>
         </div>
     </div>
-    <?php include 'includes/footer.php' ?>
+
+    <hr>
+
+    <div class="footer2">
+        <div class="copyright">
+            <p>Auto Repare <i class="far fa-copyright"></i> 2020 réalisé par Mathieu Duguet</p>
+        </div>
+        <ul class="social-footer">
+            <i class="icon-footer fab fa-facebook-f"></i>
+            <i class="icon-footer fab fa-twitter"></i>
+            <i class="icon-footer fab fa-instagram"></i>
+        </ul>
+    </div>
+    </footer>
+    <!--Fin du footer-->
 
     <!-- Slider's main "init" script -->
     <script type="text/javascript">

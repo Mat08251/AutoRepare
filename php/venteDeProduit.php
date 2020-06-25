@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/navbar.css" style="width:20px">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/venteDeProduit.css">
         <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -15,8 +17,35 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include 'includes/navbar.php' ?>
-    <p>test test</p>
-    <?php include 'includes/footer.php' ?>
+    <!--Navbar-->
+    <?php include '../includes/navbar.php' ?>
+
+    <!--photo d'accueil-->
+    <div class="image_top_page">
+        <img class="test" src="../images/image3.jpg" alt="photo_d'accueil_page">
+    </div>
+
+    <div class="container-fluid">
+        <h2 class="titrePromo">Promotion du moment</h2>
+
+        <div class="container">
+            <div class="photoPromo">
+                <img src="" alt="">
+            </div>
+            <div class="textePromo">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including
+                        versions of Lorem Ipsum.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <?php include '../includes/footer.php' ?>
 </body>
 </html>

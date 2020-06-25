@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/navbar.css" style="width:20px">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/contact.css">
         <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -15,7 +17,74 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include 'includes/navbar.php' ?>
-    <p>test test</p>
+    <!--Navbar-->
+    <?php include '../includes/navbar.php' ?>
+    
+    <!--photo d'accueil-->
+    <div class="image_top_page">
+        <img class="test" src="../images/image1.jpg" alt="photo_d'accueil_page">
+    </div>
+
+    <div class="container">
+        <h3 class="titre-coordonnes">Auto Repare à Carignan : nos coordonnées</h3>
+
+        <div class="coordonnees">
+            <div class="adresse-coordonnes col-md text-center">
+                <i class="iconInfo fas fa-map-marker-alt"></i><span class="font-weight-bold">Adresse:</span>
+                <p>6 rue Pierre Denaiffe ZAC de, 08110 Carignan</p>
+            </div>
+            <div class="telephonne-coordonnees col-md text-center">
+                <i class="iconInfo fas fa-phone"></i><span class="font-weight-bold">Téléphone:</span>
+                <p>06 35 10 13 18</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h4 class="titre-formulaire">Contactez-nous</h4>
+
+        <div class="texte_top-formulaire">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type
+                   specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                     the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                      and more recently with desktop publishing software like Aldus PageMaker including
+                      versions of Lorem Ipsum.
+            </p>
+        </div>
+
+        <div class="container formulaire">
+            <form>
+                <div class="form-group">
+                    <label for="nom">Nom<i class="test2 fas fa-asterisk"></i></label>
+                    <input type="text" class="form-control" id="nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="prenom">Prenom</label>
+                    <input type="text" class="form-control" id="prenom" required>
+                </div>
+                <div class="form-group">
+                    <label for="tel">Téléphone</label>
+                    <input type="password" class="form-control" id="tel">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                </div>
+                <div class="form-group">
+                    <label for="texte">Example textarea</label>
+                    <textarea class="form-control" id="texte" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+        <div class="condition">
+            <p>Ces informations nous sont uniquement destinées.</p>
+        </div>
+    </div>
+    <!--Footer-->
+    <?php include '../includes/footer.php' ?>
 </body>
 </html>

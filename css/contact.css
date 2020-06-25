@@ -1,0 +1,25 @@
+.test {
+    position: relative;
+    z-index: 3;
+    margin-top: -10%;
+    width: 100%;
+    height: 300px;
+}
+
+.coordonnees {
+    display: flex;
+    background-color: #514747;
+}
+
+.formulaire {
+    background-color: #B9B7B7;
+    padding: 30px;
+    margin-top: 50px;
+    padding-left: 50px!important;
+}
+
+.test2 {
+    font-size: 8px;
+    position: absolute;
+    margin-bottom: 0px;
+}

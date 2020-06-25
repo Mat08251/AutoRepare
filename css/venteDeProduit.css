@@ -5,3 +5,21 @@
     width: 100%;
     height: 300px;
 }
+
+.Promo {
+    background-color: #C4C4C4;
+}
+
+.rubriquePromo {
+    display: flex;
+}
+
+.titrePromo {
+    color: #17096D;
+}
+
+.titreListeProduit {
+    color: #17096D;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}

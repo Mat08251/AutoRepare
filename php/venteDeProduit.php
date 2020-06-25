@@ -25,14 +25,14 @@
         <img class="test" src="../images/image3.jpg" alt="photo_d'accueil_page">
     </div>
 
-    <div class="container-fluid">
-        <h2 class="titrePromo">Promotion du moment</h2>
-
-        <div class="container">
-            <div class="photoPromo">
-                <img src="" alt="">
+    <div class="Promo container-fluid">
+        <h2 class="titrePromo col-md-12 text-center">Promotion du moment</h2>
+        
+        <div class="rubriquePromo container">
+            <div class="photoPromo col-md-3">
+                <img src="../images/image3.jpg" alt="photo de la promo">
             </div>
-            <div class="textePromo">
+            <div class="textePromo col-md-9">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     when an unknown printer took a galley of type and scrambled it to make a type
@@ -44,6 +44,49 @@
                 </p>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        <h4 class="titreListeProduit col-md-12 text-center">Produits en vente sur place</h4>
+
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+                <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                </div>
+            </div>
+            </div>
     </div>
     
     <?php include '../includes/footer.php' ?>

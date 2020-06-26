@@ -62,7 +62,7 @@
                     <input type="text" class="form-control" id="nom" required>
                 </div>
                 <div class="form-group">
-                    <label for="prenom">Prenom</label>
+                    <label for="prenom">Prenom<i class="test2 fas fa-asterisk"></i></label>
                     <input type="text" class="form-control" id="prenom" required>
                 </div>
                 <div class="form-group">
@@ -70,14 +70,16 @@
                     <input type="password" class="form-control" id="tel">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">Email<i class="test2 fas fa-asterisk"></i></label>
                     <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
                 </div>
                 <div class="form-group">
-                    <label for="texte">Example textarea</label>
+                    <label for="texte">Votre demande</label>
                     <textarea class="form-control" id="texte" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Envoyer</button>
+                <div class="bouton_envoyer">
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </div>
             </form>
         </div>
         <div class="condition">

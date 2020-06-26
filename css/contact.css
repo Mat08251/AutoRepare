@@ -6,15 +6,30 @@
     height: 300px;
 }
 
+.iconInfo {
+    color: white;
+}
+
+.titre-coordonnes {
+    margin-top: 60px;
+    color: #17096D;
+}
+
 .coordonnees {
     display: flex;
-    background-color: #514747;
+    background-color: #5147477e;
+    padding: 58px;
+}
+
+.titre-formulaire {
+    margin-top: 70px;
+    color: #17096D;
 }
 
 .formulaire {
     background-color: #B9B7B7;
     padding: 30px;
-    margin-top: 50px;
+    margin-top: 20px;
     padding-left: 50px!important;
 }
 
@@ -22,4 +37,6 @@
     font-size: 8px;
     position: absolute;
     margin-bottom: 0px;
+    color: red;
 }
+

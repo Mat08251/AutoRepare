@@ -50,7 +50,7 @@
         <div class="rubrique col-md-12">
             <div class="proposition col-md-6">
                 <i class="fas fa-caret-right">Nous réalisons l'entretien de votre véhicule (révision)</i><p>
-                <a href="">Se renseigner</a>
+                <a href="../php/servicesCarrosserie.php">Se renseigner</a>
                 </p>
                 <i class="fas fa-caret-right">Nous réalisons la vidange de votre véhicule</i><p>
                 <a href="">Se renseigner</a>

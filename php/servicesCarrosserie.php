@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/navbar.css" style="width:20px">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/servicesCarrosserie.css">
         <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -15,8 +17,55 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include 'includes/navbar.php' ?>
-    <p>test test</p>
-    <?php include 'includes/footer.php' ?>
+    <?php include '../includes/navbar.php' ?>
+    
+    <!--photo d'accueil-->
+    <div class="image_top_page">
+        <img class="test" src="../images/image5.jpg" alt="photo_d'accueil_page">
+    </div>
+
+    <div class="titre-travaux col-md-12">
+        <h2>Travaux de carrosserie</h2>
+    </div>
+
+    <hr class="barre_travaux">
+
+    <div class="container">
+        <div class="photo_travaux">
+            <img src="" alt="photo_rubrique-travaux">
+        </div>
+        <div class="bloc_texte_travaux">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type
+                   specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                     the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                      and more recently with desktop publishing software like Aldus PageMaker including
+                      versions of Lorem Ipsum.
+            </p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type
+                   specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                     the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                      and more recently with desktop publishing software like Aldus PageMaker including
+                      versions of Lorem Ipsum.
+            </p>
+            <div class="tableaux-tarif">
+                <!--insertion du tableaux des tarifs--><p>test test test</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="barre_dessous_tavaux">
+
+     <!--bouton de contact-->
+     <div class="bouton_contact col-md-12">
+        <button type="button" class="btn btn-primary btn-lg">Me contacter</button>
+    </div>
+
+    <?php include '../includes/footer.php' ?>
 </body>
 </html>

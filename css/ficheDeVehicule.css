@@ -1,0 +1,31 @@
+.test {
+    position: relative;
+    z-index: 3;
+    margin-top: -10%;
+    width: 100%;
+    height: 300px;
+}
+
+.titre_voiture {
+    margin-top: 50px;
+}
+
+.descriptif-vehicule {
+    display: flex;
+}
+
+.texte_descriptif_vehicule {
+    padding-top: 50px;
+}
+
+.barre_separation {
+    border: 0.5px solid #8A8A8A!important;
+    margin-top: 80px;
+    width: 50%;
+}
+
+.bouton_contact {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  text-align: center;
+}

@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/navbar.css" style="width:20px">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/venteDeVehicule.css">
         <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -15,8 +17,87 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include 'includes/navbar.php' ?>
-    <p>test test</p>
-    <?php include 'includes/footer.php' ?>
+    <?php include '../includes/navbar.php' ?>
+    
+
+    <!--photo d'accueil-->
+    <div class="image_top_page">
+        <img class="test" src="../images/image1.jpg" alt="photo_d'accueil_page">
+    </div>
+
+    <!--texte début de page-->
+    <div class="container">
+        <h3 class="titre_descriptif_vente col-md-12">Véhicule en vente dans notre Garage</h3>
+
+        <hr class="barre_vente">
+
+        <div class="texte_descriptif_vente">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type
+                   specimen book. It has survived not only five centuries, but also the leap into
+                    electronic typesetting, remaining essentially unchanged. It was popularised in
+                     the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                      and more recently with desktop publishing software like Aldus PageMaker including
+                      versions of Lorem Ipsum.
+            </p>
+        </div>
+    </div>
+
+    <!--bloc des véhicules en vente-->
+    <div class="container">
+        <div class="row">
+            <div class="card bg-dark text-white">
+                <img src="..." class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Primary</button></a>
+                    </div>
+            </div>
+            <div class="card bg-dark text-white">
+                <img src="..." class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        
+                    </div>
+            </div>
+            <div class="card bg-dark text-white">
+                <img src="..." class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        
+                    </div>
+            </div>
+            <div class="card bg-dark text-white">
+                <img src="..." class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        
+                    </div>
+            </div>
+            <div class="card bg-dark text-white">
+                <img src="..." class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        
+                    </div>
+            </div>
+            <div class="card bg-dark text-white">
+                <img src="..." class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include '../includes/footer.php' ?>
 </body>
 </html>

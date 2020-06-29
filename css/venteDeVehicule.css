@@ -6,12 +6,36 @@
     height: 300px;
 }
 
+.titre_descriptif_vente {
+    color: #17096D;
+    margin-top: 50px;
+}
+
 .barre_vente{
     border: 0.5px solid #514747!important;
 }
 
+.bloc_vehicule {
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+
 .card {
-    width: 300px;
-    height: 200px;
+    width: 330px;
+    height: 230px;
     margin: 20px;
+}
+
+.back {
+    background-image: url('../images/voiture.jpg')!important;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: auto;
+    background-position: center;       
+}
+
+.card-title {
+    padding-top: 40%;
 }

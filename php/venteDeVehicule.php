@@ -45,54 +45,42 @@
     </div>
 
     <!--bloc des véhicules en vente-->
-    <div class="container">
+    <div class="bloc_vehicule container">
         <div class="row">
-            <div class="card bg-dark text-white">
-                <img src="..." class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Primary</button></a>
+            <div class="card text-white">
+                    <div class="back card-img-overlay">
+                        <h5 class="nom_vehicule card-title">Card title</h5>
+                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
                     </div>
             </div>
-            <div class="card bg-dark text-white">
-                <img src="..." class="card-img" alt="...">
-                    <div class="card-img-overlay">
+            <div class="card text-white">
+                    <div class="back card-img-overlay">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        
+                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
                     </div>
             </div>
-            <div class="card bg-dark text-white">
-                <img src="..." class="card-img" alt="...">
-                    <div class="card-img-overlay">
+            <div class="card text-white">
+                    <div class="back card-img-overlay">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        
+                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
                     </div>
             </div>
-            <div class="card bg-dark text-white">
-                <img src="..." class="card-img" alt="...">
-                    <div class="card-img-overlay">
+            <div class="card text-white">
+                    <div class="back card-img-overlay">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        
+                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
                     </div>
             </div>
-            <div class="card bg-dark text-white">
-                <img src="..." class="card-img" alt="...">
-                    <div class="card-img-overlay">
+            <div class="card text-white">
+                    <div class="back card-img-overlay">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        
+                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
                     </div>
             </div>
-            <div class="card bg-dark text-white">
-                <img src="..." class="card-img" alt="...">
-                    <div class="card-img-overlay">
+           <div class="card text-white">
+                    <div class="back card-img-overlay">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        
+                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
                     </div>
             </div>
         </div>

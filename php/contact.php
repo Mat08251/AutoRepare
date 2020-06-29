@@ -75,7 +75,7 @@
                 </div>
                 <div class="form-group">
                     <label for="texte">Votre demande</label>
-                    <textarea class="form-control" id="texte" rows="3"></textarea>
+                    <textarea class="form-control" id="texte" rows="3" col="5"></textarea>
                 </div>
                 <div class="bouton_envoyer">
                     <button type="submit" class="btn btn-primary">Envoyer</button>

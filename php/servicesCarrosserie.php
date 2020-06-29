@@ -30,11 +30,11 @@
 
     <hr class="barre_travaux">
 
-    <div class="container">
-        <div class="photo_travaux">
-            <img src="" alt="photo_rubrique-travaux">
+    <div class="bloc-page container">
+        <div class="photo_travaux col-md-">
+            <img src="../images/image1.jpg" class="photo_rubrique" alt="photo_rubrique-travaux">
         </div>
-        <div class="bloc_texte_travaux">
+        <div class="bloc_texte_travaux col-md-8">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                   when an unknown printer took a galley of type and scrambled it to make a type

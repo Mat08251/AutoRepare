@@ -6,10 +6,31 @@
     height: 300px;
 }
 
+.titre-travaux {
+    margin-left: 80px;
+    margin-top: 60px;
+}
+
+.bloc-page {
+    display: flex;
+}
+
 .barre_travaux {
     border: 0.5px solid #8A8A8A!important;
     width: 90%;
+    margin-bottom: 30px;
 }
+
+.photo_travaux {
+    margin-right: 80px;
+}
+
+.photo_rubrique {
+    width: 350px;
+    height: 300px;
+    
+}
+
 
 .barre_dessous_tavaux {
     border: 0.5px solid #8A8A8A!important;
@@ -19,5 +40,9 @@
 .bouton_contact {
     padding-top: 80px;
     padding-bottom: 100px;
-  text-align: center;
+    text-align: center;
+}
+
+.btn {
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.644);
 }

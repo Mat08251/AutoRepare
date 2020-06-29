@@ -25,13 +25,13 @@
     </div>
 
     <div class="container">
-        <h5 class="titre_voiture col-md-4">Citroen C4</h5>
+        <h5 class="titre_voiture col-md-4 text-center">Citroen C4</h5>
 
         <div class="descriptif-vehicule container col-md-12">
-            <div class="col-md-3">
-                <img src="../images/voiture.jpg" alt="photo_du_vehicule">
+            <div class="photo_voiture col-md-3">
+                <img src="../images/voiture.jpg" class="card-img" alt="photo_du_vehicule" style="width:390px; height:250px;">
             </div>
-            <h4 class="col-md-9">Caractéristique du véhicule</h4>
+            <h4 class="caracteristique col-md-9 text-center">Caractéristique du véhicule</h4>
         </div>
     </div>
 

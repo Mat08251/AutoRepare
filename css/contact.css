@@ -40,3 +40,6 @@
     color: red;
 }
 
+.form-control {
+    width: 20%!important;
+}

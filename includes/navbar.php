@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div id="logo">
         <img src="../images/logo.png" alt="logo-du-garage">
     </div>

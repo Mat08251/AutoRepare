@@ -21,6 +21,12 @@
     padding-bottom: 20px;
 }
 
+.proposition a:visited {
+    color: red!important;
+}
+
+
+
 .description_service {
     padding-top: 80px;
 }

@@ -50,16 +50,16 @@
         <div class="rubrique col-md-12">
             <div class="proposition col-md-6">
                 <i class="fas fa-caret-right">Nous réalisons l'entretien de votre véhicule (révision)</i><p>
-                <a href="../php/servicesCarrosserie.php">Se renseigner</a>
+                <a href="../php/servicesCarrosserie.php" class="lien-visite">Se renseigner</a>
                 </p>
                 <i class="fas fa-caret-right">Nous réalisons la vidange de votre véhicule</i><p>
-                <a href="">Se renseigner</a>
+                <a href="" class="lien-visite">Se renseigner</a>
                 </p>
                 <i class="fas fa-caret-right">Nous réalisons le contrôle technique de votre véhicule</i><p>
-                <a href="">Se renseigner</a>
+                <a href="" class="lien-visite">Se renseigner</a>
                 </p>
                 <i class="fas fa-caret-right">Nous réalisons les petites comme les grosses réparations de votre véhicule</i><p>
-                <a href="">Se renseigner</a>
+                <a href="" class="lien-visite">Se renseigner</a>
                 </p>
             </div>
             <div class="photo col-md-6">

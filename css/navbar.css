@@ -11,8 +11,10 @@ img {
 .navbar {
     position: relative;
     z-index: 4;
-    background-color: rgba(151, 151, 151, 0.315)!important;
+    background-color: rgba(151, 151, 151, 0.466)!important;
     width: 100%;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.541));
+    box-shadow: 0 4px 8px 0 rgba(43, 42, 42, 0.521);
 }
 
 .navbar-nav {

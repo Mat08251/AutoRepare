@@ -59,23 +59,23 @@
             <form>
                 <div class="form-group">
                     <label for="nom">Nom<i class="test2 fas fa-asterisk"></i></label>
-                    <input type="text" class="form-control" id="nom" required>
+                    <input type="text" class="zone_champ form-control" id="nom" required>
                 </div>
                 <div class="form-group">
                     <label for="prenom">Prenom<i class="test2 fas fa-asterisk"></i></label>
-                    <input type="text" class="form-control" id="prenom" required>
+                    <input type="text" class="zone_champ form-control" id="prenom" required>
                 </div>
                 <div class="form-group">
                     <label for="tel">Téléphone</label>
-                    <input type="password" class="form-control" id="tel">
+                    <input type="password" class="zone_champ form-control" id="tel">
                 </div>
                 <div class="form-group">
                     <label for="email">Email<i class="test2 fas fa-asterisk"></i></label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                    <input type="email" class="zone_mail form-control" id="email" aria-describedby="emailHelp" required>
                 </div>
                 <div class="form-group">
                     <label for="texte">Votre demande</label>
-                    <textarea class="form-control" id="texte" rows="3" col="5"></textarea>
+                    <textarea class="form-control col-8" id="texte" rows="6" cols="4"></textarea>
                 </div>
                 <div class="bouton_envoyer">
                     <button type="submit" class="btn btn-primary">Envoyer</button>

@@ -14,8 +14,16 @@
     display: flex;
 }
 
+.photo_promo {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10%;
+}
+
 .titrePromo {
     color: #17096D;
+    padding-top: 2%;
+    padding-bottom: 20px;
 }
 
 .titreListeProduit {
@@ -23,3 +31,17 @@
     padding-top: 60px;
     padding-bottom: 80px;
 }
+
+.card {
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.534);
+}
+
+.card:hover {
+    
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+

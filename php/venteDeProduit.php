@@ -30,9 +30,9 @@
         
         <div class="rubriquePromo container">
             <div class="photoPromo col-md-3">
-                <img src="../images/image3.jpg" alt="photo de la promo">
+                <img src="../images/image3.jpg" class="photo_promo" alt="photo de la promo">
             </div>
-            <div class="textePromo col-md-9">
+            <div class="textePromo col-md-10">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     when an unknown printer took a galley of type and scrambled it to make a type
@@ -52,7 +52,7 @@
         <div class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4">
                 <div class="card">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="../images/voiture.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -61,7 +61,7 @@
             </div>
             <div class="col mb-4">
                 <div class="card">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="../images/voiture.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -70,7 +70,7 @@
             </div>
             <div class="col mb-4">
                 <div class="card">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="../images/voiture.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -79,7 +79,7 @@
             </div>
             <div class="col mb-4">
                 <div class="card">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="../images/voiture.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>

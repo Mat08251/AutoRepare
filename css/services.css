@@ -39,6 +39,7 @@ body {
 
 .titre_debut_page {
     padding-top: 40px;
+    font-family: 'commandocommando', Arial, Helvetica, sans-serif;
 }
 
 .barre_sous-titre {
@@ -50,7 +51,9 @@ body {
     color: #17096D;
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'commandocommando', Arial, Helvetica, sans-serif;
 }
+
 
 .proposition a:visited {
     color: red!important;
@@ -60,6 +63,7 @@ body {
 
 .description_service {
     padding-top: 80px;
+    font-family: 'advent_proregular', Arial, Helvetica, sans-serif;
 }
 
 .bouton_contact {

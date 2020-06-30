@@ -39,6 +39,7 @@ body {
     margin-left: 50px;
     padding-top: 50px;
     padding-bottom: 80px;
+    font-family: 'advent_proregular', Arial, Helvetica, sans-serif;
 }
 
 .exemple-travaux  {
@@ -65,6 +66,7 @@ body {
     padding-top: 40px;
     padding-bottom: 30px;
     filter: drop-shadow(-1px 6px 2px black);
+    font-family: 'commandocommando', Arial, Helvetica, sans-serif;
 }
 
 .service {

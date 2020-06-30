@@ -91,7 +91,8 @@
 
                         <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
                         <img src="images/image1.jpg" alt="Promo-du-moment" class="rev-slidebg">
-
+                        <div>
+                        <button type="button" class="boutontest btn btn-danger">Danger</button></div>
                     </li>
 
                     <!-- MINIMUM SLIDE STRUCTURE -->
@@ -141,20 +142,16 @@
 
             <div class="card-deck">
                 <div class="card" style="background-image: url(images/image1.jpg); height:400px;">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    <h5 class="card-title text-center">Entretien du véhicule</h5> 
                 </div>
                 <div class="card" style="background-image: url(images/image1.jpg); height:400px;">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    <h5 class="card-title text-center">Vidange</h5>
                 </div>
                 <div class="card" style="background-image: url(images/image1.jpg); height:400px;">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    <h5 class="card-title text-center">Contrôle technique</h5> 
                 </div>
                 <div class="card" style="background-image: url(images/image1.jpg); height:400px;">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    <h5 class="card-title text-center">Réparation du véhicule</h5> 
                 </div>
             </div>
         </div>

@@ -3,9 +3,42 @@ body {
     padding: 0;
 }
 
+@font-face {
+    font-family: '../font/advent_proregular';
+    src: url('../font/adventpro-regular-webfont.eot');
+    src: url('../font/adventpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/adventpro-regular-webfont.woff2') format('woff2'),
+         url('../font/adventpro-regular-webfont.woff') format('woff'),
+         url('../font/adventpro-regular-webfont.ttf') format('truetype'),
+         url('../font/adventpro-regular-webfont.svg#advent_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'commandocommando';
+    src: url('../font/commando-webfont.eot');
+    src: url('../font/commando-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/commando-webfont.woff2') format('woff2'),
+         url('../font/commando-webfont.woff') format('woff'),
+         url('../font/commando-webfont.ttf') format('truetype'),
+         url('../font/commando-webfont.svg#commandocommando') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.boutontest{
+    position: relative;
+    z-index: 5;
+}
+
 .texte-descriptif {
     margin: auto;
     margin-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 80px;
 }
 
 .exemple-travaux  {
@@ -14,11 +47,12 @@ body {
 }
 
 .exemple {
-    margin-bottom: 10px;
+    margin-bottom: 24px;
 }
 
 .descriptif-garage {
     display: flex;
+    background-color: #C4C4C4;
 }
 
 .exemple-travaux {
@@ -36,6 +70,12 @@ body {
 .service {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.card-title {
+   margin-top: 80%;
+   color: white;
+   text-shadow: 2px 2px black;
 }
 
 .banniere-contact {

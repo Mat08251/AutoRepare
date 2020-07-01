@@ -1,11 +1,13 @@
 const sr = ScrollReveal();
 
+//texte du descriptif du haut de page
 sr.reveal('.texte-descriptif', {
     duration: 3000,
     distance: '30px',
     reset: true
 });
 
+//liste des divers travaux proposés
 sr.reveal('.exemple-travaux', {
     origin: 'right',
     duration: 2800,
@@ -13,6 +15,7 @@ sr.reveal('.exemple-travaux', {
     reset: true
 });
 
+//titre rubrique service
 sr.reveal('.titre-service', {
     origin: 'bottom',
     distance: '20px',
@@ -21,11 +24,13 @@ sr.reveal('.titre-service', {
     reset: true
 });
 
+//card des services
 sr.reveal('.card', {
     delay: 1000,
     interval: 250
 }, 500);
 
+//bouton bannière de contact
 sr.reveal('.bouton-contact', {
     origin: 'right',
     distance: '500px',
@@ -34,6 +39,7 @@ sr.reveal('.bouton-contact', {
     reset: true
 });
 
+//infos bannière de contact
 sr.reveal('.info-banniere', {
     origin: 'bottom',
     distance: '80px',

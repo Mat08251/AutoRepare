@@ -54,5 +54,7 @@
         <button type="button" class="btn btn-primary btn-lg">Me contacter</button>
     </div>
     <?php include '../includes/footer.php' ?>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 </html>

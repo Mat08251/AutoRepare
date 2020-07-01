@@ -225,6 +225,10 @@
     </footer>
     <!--Fin du footer-->
 
+    <!--script javascript-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="javascript/index.js"></script>
+
     <!-- Slider's main "init" script -->
     <script type="text/javascript">
             

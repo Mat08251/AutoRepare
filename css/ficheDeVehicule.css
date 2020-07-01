@@ -4,7 +4,7 @@ body {
 }
 
 @font-face {
-    font-family: '../font/advent_proregular';
+    font-family: 'advent_proregular';
     src: url('../font/adventpro-regular-webfont.eot');
     src: url('../font/adventpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../font/adventpro-regular-webfont.woff2') format('woff2'),
@@ -50,6 +50,7 @@ body {
 
 .texte_descriptif_vehicule {
     padding-top: 50px;
+    font-family: 'advent_proregular', Arial, Helvetica, sans-serif;
 }
 
 .barre_separation {

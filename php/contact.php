@@ -56,7 +56,7 @@
         </div>
 
         <div class="container formulaire">
-            <form>
+            <form method="post" action="">
                 <div class="form-group">
                     <label for="nom">Nom<i class="test2 fas fa-asterisk"></i></label>
                     <input type="text" class="zone_champ form-control" id="nom" required>

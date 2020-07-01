@@ -4,7 +4,7 @@ body {
 }
 
 @font-face {
-    font-family: '../font/advent_proregular';
+    font-family: 'advent_proregular';
     src: url('../font/adventpro-regular-webfont.eot');
     src: url('../font/adventpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../font/adventpro-regular-webfont.woff2') format('woff2'),
@@ -40,6 +40,7 @@ body {
 .titre-travaux {
     margin-left: 80px;
     margin-top: 60px;
+    font-family: 'commandocommando', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .bloc-page {
@@ -60,6 +61,10 @@ body {
     width: 350px;
     height: 300px;
     
+}
+
+.bloc_texte_travaux {
+    font-family: 'advent_proregular',  Georgia, Times, 'Times New Roman', serif;
 }
 
 

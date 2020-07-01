@@ -4,7 +4,7 @@ body {
 }
 
 @font-face {
-    font-family: '../font/advent_proregular';
+    font-family: 'advent_proregular';
     src: url('../font/adventpro-regular-webfont.eot');
     src: url('../font/adventpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../font/adventpro-regular-webfont.woff2') format('woff2'),
@@ -44,7 +44,7 @@ body {
 .titre-coordonnes {
     margin-top: 60px;
     color: #17096D;
-    font-family: 'commandocommando';
+    font-family: 'commandocommando' Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
@@ -57,8 +57,12 @@ body {
 .titre-formulaire {
     margin-top: 70px;
     color: #17096D;
-    font-family: 'commandocommando';
+    font-family: 'commandocommando' Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+
+.texte_top-formulaire {
+    font-family: 'advent_proregular', Arial, Helvetica, sans-serif;
 }
 
 .formulaire {

@@ -4,7 +4,7 @@ body {
 }
 
 @font-face {
-    font-family: '../font/advent_proregular';
+    font-family: 'advent_proregular';
     src: url('../font/adventpro-regular-webfont.eot');
     src: url('../font/adventpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../font/adventpro-regular-webfont.woff2') format('woff2'),
@@ -40,10 +40,15 @@ body {
 .titre_descriptif_vente {
     color: #17096D;
     margin-top: 50px;
+    font-family: 'commandocommando', Arial, Helvetica, sans-serif;
 }
 
 .barre_vente{
     border: 0.5px solid #514747!important;
+}
+
+.texte_descriptif_vente {
+    font-family: 'advent_proregular', Arial, Helvetica, sans-serif;
 }
 
 .bloc_vehicule {

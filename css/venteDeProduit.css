@@ -4,7 +4,7 @@ body {
 }
 
 @font-face {
-    font-family: '../font/advent_proregular';
+    font-family: 'advent_proregular';
     src: url('../font/adventpro-regular-webfont.eot');
     src: url('../font/adventpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../font/adventpro-regular-webfont.woff2') format('woff2'),
@@ -45,22 +45,32 @@ body {
     display: flex;
 }
 
+.titrePromo {
+    color: #17096D;
+    padding-top: 2%;
+    padding-bottom: 20px;
+    font-family: 'commandocommando', Arial, Helvetica, sans-serif;
+}
+
 .photo_promo {
     width: 100%;
     height: auto;
     padding-bottom: 10%;
 }
 
-.titrePromo {
-    color: #17096D;
-    padding-top: 2%;
-    padding-bottom: 20px;
+.textePromo {
+    font-family: 'advent_proregular', Arial, Helvetica, sans-serif;
+}
+
+.listeDesProduits {
+    padding-bottom: 70px;
 }
 
 .titreListeProduit {
     color: #17096D;
     padding-top: 60px;
     padding-bottom: 80px;
+    font-family: 'commandocommando', Arial, Helvetica, sans-serif;
 }
 
 .card {

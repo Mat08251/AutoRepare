@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="listeDesProduits container">
         <h4 class="titreListeProduit col-md-12 text-center">Produits en vente sur place</h4>
 
         <div class="row row-cols-1 row-cols-md-3">

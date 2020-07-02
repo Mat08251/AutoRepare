@@ -89,8 +89,10 @@
             </div>
     </div>
     
+    <!--footer-->
     <?php include '../includes/footer.php' ?>
 
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../javascript/venteDeProduit.js"></script>
 </body>
 </html>

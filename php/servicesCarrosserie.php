@@ -66,8 +66,10 @@
         <button type="button" class="btn btn-primary btn-lg">Me contacter</button>
     </div>
 
+    <!--footer-->
     <?php include '../includes/footer.php' ?>
 
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../javascript/servicesCarrosserie.js"></script>
 </body>
 </html>

@@ -56,5 +56,6 @@
     <?php include '../includes/footer.php' ?>
 
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="../javascript/ficheDeVehicule.js"></script>
 </body>
 </html>

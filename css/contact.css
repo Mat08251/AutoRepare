@@ -37,15 +37,17 @@ body {
     height: 300px;
 }
 
-.iconInfo {
-    color: white;
-}
-
+/*titre du bloc des coordonnées*/
 .titre-coordonnes {
     margin-top: 60px;
     color: #17096D;
     font-family: 'commandocommando' Arial, Helvetica, sans-serif;
     font-weight: bold;
+}
+
+/*section des coordonnées*/
+.iconInfo {
+    color: white;
 }
 
 .coordonnees {
@@ -54,6 +56,7 @@ body {
     padding: 58px;
 }
 
+/*section d'information avant le formulaire*/
 .titre-formulaire {
     margin-top: 70px;
     color: #17096D;
@@ -65,6 +68,7 @@ body {
     font-family: 'advent_proregular', Arial, Helvetica, sans-serif;
 }
 
+/*formulaire de contact*/
 .formulaire {
     background-color: #B9B7B7;
     padding: 30px;
@@ -72,7 +76,7 @@ body {
     padding-left: 50px!important;
 }
 
-.test2 {
+.etoile {
     font-size: 8px;
     position: absolute;
     margin-bottom: 0px;

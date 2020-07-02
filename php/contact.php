@@ -26,8 +26,10 @@
     </div>
 
     <div class="container">
+        <!--titre des coordonnées de contact-->
         <h3 class="titre-coordonnes">Auto Repare à Carignan : nos coordonnées</h3>
 
+        <!--les coordonnées de contact-->
         <div class="coordonnees">
             <div class="adresse-coordonnes col-md text-center">
                 <i class="iconInfo fas fa-map-marker-alt"></i><span class="font-weight-bold">Adresse:</span>
@@ -40,9 +42,11 @@
         </div>
     </div>
 
+    <!--Début bloc avant le formaulaire-->
     <div class="container">
         <h4 class="titre-formulaire">Contactez-nous</h4>
 
+        <!--texte d'informtion pour l'utilisateur-->
         <div class="texte_top-formulaire">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -54,15 +58,17 @@
                       versions of Lorem Ipsum.
             </p>
         </div>
+    <!--Fin du bloc avant le formulaire-->
 
+    <!--Début du formaulaire de contact-->
         <div class="container formulaire">
             <form method="post" action="">
                 <div class="form-group">
-                    <label for="nom">Nom<i class="test2 fas fa-asterisk"></i></label>
+                    <label for="nom">Nom<i class="etoile fas fa-asterisk"></i></label>
                     <input type="text" class="zone_champ form-control" id="nom" required>
                 </div>
                 <div class="form-group">
-                    <label for="prenom">Prenom<i class="test2 fas fa-asterisk"></i></label>
+                    <label for="prenom">Prenom<i class="etoile fas fa-asterisk"></i></label>
                     <input type="text" class="zone_champ form-control" id="prenom" required>
                 </div>
                 <div class="form-group">
@@ -70,7 +76,7 @@
                     <input type="password" class="zone_champ form-control" id="tel">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email<i class="test2 fas fa-asterisk"></i></label>
+                    <label for="email">Email<i class="etoile fas fa-asterisk"></i></label>
                     <input type="email" class="zone_mail form-control" id="email" aria-describedby="emailHelp" required>
                 </div>
                 <div class="form-group">
@@ -82,13 +88,16 @@
                 </div>
             </form>
         </div>
-        <div class="condition">
+    <!--Fin du formulaire de contact-->
+        <div class="condition"><!--information pour rassurer l'utilisateur-->
             <p>Ces informations nous sont uniquement destinées.</p>
         </div>
     </div>
+
     <!--Footer-->
     <?php include '../includes/footer.php' ?>
 
+    <!--script javascript ScrollReveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../javascript/contact.js"></script>
 </body>

@@ -17,6 +17,7 @@
     <title>Document</title>
 </head>
 <body>
+    <!--Navbar-->
     <?php include '../includes/navbar.php' ?>
     
     <!--photo d'accueil-->
@@ -24,12 +25,14 @@
         <img class="test" src="../images/image5.jpg" alt="photo_d'accueil_page">
     </div>
 
+    <!--titre de la rubrique-->
     <div class="titre-travaux col-md-12">
         <h2>Travaux de carrosserie</h2>
     </div>
 
     <hr class="barre_travaux">
 
+    <!--bloc descriptif de la rubrique-->
     <div class="bloc-page container">
         <div class="photo_travaux col-md-">
             <img src="../images/image1.jpg" class="photo_rubrique" alt="photo_rubrique-travaux">
@@ -53,6 +56,8 @@
                       and more recently with desktop publishing software like Aldus PageMaker including
                       versions of Lorem Ipsum.
             </p>
+
+            <!--tableau des traif de la rubrique-->
             <div class="tableaux-tarif">
                 <!--insertion du tableaux des tarifs--><p>test test test</p>
             </div>
@@ -69,6 +74,7 @@
     <!--footer-->
     <?php include '../includes/footer.php' ?>
 
+    <!--script javascript ScrollReveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../javascript/servicesCarrosserie.js"></script>
 </body>

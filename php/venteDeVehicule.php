@@ -17,6 +17,7 @@
     <title>Document</title>
 </head>
 <body>
+    <!--Navbar-->
     <?php include '../includes/navbar.php' ?>
     
 
@@ -89,6 +90,7 @@
     <!--footer-->
     <?php include '../includes/footer.php' ?>
 
+    <!--script javascript ScrollReveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../javascript/venteDeVehicule.js"></script>
 </body>

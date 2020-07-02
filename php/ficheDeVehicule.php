@@ -53,8 +53,11 @@
      <div class="bouton_contact col-md-12">
         <button type="button" class="btn btn-primary btn-lg">Me contacter</button>
     </div>
+
+    <!--footer-->
     <?php include '../includes/footer.php' ?>
 
+    <!--script javascript ScrollReveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../javascript/ficheDeVehicule.js"></script>
 </body>

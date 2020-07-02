@@ -37,6 +37,7 @@ body {
     height: 300px;
 }
 
+/*titre de la page*/
 .titre_descriptif_vente {
     color: #17096D;
     margin-top: 50px;
@@ -47,10 +48,13 @@ body {
     border: 0.5px solid #514747!important;
 }
 
+/*descriptif de la page*/
 .texte_descriptif_vente {
     font-family: 'advent_proregular', Arial, Helvetica, sans-serif;
 }
 
+
+/*Rubrique de vente des véhicules*/
 .bloc_vehicule {
     margin-top: 80px;
     margin-bottom: 120px;

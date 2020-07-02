@@ -37,6 +37,7 @@ body {
     height: 300px;
 }
 
+/*haut de la page*/
 .titre_debut_page {
     padding-top: 40px;
     font-family: 'commandocommando', Arial, Helvetica, sans-serif;
@@ -47,6 +48,7 @@ body {
     width: 100%!important;
 }
 
+/*bloc des propositions de service*/
 .titreRubrique {
     color: #17096D;
     padding-top: 50px;
@@ -60,12 +62,13 @@ body {
 }
 
 
-
+/*texte de description du service*/
 .description_service {
     padding-top: 80px;
     font-family: 'advent_proregular', Arial, Helvetica, sans-serif;
 }
 
+/*bouton de contact*/
 .bouton_contact {
     padding-top: 80px;
     padding-bottom: 100px;

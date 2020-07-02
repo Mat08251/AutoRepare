@@ -116,6 +116,7 @@
             </div><!-- END SLIDER CONTAINER -->
         </div>
    
+   <!--intro du site-->
     <div class="descriptif-garage">
         <p class="texte-descriptif col-md-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -136,6 +137,7 @@
         </div>
     </div>
 
+    <!--rubrique des services-->
     <div class="service">
         <div class="container">
             <h2 class="titre-service text-center">SERVICES</h2>
@@ -157,6 +159,7 @@
         </div>
     </div>
 
+    <!--partie contact du garage-->
     <div class="banniere-contact">
                 <div class="bouton-contact">
                     <a href="php/contact.php"><button type="button" class="btn btn-primary btn-lg">Me Contacter</button></a>
@@ -181,8 +184,9 @@
                 </div>
     </div>
 
+    <!--carte de localisation du garage-->
     <div class="map-responsive">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2583.434665933933!2d5.150063615309478!3d49.646108779372526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ea614dfe9f599f%3A0xd433a02635edb930!2sAutos%20R%C3%A9pare!5e0!3m2!1sfr!2sfr!4v1592918158903!5m2!1sfr!2sfr" width="400" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2583.434665933933!2d5.150063615309478!3d49.646108779372526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ea614dfe9f599f%3A0xd433a02635edb930!2sAutos%20R%C3%A9pare!5e0!3m2!1sfr!2sfr!4v1592918158903!5m2!1sfr!2sfr" width="400" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
     
     <!--Début du footer-->
@@ -225,7 +229,7 @@
     </footer>
     <!--Fin du footer-->
 
-    <!--script javascript-->
+    <!--script javascript ScrollReveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="javascript/index.js"></script>
 

@@ -25,9 +25,12 @@
         <img class="test" src="../images/image3.jpg" alt="photo_d'accueil_page">
     </div>
 
+
+    <!--rubrique de la promotion-->
     <div class="Promo container-fluid">
+        <!--titre de la promotion-->
         <h2 class="titrePromo col-md-12 text-center">Promotion du moment</h2>
-        
+       <!--information promotion--> 
         <div class="rubriquePromo container">
             <div class="photoPromo col-md-3">
                 <img src="../images/image3.jpg" class="photo_promo" alt="photo de la promo">
@@ -45,10 +48,14 @@
             </div>
         </div>
     </div>
+    <!--fin rubrique promotion-->
 
+    <!--Rubrique vente de produit-->
     <div class="listeDesProduits container">
+        <!--titre de la rubrique-->
         <h4 class="titreListeProduit col-md-12 text-center">Produits en vente sur place</h4>
 
+        <!--cards des produits en vente-->
         <div class="row row-cols-1 row-cols-md-3">
             <div class="col mb-4">
                 <div class="card">
@@ -88,10 +95,12 @@
             </div>
             </div>
     </div>
+    <!--Fin de la rubrique vente de produit-->
     
     <!--footer-->
     <?php include '../includes/footer.php' ?>
 
+    <!--script javascript ScrollReveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../javascript/venteDeProduit.js"></script>
 </body>

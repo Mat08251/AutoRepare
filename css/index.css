@@ -34,6 +34,12 @@ body {
     z-index: 5;
 }
 
+/*texte d'intro de page*/
+.descriptif-garage {
+    display: flex;
+    background-color: #C4C4C4;
+}
+
 .texte-descriptif {
     margin: auto;
     margin-left: 50px;
@@ -42,25 +48,19 @@ body {
     font-family: 'advent_proregular', Arial, Helvetica, sans-serif;
 }
 
+/*liste des travaux proposés*/
 .exemple-travaux  {
     margin: auto;
     margin-left: 120px;
+    display: flex;
+    flex-direction: column;
 }
 
 .exemple {
     margin-bottom: 24px;
 }
 
-.descriptif-garage {
-    display: flex;
-    background-color: #C4C4C4;
-}
-
-.exemple-travaux {
-    display: flex;
-    flex-direction: column;
-}
-
+/*rubrique des services proposés*/
 .titre-service {
     color: black;
     padding-top: 40px;
@@ -74,12 +74,14 @@ body {
     margin-bottom: 50px;
 }
 
+/*titre des services*/
 .card-title {
    margin-top: 80%;
    color: white;
    text-shadow: 2px 2px black;
 }
 
+/*partie bannière de contact*/
 .banniere-contact {
     background-image: url("../images/imageContact.jpg")!important;
     background-repeat: no-repeat;
@@ -94,23 +96,7 @@ body {
    padding-bottom: 56px;
 }
 
-
-
-.map-responsive {
-    overflow:hidden;
-    padding-bottom:25.25%;
-    position:relative;
-    height:0;
-    }
-    
-.map-responsive iframe {
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-    }
-
+/*bloc d'information pied de la bannière de contact*/
 .info-banniere {
     display: flex;
     background-color: #7978785e;
@@ -131,3 +117,19 @@ body {
  margin-left: 50px;
  margin-top: 10px;
 }
+
+/*carte google du site*/
+.map-responsive {
+    overflow:hidden;
+    padding-bottom:25.25%;
+    position:relative;
+    height:0;
+    }
+    
+.map-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }

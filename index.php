@@ -92,7 +92,8 @@
                         <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
                         <img src="images/image1.jpg" alt="Promo-du-moment" class="rev-slidebg">
                         <div>
-                        <button type="button" class="boutontest btn btn-danger">Danger</button></div>
+                            <button type="button" class="boutontest btn btn-danger">Danger</button>
+                        </div>
                     </li>
 
                     <!-- MINIMUM SLIDE STRUCTURE -->

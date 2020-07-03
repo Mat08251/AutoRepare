@@ -28,6 +28,9 @@
         <div class="copyright">
             <p>Auto Repare <i class="far fa-copyright"></i> 2020 réalisé par Mathieu Duguet</p>
         </div>
+
+        <hr class="barre_test">
+
         <ul class="social-footer">
             <i class="icon-footer fab fa-facebook-f"></i>
             <i class="icon-footer fab fa-twitter"></i>

@@ -87,3 +87,29 @@ body {
     height: auto;
 }
 
+/*media responsive ipad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .textePromo {
+        font-size: 16px;
+        padding-bottom: 40px;
+    }
+}
+
+/*media responsive iphone*/
+@media only screen and (max-width: 600px) {
+    .rubriquePromo {
+        display: block;
+    }
+
+    .photo_promo {
+        display: none;
+    }
+
+    .textePromo {
+        padding-bottom: 20px;
+    }
+
+    .titreListeProduit {
+        padding-bottom: 40px;
+    }
+}

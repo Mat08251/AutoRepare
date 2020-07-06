@@ -78,3 +78,32 @@ body {
 .btn {
     box-shadow: 5px 6px 9px rgba(0, 0, 0, 0.63);
 }
+
+/*media responsive ipad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/*media responsive iphone*/
+@media only screen and (max-width: 600px) {
+    .titre_debut_page {
+        font-size: 21px;
+    }
+
+    .barre_sous-titre {
+        width: 80%!important;
+    }
+
+    .descriptif-service {
+        font-size: 14px;
+    }
+
+    .titreRubrique {
+        font-size: 16px;
+        margin-left: 12px;
+    }
+
+    .description_service {
+        font-size: 14px;
+    }
+}

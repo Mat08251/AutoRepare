@@ -33,10 +33,10 @@ sr.reveal('.card', {
 //bouton bannière de contact
 sr.reveal('.bouton-contact', {
     origin: 'right',
-    distance: '500px',
+    distance: '300px',
     duration: 2500,
     opacity: 0.2,
-    reset: true
+    reset: true,
 });
 
 //infos bannière de contact

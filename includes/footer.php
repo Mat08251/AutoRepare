@@ -23,7 +23,7 @@
     </div>
 
     <hr class="barre_de_separation">
-
+    
     <div class="footer2">
         <div class="copyright">
             <p>Auto Repare <i class="far fa-copyright"></i> 2020 réalisé par Mathieu Duguet</p>

@@ -119,7 +119,7 @@
    
    <!--intro du site-->
     <div class="descriptif-garage">
-        <p class="texte-descriptif col-md-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        <p class="texte-descriptif col-md-6 col-sm-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
             when an unknown printer took a galley of type and scrambled it to make a type 
             specimen book. It has survived not only five centuries, but also the leap into 
@@ -128,7 +128,7 @@
             and more recently with desktop publishing software like Aldus PageMaker including 
             versions of Lorem Ipsum.
         </p>
-        <div class="exemple-travaux col-md-">
+        <div class="exemple-travaux col-md- col-sm-12">
             <i class="exemple fas fa-chevron-right">Vidange</i>
             <i class="exemple fas fa-chevron-right">Entretien du véhicule</i>
             <i class="exemple fas fa-chevron-right">Contrôle technique</i>
@@ -144,16 +144,16 @@
             <h2 class="titre-service text-center">SERVICES</h2>
 
             <div class="card-deck">
-                <div class="card" style="background-image: url(images/image1.jpg); height:400px;">
+                <div class="card col-sm-6" style="background-image: url(images/image1.jpg); height:400px;">
                     <h5 class="card-title text-center">Entretien du véhicule</h5> 
                 </div>
-                <div class="card" style="background-image: url(images/image1.jpg); height:400px;">
+                <div class="card col-sm-6" style="background-image: url(images/image1.jpg); height:400px;">
                     <h5 class="card-title text-center">Vidange</h5>
                 </div>
-                <div class="card" style="background-image: url(images/image1.jpg); height:400px;">
+                <div class="card col-sm-6" style="background-image: url(images/image1.jpg); height:400px;">
                     <h5 class="card-title text-center">Contrôle technique</h5> 
                 </div>
-                <div class="card" style="background-image: url(images/image1.jpg); height:400px;">
+                <div class="card col-sm-6" style="background-image: url(images/image1.jpg); height:400px;">
                     <h5 class="card-title text-center">Réparation du véhicule</h5> 
                 </div>
             </div>
@@ -215,12 +215,15 @@
         </div>
     </div>
 
-    <hr>
+    <hr class="barre_de_separation">
 
     <div class="footer2">
         <div class="copyright">
             <p>Auto Repare <i class="far fa-copyright"></i> 2020 réalisé par Mathieu Duguet</p>
         </div>
+
+        <hr class="barre_test">
+
         <ul class="social-footer">
             <i class="icon-footer fab fa-facebook-f"></i>
             <i class="icon-footer fab fa-twitter"></i>

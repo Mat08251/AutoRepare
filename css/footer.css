@@ -108,9 +108,13 @@ footer {
         flex-direction: column;
     }
 
+    .barre_de_separation {
+        display: none;
+    }
+
     .barre_test {
-        border: 1.5px solid #000000!important;
-        width: 20%;
+        border: 1.5px solid #8A8A8A!important;
+        width: 55%;
     }
 
     .social-footer {

@@ -81,6 +81,7 @@ body {
    text-shadow: 2px 2px black;
 }
 
+
 /*partie bannière de contact*/
 .banniere-contact {
     background-image: url("../images/imageContact.jpg")!important;
@@ -135,5 +136,74 @@ body {
     }
 
 /*media responsive tablette ipad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .exemple-travaux {
+        margin-left: 10px!important;
+        margin-right: 40px;
+    }
 
+    .card {
+        height: 300px !important;
+    }
+
+    .card-title {
+        margin-top: 130px;
+    }
+
+    .bouton-contact {
+        margin-left: 310px;
+    }
+}
 /*media responsive telephone iphone*/
+@media only screen and (max-width: 600px) {
+    .descriptif-garage {
+        display: inline-block;
+        flex-direction: row;
+    }
+
+    .texte-descriptif {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: -40px!important;
+    }
+
+    .exemple-travaux {
+        margin-left: 80px;
+        padding-bottom: 50px;
+    }
+
+    .titre-service {
+        padding-top: 5px;
+    }
+
+    .card {
+        margin-bottom: 40px!important;
+    }
+
+    .bouton-contact {
+        margin-left: 120px;
+    }
+
+    .banniere-contact {
+        height: 540px;
+    }
+
+    .info-banniere {
+        display: block;
+    }
+
+    .adresse-banniere {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .telephonne-banniere {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heure-banniere {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -31,11 +31,11 @@
 
         <!--les coordonnées de contact-->
         <div class="coordonnees">
-            <div class="adresse-coordonnes col-md text-center">
+            <div class="adresse-coordonnes col-sm-6 col-md text-center">
                 <i class="iconInfo fas fa-map-marker-alt"></i><span class="font-weight-bold">Adresse:</span>
                 <p>6 rue Pierre Denaiffe ZAC de, 08110 Carignan</p>
             </div>
-            <div class="telephonne-coordonnees col-md text-center">
+            <div class="telephonne-coordonnees col-sm-6 col-md text-center">
                 <i class="iconInfo fas fa-phone"></i><span class="font-weight-bold">Téléphone:</span>
                 <p>06 35 10 13 18</p>
             </div>

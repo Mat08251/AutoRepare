@@ -90,3 +90,43 @@ body {
 .zone_mail {
     width: 24%!important;
 }
+
+/*media responsive iphone*/
+@media only screen and (max-width: 600px) {
+    .titre-coordonnes {
+        font-size: 18px;
+    }
+
+    .coordonnees {
+        padding: 30px;
+    }
+
+    .adresse-coordonnes {
+        font-size: 12px;
+    }
+
+    .telephonne-coordonnees {
+        font-size: 12px;
+    }
+
+    .titre-formulaire {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    .texte_top-formulaire {
+        margin-bottom: 50px;
+    }
+
+    .zone_champ {
+        width: 50%!important;
+    }
+    
+    .zone_mail {
+        width: 60%!important;
+    }
+
+    .condition {
+        font-size: 14px;
+    }
+}

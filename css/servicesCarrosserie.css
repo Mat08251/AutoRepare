@@ -131,6 +131,10 @@ body {
         display: block;
     }
 
+    .bloc_texte_travaux {
+        margin-left: 8px;
+    }
+
     .barre_dessous_tavaux {
         margin-top: 50px!important;
     }

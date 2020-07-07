@@ -25,17 +25,17 @@
     </div>
 
     <div class="container">
-        <h5 class="titre_voiture col-md-4 text-center">Citroen C4</h5>
+        <h5 class="titre_voiture col-sm-12 col-md-4  text-center">Citroen C4</h5>
 
-        <div class="descriptif-vehicule container col-md-12">
-            <div class="photo_voiture col-md-3">
-                <img src="../images/voiture.jpg" class="card-img" alt="photo_du_vehicule" style="width:390px; height:250px;">
+        <div class="descriptif-vehicule container col-sm-12 col-md-12 ">
+            <div class="photo_voiture col-sm-12 col-md-3 ">
+                <img src="../images/voiture.jpg" class="photo-responsive card-img" alt="photo_du_vehicule" style="; ;">
             </div>
-            <h4 class="caracteristique col-md-9 text-center">Caractéristique du véhicule</h4>
+            <h4 class="caracteristique col-sm-12 col-md-9  text-center">Caractéristique du véhicule</h4>
         </div>
     </div>
 
-    <div class="texte_descriptif_vehicule container col-md-10">
+    <div class="texte_descriptif_vehicule container col-sm-12 col-md-10">
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                 when an unknown printer took a galley of type and scrambled it to make a type
@@ -47,7 +47,7 @@
         </p>
     </div>
 
-    <hr class="barre_separation">
+    <hr class="barre_separation text-center">
 
      <!--bouton de contact-->
      <div class="bouton_contact col-md-12">

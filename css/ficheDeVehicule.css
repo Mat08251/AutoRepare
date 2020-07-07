@@ -48,6 +48,11 @@ body {
     display: flex;
 }
 
+.photo-responsive {
+    width: 390px!important;
+    height: 250px!important;
+}
+
 .texte_descriptif_vehicule {
     padding-top: 50px;
     font-family: 'advent_proregular', Arial, Helvetica, sans-serif;
@@ -68,4 +73,45 @@ body {
 
 .btn {
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.644);
+}
+
+/*media responsive ipad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .caracteristique {
+        margin-left: 100px;
+        
+    }
+}
+
+/*media responsive iphone*/
+@media only screen and (max-width: 600px) {
+    .titre_voiture {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
+    
+    .descriptif-vehicule {
+        display: block;
+    }
+
+    .photo-responsive {
+        width: 290px!important;
+        height: 190px!important;
+    }
+
+    .caracteristique {
+        margin-top: 80px;
+    }
+
+    .texte_descriptif_vehicule {
+        text-align: center;
+    }
+
+    .bouton_contact {
+        padding-top: 40px;
+        padding-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

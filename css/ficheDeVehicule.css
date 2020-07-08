@@ -77,9 +77,19 @@ body {
 
 /*media responsive ipad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .titre_voiture {
+        margin-left: 60px;
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
+    
+    .photo-responsive {
+        width: 290px!important;
+        height: 190px!important;
+    }
+    
     .caracteristique {
         margin-left: 100px;
-        
     }
 }
 

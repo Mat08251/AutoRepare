@@ -62,29 +62,33 @@
 
     <!--Début du formaulaire de contact-->
         <div class="container formulaire">
-            <form method="post" action="">
+            <form method="post" action="mail.php" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="nom">Nom<i class="etoile fas fa-asterisk"></i></label>
-                    <input type="text" class="zone_champ form-control" id="nom" required>
+                    <input type="text" class="zone_champ form-control" name="nom" id="nom" required value="<?php if(isset($_POST['nom'])) { echo $_POST['nom']; } ?>">
                 </div>
                 <div class="form-group">
                     <label for="prenom">Prenom<i class="etoile fas fa-asterisk"></i></label>
-                    <input type="text" class="zone_champ form-control" id="prenom" required>
+                    <input type="text" class="zone_champ form-control" name="prenom" id="prenom" required value="<?php if(isset($_POST['prenom'])) { echo $_POST['prenom']; } ?>">
                 </div>
                 <div class="form-group">
                     <label for="tel">Téléphone</label>
-                    <input type="password" class="zone_champ form-control" id="tel">
+                    <input type="tel" class="zone_champ form-control" name="tel" id="tel" value="<?php if(isset($_POST['tel'])) { echo $_POST['tel']; } ?>">
                 </div>
                 <div class="form-group">
                     <label for="email">Email<i class="etoile fas fa-asterisk"></i></label>
-                    <input type="email" class="zone_mail form-control" id="email" aria-describedby="emailHelp" required>
+                    <input type="email" class="zone_mail form-control" name="email" id="email" aria-describedby="emailHelp" required value="<?php if(isset($_POST['email'])) { echo $_POST['email']; } ?>">
                 </div>
                 <div class="form-group">
-                    <label for="texte">Votre demande</label>
-                    <textarea class="form-control col-8" id="texte" rows="6" cols="4"></textarea>
+                    <label for="exampleFormControlFile1">Fichier à joindre(si nécessaire)</label>
+                    <input type="file" class="form-control-file" name="fichier" id="fichier">
+                </div>
+                <div class="form-group">
+                    <label for="message">Votre demande</label>
+                    <textarea class="form-control col-8" name="message" id="message" rows="6" cols="4"><?php if(isset($_POST['message'])) { echo $_POST['message']; } ?></textarea>
                 </div>
                 <div class="bouton_envoyer">
-                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                    <button type="submit" class="btn btn-primary" name="envoyer">Envoyer</button>
                 </div>
             </form>
         </div>

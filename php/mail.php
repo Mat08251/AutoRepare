@@ -1,51 +1,97 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php 
-       $nom = htmlspecialchars ($_POST['nom']);
-       $prenom = htmlspecialchars ($_POST['prenom']);
-       $tel = htmlspecialchars ($_POST['tel']);
-       $email = htmlspecialchars ($_POST['email']);
-       $fichier = ($_POST['fichier']);
-       $message = htmlspecialchars ($_POST['message']);
-       $EmailTo = "bibi080@live.fr";
-       $EmailFrom = $_POST['email'];
-    
+<?php
+ 
+error_reporting(E_ALL);
+ini_set("display_errors", 1); //Affichage des erreurs
+ 
+if (get_magic_quotes_gpc()){
+    $nom = stripslashes (htmlentities($_POST['nom']));
+    $prenom = stripslashes (htmlspecialchars ($_POST['prenom']));
+    $tel = stripslashes (htmlspecialchars ($_POST['tel']));
+    $email = stripslashes (htmlspecialchars ($_POST['email']));
+    $message = stripslashes (htmlspecialchars ($_POST['message'])); 
+}else{ 
+    //Eviter les insertions de scripts dans le cas d'un e-mail HTML
+    $nom = htmlentities($_POST['nom']);
+    $prenom = htmlspecialchars ($_POST['prenom']);
+    $tel = htmlspecialchars ($_POST['tel']);
+    $email = htmlspecialchars ($_POST['email']);
+    $message = htmlspecialchars ($_POST['message']);
+}
+ 
+//Verifie si le fournisseur prend en charge les r
+if(preg_match("#@(hotmail|live|msn|gmail|laposte).[a-z]{2,4}$#", $email)){
+    $passage_ligne = "\n";
+}else{
+    $passage_ligne = "\r\n";
+}
+ 
+$email_to = "bibi080@live.fr"; //Destinataire
+$email_subject = "Contact - AutoRepare"; //Sujet du mail
+$boundary = md5(rand()); // clé aléatoire de limite
+ 
+//nettoyage du message
+function clean_string($string) {
+    $bad = array("content-type","bcc:","to:","cc:","href");
+    return str_replace($bad,"",$string);
+} 
 
-        $Body = "";
-        $Body .= "nom: ";
-        $Body .= $nom;
-        $Body .= "\n";
-        $Body .= "prenom: ";
-        $Body .= $prenom;
-        $Body .= "\n";
-        $Body .= "tel: ";
-        $Body .= $tel;
-        $Body .= "\n";
-        $Body .= "email: ";
-        $Body .= $email;
-        $Body .= "\n";
-        $Body .= "fichier: ";
-        $Body .= $fichier;
-        $Body .= "\n";
-        $Body .= "message: ";
-        $Body .= $message;
-        $Body .= "\n";
+//création du mail
+    $headers = "From: \"".$nom."\"".$prenom."\"".$tel."\"<".$email.">" . $passage_ligne; //Emetteur
+    $headers.= "Reply-to: \"".$nom."\"".$prenom."\" <".$email.">" . $passage_ligne; //Emetteur
+    $headers.= "MIME-Version: 1.0" . $passage_ligne; //MIME Version
+    $headers.= 'Content-Type: multipart/mixed; boundary='.$boundary .' '. $passage_ligne; //Contenu du message (alternative pour deux versions ex:text/plain et text/html
+
+    $email_message = '--' . $boundary . $passage_ligne; //Séparateur d'ouverture
+    $email_message .= "Content-Type: text/plain; charset=\"utf-8\"" . $passage_ligne; //Type du contenu
+    $email_message .= "Content-Transfer-Encoding: 8bit" . $passage_ligne; //Encodage
+    $email_message .= $passage_ligne .clean_string($message). $passage_ligne; //Contenu du message
 
 
-       $success = mail($EmailTo, "Contact -- AutoRepare", $message, "From: <$EmailFrom>");
+    //Pièce jointe
+    if(isset($_FILES["fichier"]) &&  $_FILES['fichier']['name'] != ""){ //Vérifie sur formulaire envoyé et que le fichier existe
+        $nom_fichier = $_FILES['fichier']['name'];
+        $source = $_FILES['fichier']['tmp_name'];
+        $type_fichier = $_FILES['fichier']['type'];
+        $taille_fichier = $_FILES['fichier']['size'];
+                    
+        if($nom_fichier != ".htaccess"){ //Vérifie que ce n'est pas un .htaccess
+			 if($type_fichier == "image/jpeg" 
+                || $type_fichier == "image/pjpeg" 
+                || $type_fichier == "application/pdf"){ //Soit un jpeg soit un pdf
+                 
+                if ($taille_fichier <= 2097152) { //Taille supérieure à Mo (en octets)
+                    $tabRemplacement = array("é"=>"e", "è"=>"e", "à"=>"a"); //Remplacement des caractères spéciaux
+                    
+                    $handle = fopen($source, 'r'); //Ouverture du fichier
+                    $content = fread($handle, $taille_fichier); //Lecture du fichier
+                    $encoded_content = chunk_split(base64_encode($content)); //Encodage
+                    $f = fclose($handle); //Fermeture du fichier
+                                
+                    $email_message .= $passage_ligne . "--" . $boundary . $passage_ligne; //Deuxième séparateur d'ouverture
+                    $email_message .= 'Content-type:'.$type_fichier.';name="'.$nom_fichier.'"'."n"; //Type de contenu (application/pdf ou image/jpeg)
+                    $email_message .='Content-Disposition: attachment; filename="'.$nom_fichier.'"'."n"; //Précision de pièce jointe
+                    $email_message .= 'Content-transfer-encoding:base64'."n"; //Encodage
+                    $email_message .= "n"; //Ligne blanche. IMPORTANT !
+                    $email_message .= $encoded_content."n"; //Pièce jointe
 
-       if ($success){
-           echo "votre message à bien été envoyé.";
-       }
-       else{
-           echo "Une erreur s'est produite à l'envoi de votre message.";
-       }
-    ?>
-</body>
-</html>
+                }else{
+					//Message d'erreur
+                    $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe mais celle ci était superieure à 2Mo.". $passage_ligne;
+                }
+            }else{
+				//Message d'erreur
+                $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe mais elle n'était pas au bon format.". $passage_ligne;
+            }
+        }else{
+			//Message d'erreur .htaccess file
+            $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe .htaccess.". $passage_ligne;
+        }
+    }
+                
+    $email_message .= $passage_ligne . "--" . $boundary . "--" . $passage_ligne; //Séparateur de fermeture
+
+    if(mail($email_to,$email_subject, $email_message, $headers)==true){  //Envoi du mail
+        header('Location: contact.php'); //Redirection
+    }
+?>
+

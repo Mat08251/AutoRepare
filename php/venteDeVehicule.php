@@ -33,14 +33,10 @@
         <hr class="barre_vente">
 
         <div class="texte_descriptif_vente">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled it to make a type
-                   specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                     the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                      and more recently with desktop publishing software like Aldus PageMaker including
-                      versions of Lorem Ipsum.
+            <p>Notre garage propose également la vente de véhicule d'occasion et neuf toute marque confondu
+                avec un suivis professionnel de chaque véhicule, afin de garantir une confiance client durant le procedure d'achat.</br>
+                Tout nos véhicule peuvent être consulté ci-dessous avec une fiche détaillé des caractèristiques de celui-ci.</br>
+                Pour tout autre information concernant l'achat de véhicule n'hésitez pas à nous contacter.
             </p>
         </div>
     </div>

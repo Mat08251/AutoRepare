@@ -119,14 +119,13 @@
    
    <!--intro du site-->
     <div class="descriptif-garage">
-        <p class="texte-descriptif col-md-6 col-sm-12">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type 
-            specimen book. It has survived not only five centuries, but also the leap into 
-            electronic typesetting, remaining essentially unchanged. It was popularised in 
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-            and more recently with desktop publishing software like Aldus PageMaker including 
-            versions of Lorem Ipsum.
+        <p class="texte-descriptif col-md-6 col-sm-12">Bienvenue chez votre garagiste Auto-repare</br>
+            Chez nous qualité et écoute du client sont primordiable afin d'établir dès le départ
+            une confiance mutuelle.</br>
+            Ici vous trouverez également tout le necessaire pour entretenir votre véhicule avec notre large gamme de produit.
+            Nous proposons également les divers services listés à votre droite.</br>
+            Pour d'éventuelles question sur nos services ou nos tarif n'hésitez pas à nous contacter. 
+
         </p>
         <div class="exemple-travaux col-md- col-sm-12">
             <i class="exemple fas fa-chevron-right">Vidange</i>

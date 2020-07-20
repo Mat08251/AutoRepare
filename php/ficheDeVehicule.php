@@ -29,7 +29,7 @@
 
         <div class="descriptif-vehicule container col-sm-12 col-md-12 ">
             <div class="photo_voiture col-sm-12 col-md-3 ">
-                <img src="../images/voiture.jpg" class="photo-responsive card-img" alt="photo_du_vehicule" style="; ;">
+                <img src="../images/voiture.jpg" class="photo-responsive card-img" alt="photo_du_vehicule" style="">
             </div>
             <h4 class="caracteristique col-sm-12 col-md-9  text-center">Caractéristique du véhicule</h4>
         </div>
@@ -51,7 +51,7 @@
 
      <!--bouton de contact-->
      <div class="bouton_contact col-md-12">
-        <button type="button" class="btn btn-primary btn-lg">Me contacter</button>
+        <a href="contact.php"><button type="button" class="btn btn-primary btn-lg">Me contacter</button></a>
     </div>
 
     <!--footer-->

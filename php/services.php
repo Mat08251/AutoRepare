@@ -75,7 +75,7 @@
 
     <!--bouton de contact-->
     <div class="bouton_contact col-md-12">
-        <button type="button" class="btn btn-primary btn-lg">Me contacter</button>
+        <a href="contact.php"><button type="button" class="btn btn-primary btn-lg">Me contacter</button></a>
     </div>
 
     <!--Footer-->

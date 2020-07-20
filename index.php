@@ -91,8 +91,8 @@
 
                         <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
                         <img src="images/image1.jpg" alt="Promo-du-moment" class="rev-slidebg">
-                        <div>
-                            <button type="button" class="boutontest btn btn-danger">Danger</button>
+                        <div class="insertion-texte">
+                            <p>test test test test test test test test test test test test</p>
                         </div>
                     </li>
 

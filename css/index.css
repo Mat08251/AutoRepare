@@ -29,9 +29,14 @@ body {
 
 }
 
-.boutontest{
+.insertion-texte{
     position: relative;
+    margin-top: 26%;
     z-index: 5;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-size: 18px;
+    margin-left: 20px;
 }
 
 /*texte d'intro de page*/
@@ -137,6 +142,10 @@ body {
 
 /*media responsive tablette ipad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .insertion-texte {
+        margin-top: 36%;
+    }
+
     .exemple-travaux {
         margin-left: 10px!important;
         margin-right: 40px;
@@ -156,6 +165,11 @@ body {
 }
 /*media responsive telephone iphone*/
 @media only screen and (max-width: 600px) {
+    .insertion-texte {
+        font-size: 12px;
+        margin-top: 32%;
+    }
+
     .descriptif-garage {
         display: inline-block;
         flex-direction: row;

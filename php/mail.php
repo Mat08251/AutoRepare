@@ -3,20 +3,20 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1); //Affichage des erreurs
  
-if (get_magic_quotes_gpc()){
-    $nom = stripslashes (htmlentities($_POST['nom']));
-    $prenom = stripslashes (htmlspecialchars ($_POST['prenom']));
-    $tel = stripslashes (htmlspecialchars ($_POST['tel']));
-    $email = stripslashes (htmlspecialchars ($_POST['email']));
-    $message = stripslashes (htmlspecialchars ($_POST['message'])); 
-}else{ 
+// if (get_magic_quotes_gpc()){
+//     $nom = stripslashes (htmlentities($_POST['nom']));
+//     $prenom = stripslashes (htmlspecialchars ($_POST['prenom']));
+//     $tel = stripslashes (htmlspecialchars ($_POST['tel']));
+//     $email = stripslashes (htmlspecialchars ($_POST['email']));
+//     $message = stripslashes (htmlspecialchars ($_POST['message'])); 
+// }else{ 
     //Eviter les insertions de scripts dans le cas d'un e-mail HTML
     $nom = htmlentities($_POST['nom']);
     $prenom = htmlspecialchars ($_POST['prenom']);
     $tel = htmlspecialchars ($_POST['tel']);
     $email = htmlspecialchars ($_POST['email']);
     $message = htmlspecialchars ($_POST['message']);
-}
+//}
  
 //Verifie si le fournisseur prend en charge les r
 if(preg_match("#@(hotmail|live|msn|gmail|laposte).[a-z]{2,4}$#", $email)){
@@ -73,7 +73,7 @@ function clean_string($string) {
                     $email_message .= 'Content-transfer-encoding:base64'."n"; //Encodage
                     $email_message .= "n"; //Ligne blanche. IMPORTANT !
                     $email_message .= $encoded_content."n"; //Pièce jointe
-
+ 
                 }else{
 					//Message d'erreur
                     $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe mais celle ci était superieure à 2Mo.". $passage_ligne;
@@ -83,12 +83,13 @@ function clean_string($string) {
                 $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe mais elle n'était pas au bon format.". $passage_ligne;
             }
         }else{
-			//Message d'erreur .htaccess file
+			//Message d'erreur
             $email_message .= $passage_ligne ."L'utilisateur a tenté de vous envoyer une pièce jointe .htaccess.". $passage_ligne;
         }
     }
-                
-    $email_message .= $passage_ligne . "--" . $boundary . "--" . $passage_ligne; //Séparateur de fermeture
+$email_message .= $passage_ligne . "--" . $boundary . "--" . $passage_ligne; //Séparateur de fermeture
+
+    
 
     if(mail($email_to,$email_subject, $email_message, $headers)==true){  //Envoi du mail
         header('Location: contact.php'); //Redirection

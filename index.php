@@ -90,7 +90,7 @@
                     <li data-transition="fade">
 
                         <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
-                        <img src="images/image1.jpg" alt="Promo-du-moment" class="rev-slidebg">
+                        <img src="images/image2.jpg" alt="Promo-du-moment" class="rev-slidebg">
                         <div class="insertion-texte">
                             <p>test test test test test test test test test test test test</p>
                         </div>
@@ -100,7 +100,7 @@
                     <li data-transition="fade">
 
                         <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
-                        <img src="images/image2.jpg" alt="Vente-de-vehicule" class="rev-slidebg">
+                        <img src="images/garage1.jpg" alt="Vente-de-vehicule" class="rev-slidebg">
 
                     </li>
 
@@ -108,7 +108,7 @@
                     <li data-transition="fade">
 
                         <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
-                        <img src="images/image3.jpg" alt="Vente-de-produit-auto" class="rev-slidebg">
+                        <img src="images/voitureauto.jpg" alt="Vente-de-produit-auto" class="rev-slidebg">
 
                     </li>
 
@@ -143,7 +143,7 @@
             <h2 class="titre-service text-center">SERVICES</h2>
 
             <div class="card-deck">
-                <div class="card col-sm-6" style="background-image: url(images/image1.jpg); height:400px;">
+                <div class="card col-sm-6" style="background-image: url(images/garage6mini.jpg ); height:400px; background-position: center; background-position: right; ">
                     <h5 class="card-title text-center">Entretien du véhicule</h5> 
                 </div>
                 <div class="card col-sm-6" style="background-image: url(images/image1.jpg); height:400px;">

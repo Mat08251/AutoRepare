@@ -9,7 +9,7 @@ sr.reveal('.texte-descriptif', {
 
 //liste des divers travaux proposés
 sr.reveal('.exemple-travaux', {
-    origin: 'right',
+    origin: 'bottom',
     duration: 2800,
     distance: '80px',
     reset: true
@@ -32,7 +32,7 @@ sr.reveal('.card', {
 
 //bouton bannière de contact
 sr.reveal('.bouton-contact', {
-    origin: 'right',
+    origin: 'left',
     distance: '300px',
     duration: 2500,
     opacity: 0.2,

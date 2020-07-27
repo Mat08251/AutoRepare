@@ -22,7 +22,7 @@
     
     <!--photo d'accueil-->
     <div class="image_top_page">
-        <img class="test" src="../images/image5.jpg" alt="photo_d'accueil_page">
+        <img class="test" src="../images/image4mini.jpg" alt="photo_d'accueil_page">
     </div>
 
     <!--titre de la rubrique-->
@@ -35,7 +35,7 @@
     <!--bloc descriptif de la rubrique-->
     <div class="bloc-page container">
         <div class="photo_travaux col-md- ">
-            <img src="../images/image1.jpg" class="photo_rubrique" alt="photo_rubrique-travaux">
+            <img src="../images/garage2.jpg" class="photo_rubrique" alt="photo_rubrique-travaux">
         </div>
         <div class="bloc_texte_travaux col-md-8 col-sm-10">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.

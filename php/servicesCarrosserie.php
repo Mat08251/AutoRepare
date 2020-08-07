@@ -22,7 +22,7 @@
     
     <!--photo d'accueil-->
     <div class="image_top_page">
-        <img class="test" src="../images/image4mini.jpg" alt="photo_d'accueil_page">
+        <img class="test" src="../images/image4mini.jpg" alt="photo_d'accueil_page" style="background-position: top;">
     </div>
 
     <!--titre de la rubrique-->

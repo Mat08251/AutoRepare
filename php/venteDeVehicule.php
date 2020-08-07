@@ -1,3 +1,4 @@
+<?php include('connectbdd.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,7 +24,7 @@
 
     <!--photo d'accueil-->
     <div class="image_top_page">
-        <img class="test" src="../images/image1.jpg" alt="photo_d'accueil_page">
+        <img class="test" src="../images/voitureGaremini.jpg" alt="photo_d'accueil_page">
     </div>
 
     <!--texte début de page-->
@@ -44,42 +45,20 @@
     <!--bloc des véhicules en vente-->
     <div class="bloc_vehicule container">
         <div class="row">
+
+            <?php $voitures= $bdd->prepare("SELECT * FROM vehicule");
+                  $voitures->execute();
+
+                  while($voiture=$voitures->fetch()) {
+            ?>
+                  
             <div class="card text-white">
-                    <div class="back card-img-overlay">
-                        <h5 class="nom_vehicule card-title">Card title</h5>
-                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
+                    <div class="back card-img-overlay" style="background-image:url('../images/<?=$voiture['image_voiture'] ?>')">
+                        <h5 class="nom_vehicule card-title"><?=$voiture['nom_voiture'] ?></h5>
+                        <a href="../php/ficheDeVehicule.php?id=<?=$voiture['id_voiture'] ?>"><button type="button" class="btn btn-primary">Voir infos</button></a>
                     </div>
             </div>
-            <div class="card text-white">
-                    <div class="back card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
-                    </div>
-            </div>
-            <div class="card text-white">
-                    <div class="back card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
-                    </div>
-            </div>
-            <div class="card text-white">
-                    <div class="back card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
-                    </div>
-            </div>
-            <div class="card text-white">
-                    <div class="back card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
-                    </div>
-            </div>
-           <div class="card text-white">
-                    <div class="back card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <a href="../php/ficheDeVehicule.php"><button type="button" class="btn btn-primary">Voir infos</button></a>
-                    </div>
-            </div>
+                  <?php } $voitures->closeCursor(); ?>
         </div>
     </div>
 

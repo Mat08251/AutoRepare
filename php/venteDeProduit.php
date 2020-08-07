@@ -1,3 +1,4 @@
+<?php include('connectbdd.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -22,7 +23,7 @@
 
     <!--photo d'accueil-->
     <div class="image_top_page">
-        <img class="test" src="../images/image3.jpg" alt="photo_d'accueil_page">
+        <img class="test" src="../images/image1.jpg" alt="photo_d'accueil_page">
     </div>
 
 
@@ -57,43 +58,22 @@
 
         <!--cards des produits en vente-->
         <div class="row row-cols-1 row-cols-md-3">
+        <?php $produits= $bdd->prepare("SELECT * FROM vente_produit");
+                  $produits->execute();
+
+                  while($produit=$produits->fetch()) {
+            ?>
             <div class="col mb-4">
                 <div class="card">
-                <img src="../images/voiture.jpg" class="card-img-top" alt="...">
+                <img src="../images/<?=$produit['image_produit'] ?>" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5 class="card-title"><?=$produit['titre_produit'] ?><span class="prix"><?=$produit['prix_produit'] ?>€</span></h5>
+                    <p class="card-text"><?=$produit['texte_produit'] ?></p>
                 </div>
                 </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                <img src="../images/voiture.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                <img src="../images/voiture.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                <img src="../images/voiture.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-                </div>
-            </div>
-            </div>
+            </div> 
+            <?php } $produits->closeCursor(); ?> 
+        </div>
     </div>
     <!--Fin de la rubrique vente de produit-->
     

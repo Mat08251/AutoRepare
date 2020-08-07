@@ -1,3 +1,6 @@
+<?php
+require('php/connectbdd.php');
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -92,7 +95,14 @@
                         <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
                         <img src="images/image2.jpg" alt="Promo-du-moment" class="rev-slidebg">
                         <div class="insertion-texte">
-                            <p>test test test test test test test test test test test test</p>
+                        <?php 
+                            $req=$bdd->prepare("SELECT text_promo FROM promotions WHERE id_promo ='1'");
+                            $req->execute();
+                            $donnees =$req->fetch();
+            
+                
+                         ?>
+                            <p><?=$donnees['text_promo']?></p>
                         </div>
                     </li>
 
@@ -101,7 +111,16 @@
 
                         <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
                         <img src="images/garage1.jpg" alt="Vente-de-vehicule" class="rev-slidebg">
-
+                        <div class="insertion-texte">
+                        <?php 
+                            $req=$bdd->prepare("SELECT text_promo FROM promotions WHERE id_promo ='2'");
+                            $req->execute();
+                            $donnees =$req->fetch();
+            
+                
+                         ?>
+                            <p><?=$donnees['text_promo']?></p>
+                        </div>
                     </li>
 
                     <!-- MINIMUM SLIDE STRUCTURE -->
@@ -109,7 +128,16 @@
 
                         <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
                         <img src="images/voitureauto.jpg" alt="Vente-de-produit-auto" class="rev-slidebg">
-
+                        <div class="insertion-texte">
+                        <?php 
+                            $req=$bdd->prepare("SELECT text_promo FROM promotions WHERE id_promo ='3'");
+                            $req->execute();
+                            $donnees =$req->fetch();
+            
+                
+                         ?>
+                            <p><?=$donnees['text_promo']?></p>
+                        </div>
                     </li>
 
                 </ul><!-- END SLIDES LIST -->

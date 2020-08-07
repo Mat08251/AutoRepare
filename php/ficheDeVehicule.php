@@ -1,3 +1,13 @@
+<?php include('connectbdd.php');
+    $id= $_GET['id'];
+
+    $fiche= $bdd->prepare("SELECT * FROM vehicule WHERE id_voiture='$id'");
+    $fiche->execute();
+
+    while($fichevoiture=$fiche->fetch()) {
+
+   
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,32 +31,25 @@
     
     <!--photo d'accueil-->
     <div class="image_top_page">
-        <img class="test" src="../images/image1.jpg" alt="photo_d'accueil_page">
+        <img class="test" src="../images/voitureGaremini.jpg" alt="photo_d'accueil_page">
     </div>
 
     <div class="container">
-        <h5 class="titre_voiture col-sm-12 col-md-4  text-center">Citroen C4</h5>
+        <h5 class="titre_voiture col-sm-12 col-md-4  text-center"><?=$fichevoiture['nom_voiture'] ?></h5>
 
         <div class="descriptif-vehicule container col-sm-12 col-md-12 ">
             <div class="photo_voiture col-sm-12 col-md-3 ">
-                <img src="../images/voiture.jpg" class="photo-responsive card-img" alt="photo_du_vehicule" style="">
+                <img src="../images/<?=$fichevoiture['image_voiture'] ?>" class="photo-responsive card-img" alt="photo_du_vehicule" style="">
             </div>
-            <h4 class="caracteristique col-sm-12 col-md-9  text-center">Caractéristique du véhicule</h4>
+            <h4 class="caracteristique col-sm-12 col-md-9  text-center"><?=$fichevoiture['caracteristique_voiture'] ?></h4>
         </div>
     </div>
 
     <div class="texte_descriptif_vehicule container col-sm-12 col-md-10">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it to make a type
-                specimen book. It has survived not only five centuries, but also the leap into
-                 electronic typesetting, remaining essentially unchanged. It was popularised in
-                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                and more recently with desktop publishing software like Aldus PageMaker including
-                versions of Lorem Ipsum.
-        </p>
+        <p><?=$fichevoiture['descriptif_voiture'] ?></p><br>
+        <?=$fichevoiture['prix_voiture'] ?>
     </div>
-
+    <?php } $fiche->closeCursor(); ?>
     <hr class="barre_separation text-center">
 
      <!--bouton de contact-->

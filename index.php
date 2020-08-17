@@ -72,6 +72,7 @@ require('php/connectbdd.php');
             </ul>
             <div class="vl"></div>
             <ul class="social">
+                <a href="admin/admin.php"><i class="icon fas fa-user"><span class="text_admin">Admin</span></i></a>
                 <i class="icon fab fa-facebook-f"></i>
                 <i class="icon fab fa-twitter"></i>
                 <i class="icon fab fa-instagram"></i>
@@ -88,57 +89,41 @@ require('php/connectbdd.php');
 
                 <!-- BEGIN SLIDES LIST -->
                 <ul>
+                <?php 
+                            $i = 0;
+                            $image1 = "images/image2.jpg";
+                            $image2 = "images/garage1.jpg";
+                            $image3 = "images/voitureauto.jpg";
+                            
+                            $req=$bdd->prepare("SELECT text_promo FROM promotions");
+                            $req->execute();
+                            while ($donnees =$req->fetch()) {
 
+                         ?>
                     <!-- MINIMUM SLIDE STRUCTURE -->
                     <li data-transition="fade">
 
                         <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
-                        <img src="images/image2.jpg" alt="Promo-du-moment" class="rev-slidebg">
+                        <img src="<?php 
+                        if ($i == 0){
+                            echo $image1;
+                        }
+                        if ($i == 1){
+                            echo $image2;
+                        }
+                        if ($i == 2){
+                            echo $image3;
+                        }                    
+                        
+                        ?>" alt="Promo-du-moment" class="rev-slidebg">
+
                         <div class="insertion-texte">
-                        <?php 
-                            $req=$bdd->prepare("SELECT text_promo FROM promotions WHERE id_promo ='1'");
-                            $req->execute();
-                            $donnees =$req->fetch();
-            
-                
-                         ?>
+                    
                             <p><?=$donnees['text_promo']?></p>
                         </div>
-                    </li>
+                            </li>
 
-                    <!-- MINIMUM SLIDE STRUCTURE -->
-                    <li data-transition="fade">
-
-                        <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
-                        <img src="images/garage1.jpg" alt="Vente-de-vehicule" class="rev-slidebg">
-                        <div class="insertion-texte">
-                        <?php 
-                            $req=$bdd->prepare("SELECT text_promo FROM promotions WHERE id_promo ='2'");
-                            $req->execute();
-                            $donnees =$req->fetch();
-            
-                
-                         ?>
-                            <p><?=$donnees['text_promo']?></p>
-                        </div>
-                    </li>
-
-                    <!-- MINIMUM SLIDE STRUCTURE -->
-                    <li data-transition="fade">
-
-                        <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
-                        <img src="images/voitureauto.jpg" alt="Vente-de-produit-auto" class="rev-slidebg">
-                        <div class="insertion-texte">
-                        <?php 
-                            $req=$bdd->prepare("SELECT text_promo FROM promotions WHERE id_promo ='3'");
-                            $req->execute();
-                            $donnees =$req->fetch();
-            
-                
-                         ?>
-                            <p><?=$donnees['text_promo']?></p>
-                        </div>
-                    </li>
+                        <?php $i++; } ?>
 
                 </ul><!-- END SLIDES LIST -->
 

@@ -39,6 +39,10 @@ img {
     filter: drop-shadow(2px 4px 2px black);
   }
 
+.text_admin {
+    margin-left: 8px;
+}
+
 
 .social {
     margin-right: 10px;

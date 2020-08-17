@@ -26,6 +26,7 @@
         </ul>
         <div class="vl"></div>
         <ul class="social">
+            <a href="../admin/admin.php"><i class="icon fas fa-user"><span class="text_admin">Admin</span></i></a>
             <i class="icon fab fa-facebook-f"></i>
             <i class="icon fab fa-twitter"></i>
             <i class="icon fab fa-instagram"></i>

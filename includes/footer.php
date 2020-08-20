@@ -1,6 +1,6 @@
 <footer>
     <div class="footer1">
-        <div class="logo-footer col-2">
+        <div class="logo-footer col-md-3">
             <img src="../images/logo.png" alt="logo-du-garage" style="width: 170px; height: 80px;">
         </div>
         <div class="infos mr-auto col-md-9">

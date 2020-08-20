@@ -6,8 +6,8 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto  justify-content-center align-items-center">
             <li class="nav-item">
                 <a class="nav-link" href="../index.php">Accueil</a>
             </li>

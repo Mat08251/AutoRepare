@@ -21,8 +21,14 @@ h1 {
 }
 
 .boutondeco {
-    background-color: red!important;
+    background-color: rgb(160, 0, 0)!important;
     margin-top: 20px;
+    color: white!important;
+    box-shadow: 2px 4px rgba(87, 87, 87, 0.651);
+}
+
+.boutondeco:hover {
+    background-color: rgb(187, 0, 0)!important;
 }
 
 .lien-admin {
@@ -39,3 +45,29 @@ h1 {
     margin-left: 34px;
 }
 
+.icon:hover {
+    color: rgb(0, 45, 129);
+}
+
+.modif {
+    padding-left: 18px!important;
+}
+
+/*media responsive tablette ipad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .fond {
+        background-color: rgb(104, 104, 104);
+    }
+}
+
+/*media responsive telephone iphone*/
+@media only screen and (max-width: 600px) {
+    .fond {
+        background-color: rgb(104, 104, 104);
+    }
+    
+    .container {
+        padding-right: 0%!important;
+        padding-left: 0%!important;
+    }
+}

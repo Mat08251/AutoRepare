@@ -57,7 +57,7 @@ body {
 }
 
 
-.proposition a:visited {
+.lien-visite:visited {
     color: red!important;
 }
 

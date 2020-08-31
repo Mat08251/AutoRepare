@@ -7,6 +7,67 @@ body {
     width: 14%;
 }
 
+.fond {
+    background-image: url("../images/garageAvanttest.jpg");
+    background-size: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: rgb(209, 209, 209);
+    text-shadow: 2px 2px black;
+}
+
 .boutondeco {
-    background-color: red!important;
+    background-color: rgb(160, 0, 0)!important;
+    margin-top: 20px;
+    color: white!important;
+    box-shadow: 2px 4px rgba(87, 87, 87, 0.651);
+}
+
+.boutondeco:hover {
+    background-color: rgb(187, 0, 0)!important;
+}
+
+.lien-admin {
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.fond_tableau {
+    background-color: rgba(240, 255, 255, 0.664);
+}
+
+.icon {
+    color: rgba(0, 0, 0, 0.589);
+    margin-left: 34px;
+}
+
+.icon:hover {
+    color: rgb(0, 45, 129);
+}
+
+.modif {
+    padding-left: 18px!important;
+}
+
+/*media responsive tablette ipad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .fond {
+        background-color: rgb(104, 104, 104);
+    }
+}
+
+/*media responsive telephone iphone*/
+@media only screen and (max-width: 600px) {
+    .fond {
+        background-color: rgb(104, 104, 104);
+    }
+    
+    .container {
+        padding-right: 0%!important;
+        padding-left: 0%!important;
+    }
 }

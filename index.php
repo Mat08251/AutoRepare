@@ -40,7 +40,7 @@ require('php/connectbdd.php');
 		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <title>Document</title>
+    <title>Accueil</title>
 </head>
 <body>
     <!--Navbar-->
@@ -53,7 +53,7 @@ require('php/connectbdd.php');
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto text-center">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Accueil</a>
                 </li>
@@ -71,7 +71,8 @@ require('php/connectbdd.php');
                 </li>
             </ul>
             <div class="vl"></div>
-            <ul class="social">
+            <ul class="social text-center">
+                <a href="admin/admin.php"><i class="icon fas fa-user"><span class="text_admin">Admin</span></i></a>
                 <i class="icon fab fa-facebook-f"></i>
                 <i class="icon fab fa-twitter"></i>
                 <i class="icon fab fa-instagram"></i>
@@ -88,57 +89,41 @@ require('php/connectbdd.php');
 
                 <!-- BEGIN SLIDES LIST -->
                 <ul>
+                <?php 
+                            $i = 0;
+                            $image1 = "images/image2.jpg";
+                            $image2 = "images/garage1.jpg";
+                            $image3 = "images/voitureauto.jpg";
+                            
+                            $req=$bdd->prepare("SELECT text_promo FROM promotions");
+                            $req->execute();
+                            while ($donnees =$req->fetch()) {
 
+                         ?>
                     <!-- MINIMUM SLIDE STRUCTURE -->
                     <li data-transition="fade">
 
                         <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
-                        <img src="images/image2.jpg" alt="Promo-du-moment" class="rev-slidebg">
+                        <img src="<?php 
+                        if ($i == 0){
+                            echo $image1;
+                        }
+                        if ($i == 1){
+                            echo $image2;
+                        }
+                        if ($i == 2){
+                            echo $image3;
+                        }                    
+                        
+                        ?>" alt="Promo-du-moment" class="rev-slidebg">
+
                         <div class="insertion-texte">
-                        <?php 
-                            $req=$bdd->prepare("SELECT text_promo FROM promotions WHERE id_promo ='1'");
-                            $req->execute();
-                            $donnees =$req->fetch();
-            
-                
-                         ?>
+                    
                             <p><?=$donnees['text_promo']?></p>
                         </div>
-                    </li>
+                            </li>
 
-                    <!-- MINIMUM SLIDE STRUCTURE -->
-                    <li data-transition="fade">
-
-                        <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
-                        <img src="images/garage1.jpg" alt="Vente-de-vehicule" class="rev-slidebg">
-                        <div class="insertion-texte">
-                        <?php 
-                            $req=$bdd->prepare("SELECT text_promo FROM promotions WHERE id_promo ='2'");
-                            $req->execute();
-                            $donnees =$req->fetch();
-            
-                
-                         ?>
-                            <p><?=$donnees['text_promo']?></p>
-                        </div>
-                    </li>
-
-                    <!-- MINIMUM SLIDE STRUCTURE -->
-                    <li data-transition="fade">
-
-                        <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
-                        <img src="images/voitureauto.jpg" alt="Vente-de-produit-auto" class="rev-slidebg">
-                        <div class="insertion-texte">
-                        <?php 
-                            $req=$bdd->prepare("SELECT text_promo FROM promotions WHERE id_promo ='3'");
-                            $req->execute();
-                            $donnees =$req->fetch();
-            
-                
-                         ?>
-                            <p><?=$donnees['text_promo']?></p>
-                        </div>
-                    </li>
+                        <?php $i++; } ?>
 
                 </ul><!-- END SLIDES LIST -->
 
@@ -189,7 +174,7 @@ require('php/connectbdd.php');
 
     <!--partie contact du garage-->
     <div class="banniere-contact">
-                <div class="bouton-contact">
+                <div class="bouton-contact text-center">
                     <a href="php/contact.php"><button type="button" class="btn btn-primary btn-lg">Me Contacter</button></a>
                 </div>
                 <div class="info-banniere col-md-12">
@@ -223,7 +208,7 @@ require('php/connectbdd.php');
         <div class="logo-footer col-2">
             <img src="images/logo.png" alt="logo-du-garage" style="width: 170px; height: 80px;">
         </div>
-        <div class="infos mr-auto col-md-9">
+        <div class="infos mr-auto  mr-5 col-md-8 justify-content-center align-items-center">
             <div class="adresse">
                 <i class="iconInfo fas fa-map-marker-alt"></i><span class="font-weight-bold">Adresse:</span>
                 <p>6 rue Pierre Denaiffe ZAC de, 08110 Carignan</p>

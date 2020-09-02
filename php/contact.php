@@ -76,7 +76,7 @@
                     <input type="email" class="zone_mail form-control" name="email" id="email" aria-describedby="emailHelp" required value="<?php if(isset($_POST['email'])) { echo $_POST['email']; } ?>">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlFile1">Fichier à joindre(si nécessaire)</label>
+                    <label for="exampleFormControlFile1">Fichier à joindre(si nécessaire PDF, png, jpeg)</label>
                     <input type="file" class="form-control-file" name="fichier" id="fichier">
                 </div>
                 <div class="form-group">

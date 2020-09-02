@@ -11,7 +11,6 @@
        $prenom = htmlspecialchars ($_POST['prenom']);
        $tel = htmlspecialchars ($_POST['tel']);
        $email = htmlspecialchars ($_POST['email']);
-       $fichier = ($_POST['fichier']);
        $message = htmlspecialchars ($_POST['message']);
        $EmailTo = "bibi080@live.fr";
        $EmailFrom = $_POST['email'];
@@ -29,9 +28,6 @@
         $Body .= "\n";
         $Body .= "email: ";
         $Body .= $email;
-        $Body .= "\n";
-        $Body .= "fichier: ";
-        $Body .= $fichier;
         $Body .= "\n";
         $Body .= "message: ";
         $Body .= $message;

@@ -37,6 +37,8 @@ body {
     height: 300px;
 }
 
+
+
 /*titre de la page*/
 .titre_descriptif_vente {
     color: #17096D;
@@ -74,11 +76,32 @@ body {
             -o-background-size: cover;
             background-size: cover;
             height: auto;
-    background-position: center;       
+    background-position: center;
+    padding: 0%!important;  
 }
 
+.essai {
+    background-color: rgba(116, 116, 116, 0.356);
+    height: 100%;
+}
+
+
+
 .card-title {
-    padding-top: 40%;
+    padding-top: 30%;
+    text-shadow: 2px 2px 3px black!important;
+    margin-left: 20px;
+}
+
+.prix_vehicule {
+    text-shadow: 2px 2px 1px black!important;
+    margin-bottom: 10px;
+    font-size: 20px!important;
+    margin-left: 20px;
+}
+
+.btn {
+    margin-left: 110px;
 }
 
 /*media responsive ipad*/
@@ -99,6 +122,10 @@ body {
 
 /*media responsive iphone*/
 @media only screen and (max-width: 600px) {
+    .test {
+        height: 200px;
+    }
+    
     .barre_vente {
         width: 70%;
     }

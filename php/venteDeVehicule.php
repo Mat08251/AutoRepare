@@ -53,9 +53,12 @@
             ?>
                   
             <div class="card text-white">
-                    <div class="back card-img-overlay" style="background-image:url('../images/<?=$voiture['image_voiture'] ?>')">
-                        <h5 class="nom_vehicule card-title"><?=$voiture['nom_voiture'] ?></h5>
-                        <a href="../php/ficheDeVehicule.php?id=<?=$voiture['id_voiture'] ?>"><button type="button" class="btn btn-primary">Voir infos</button></a>
+                    <div class="back card-img-overlay" style="background-image:url('../images/<?=$voiture['image_voiture'] ?>');">
+                        <div class="essai">
+                            <h5 class="nom_vehicule card-title"><?=$voiture['nom_voiture'] ?></h5>
+                            <div class="prix_vehicule"> <?=$voiture['prix_voiture'] ?>€ </div>
+                            <a href="../php/ficheDeVehicule.php?id=<?=$voiture['id_voiture'] ?>"><button type="button" class="btn btn-primary">Voir infos</button></a>
+                        </div>
                     </div>
             </div>
                   <?php } $voitures->closeCursor(); ?>

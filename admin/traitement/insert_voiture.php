@@ -11,9 +11,9 @@
 <body>
     <h2 class="text-center titre_formulaire">Formulaire d'ajout de voiture sur la page vente de véhicule</h2>
     <form class="text-center mx-auto" action="insert_voiture_traitement.php" method="POST" enctype="multipart/form-data">
-        <div class="form-group"> 
-            <label for="exampleFormControlTextarea1">Nom du véhicule</label>   
-            <inputv class="form-control  mx-auto" type="text" name="nom" required>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Nom du véhicule</label>
+            <input class="form-control  mx-auto" type="text" name="nom" required>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Caractéristiques du véhicule</label>

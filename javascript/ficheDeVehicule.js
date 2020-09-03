@@ -22,7 +22,8 @@ sr.reveal('.caracteristique', {
     delay: 800,
     origin: 'right',
     distance: '100px',
-    reset: true
+    reset: true,
+    mobile: false
 });
 
 //texte descriptif du véhicule

@@ -15,13 +15,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/edit.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    <form action="edit_promoIndex_traitement.php?id=<?=$data['id_promo'] ?>" method="POST">
-        <textarea type="text" name="descriptif" required><?=$data['text_promo'] ?></textarea>
+    <h2 class="text-center titre_formulaire">Formulaire de modification de la promotion page Accueil</h2>
+    <form class="text-center mx-auto" action="edit_promoIndex_traitement.php?id=<?=$data['id_promo'] ?>" method="POST">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Descriptif de la promo page d'accueil</label>
+            <textarea class="form-control mx-auto type="text" name="descriptif" required><?=$data['text_promo'] ?></textarea>
+        </div>
 
-        <button type="submit">valider</button>
+        <button class="btn " type="submit">valider</button>
         
 
 

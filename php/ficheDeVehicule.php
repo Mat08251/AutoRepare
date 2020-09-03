@@ -41,7 +41,7 @@
             <div class="photo_voiture col-sm-12 col-md-3 ">
                 <img src="../images/<?=$fichevoiture['image_voiture'] ?>" class="photo-responsive card-img" alt="photo_du_vehicule" style="">
             </div>
-            <h4 class="caracteristique col-sm-12 col-md-9  text-center"><?=$fichevoiture['caracteristique_voiture'] ?></h4>
+            <p class="caracteristique col-sm-7 col-md-7  text-center"><?=$fichevoiture['caracteristique_voiture'] ?></p>
         </div>
     </div>
 

@@ -17,7 +17,7 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Caractéristiques du véhicule</label>
-            <textarea class="form-control  mx-auto" type="text" name="caracteristique" rows="5" required></textarea>
+            <textarea class="form-control  mx-auto" type="text" name="caracteristique" rows="5" cols="50" required></textarea>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Texte descriptif du véhicule</label>

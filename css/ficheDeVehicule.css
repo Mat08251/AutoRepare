@@ -43,6 +43,10 @@ body {
     margin-left: 30px;
 }
 
+.caracteristique {
+    margin-left: 180px!important;
+}
+
 /*contenue du véhicule en vente*/
 .descriptif-vehicule {
     display: flex;
@@ -78,18 +82,23 @@ body {
 /*media responsive ipad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .titre_voiture {
-        margin-left: 60px;
+        margin-left: 50px;
         margin-right: auto;
         margin-bottom: 40px;
     }
     
     .photo-responsive {
-        width: 290px!important;
+        width: 270px!important;
         height: 190px!important;
     }
     
     .caracteristique {
-        margin-left: 100px;
+        margin-left: 120px!important;
+        padding-right: 0%!important;
+    }
+
+    .texte_descriptif_vehicule {
+        width: 50%;
     }
 }
 
@@ -112,10 +121,12 @@ body {
 
     .caracteristique {
         margin-top: 80px;
+        margin-left: 0!important;
     }
 
     .texte_descriptif_vehicule {
         text-align: center;
+        width: 50%;
     }
 
     .bouton_contact {

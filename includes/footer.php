@@ -1,9 +1,9 @@
 <footer>
     <div class="footer1">
-        <div class="logo-footer col-md-3">
+        <div class="logo-footer col-2">
             <img src="../images/logo.png" alt="logo-du-garage" style="width: 170px; height: 80px;">
         </div>
-        <div class="infos mr-auto col-md-9">
+        <div class="infos mr-auto  mr-5 col-md-8 justify-content-center align-items-center">
             <div class="adresse">
                 <i class="iconInfo fas fa-map-marker-alt"></i><span class="font-weight-bold">Adresse:</span>
                 <p>6 rue Pierre Denaiffe ZAC de, 08110 Carignan</p>

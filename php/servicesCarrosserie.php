@@ -26,7 +26,7 @@
     </div>
 
     <!--titre de la rubrique-->
-    <div class="titre-travaux col-md-12 col-sm-12">
+    <div class="titre-travaux col-md-8 col-sm-12">
         <h2>Travaux de carrosserie</h2>
     </div>
 

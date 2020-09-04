@@ -108,6 +108,10 @@ body {
 
 /*media responsive iphone*/
 @media only screen and (max-width: 600px) {
+    .test {
+        height: 150px;
+    }
+    
     .titre-travaux {
         margin-left: auto;
         margin-right: auto;

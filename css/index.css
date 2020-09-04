@@ -200,6 +200,10 @@ body {
         margin-bottom: 40px!important;
     }
 
+    .card-title {
+        margin-top: 60%;
+    }
+
     .bouton-contact {
         margin-left: 0px;
     }

@@ -104,6 +104,10 @@ body {
 
 /*media responsive iphone*/
 @media only screen and (max-width: 600px) {
+    .test {
+        height: 160px;
+    }
+    
     .titre_voiture {
         margin-left: auto;
         margin-right: auto;

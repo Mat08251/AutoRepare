@@ -46,7 +46,8 @@ sr.reveal('.form-group', {
     origin: 'right',
     distance: '150px',
     duration: 2500,
-    interval: 500
+    interval: 500,
+    mobile: false
 });
 
 //bouton d'envoie
@@ -62,5 +63,6 @@ sr.reveal('.bouton_envoyer', {
 sr.reveal('.condition', {
     origin: 'right',
     distance: '50px',
-    duration: 2000
+    duration: 2000,
+    mobile: false
 });

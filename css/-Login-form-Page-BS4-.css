@@ -10,8 +10,9 @@ input {
   width: 70%!important;
 }
 
-.text-secondary {
-  text-shadow: 1px 1px 1px black;
+.text {
+  text-shadow: 2px 2px 3px black;
+  color: rgb(215, 215, 233);
 }
 
 .btn {
@@ -30,8 +31,10 @@ input {
 }
 
 .lienAccueil {
-  color: rgb(0, 27, 85);
+  color: rgb(23, 91, 194);
+  text-shadow: 1px 1px 2px black;
   bottom: 50px!important;
+  font-size: 20px;
 }
 
 .lienAccueil:hover {
@@ -41,7 +44,8 @@ input {
 
 @media (max-width: 991.98px) {
   #login-block {
-    opacity: .95;
+    opacity: .98;
+    background-color: rgba(0, 0, 0, 0.308);
   }
 }
 

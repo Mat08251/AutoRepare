@@ -21,7 +21,8 @@ sr.reveal('.textePromo', {
     distance: '100px',
     duration: 1500,
     delay: 1000,
-    reset: true
+    reset: true,
+    mobile: false
 });
 
 //titre rubrique produit

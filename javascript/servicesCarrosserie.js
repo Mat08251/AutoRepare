@@ -20,6 +20,7 @@ sr.reveal('.bloc_texte_travaux', {
     distance: '70px',
     duration: 2600,
     delay: 500,
+    mobile: false
 });
 
 //bouton de contact

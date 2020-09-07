@@ -59,6 +59,9 @@ img {
     filter: drop-shadow(2px 4px 2px black);
 }
 
+.icon:hover {
+    color: rgb(28, 146, 214)!important;
+}
 /*media responsive tablette ipad*/
 @media screen and (min-width: 768px) and (max-width: 1024px){
     .navbar-nav {

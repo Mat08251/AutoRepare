@@ -47,7 +47,7 @@
 
     <div class="texte_descriptif_vehicule container col-sm-12 col-md-10">
         <p><?=$fichevoiture['descriptif_voiture'] ?></p><br>
-        <?=$fichevoiture['prix_voiture'] ?>
+        <?=$fichevoiture['prix_voiture'] ?>€
     </div>
     <?php } $fiche->closeCursor(); ?>
     <hr class="barre_separation text-center">

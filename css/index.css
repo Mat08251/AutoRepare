@@ -36,9 +36,12 @@ body {
     z-index: 5;
     color: white;
     text-shadow: 2px 2px 4px black;
-    font-size: 18px;
-    margin-left: 20px;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.425);
+    height: 200px;
 }
+
+
 
 /*texte d'intro de page*/
 .descriptif-garage {
@@ -89,8 +92,9 @@ body {
   
 }
 
-.card .background-image {
-    margin-right: 50px!important;
+.card  {
+    background-size: cover;
+    height: 400px;
 }
 
 

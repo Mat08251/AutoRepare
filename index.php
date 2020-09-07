@@ -116,10 +116,10 @@ require('php/connectbdd.php');
                         }                    
                         
                         ?>" alt="Promo-du-moment" class="rev-slidebg">
-
+                    
                         <div class="insertion-texte">
                     
-                            <p><?=$donnees['text_promo']?></p>
+                            <p class="textePromo ml-5"><?=$donnees['text_promo']?></p>
                         </div>
                             </li>
 
@@ -156,16 +156,16 @@ require('php/connectbdd.php');
             <h2 class="titre-service text-center">SERVICES</h2>
 
             <div class="card-deck">
-                <div class="card col-sm-6" style="background-image: url(images/garage6mini.jpg ); height:400px; background-position: center; background-position: right; background-repeat: no-repeat;">
+                <div class="card col-sm-6" style="background-image: url(images/garage6mini.jpg ); ">
                     <h5 class="card-title text-center">Entretien du véhicule</h5> 
                 </div>
-                <div class="card col-sm-6" style="background-image: url(images/vidange.jpg); height:400px; background-position: center; background-position: right; background-repeat: no-repeat;">
+                <div class="card col-sm-6" style="background-image: url(images/vidange.jpg); ">
                     <h5 class="card-title text-center">Vidange</h5>
                 </div>
-                <div class="card col-sm-6" style="background-image: url(images/controleTechnique.jpg); height:400px; background-position: center; background-position: right; background-repeat: no-repeat;">
+                <div class="card col-sm-6" style="background-image: url(images/controleTechnique.jpg); ">
                     <h5 class="card-title text-center">Contrôle technique</h5> 
                 </div>
-                <div class="card col-sm-6" style="background-image: url(images/garage1mini.jpg); height:400px; background-position: center; background-position: right; background-repeat: no-repeat;">
+                <div class="card col-sm-6" style="background-image: url(images/garage1mini.jpg); ">
                     <h5 class="card-title text-center">Réparation du véhicule</h5> 
                 </div>
             </div>

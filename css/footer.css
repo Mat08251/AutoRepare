@@ -71,7 +71,15 @@ footer {
     .logo-footer {
         margin-left: 1px;
     }
+
+    .infos {
+        padding-right: 0%!important;
+    }
     
+    .iconInfo {
+        margin-right: 6px;
+    }
+
     .adresse {
         margin-left: 50px;
         font-size: 10px;
@@ -79,10 +87,12 @@ footer {
 
     .telephone {
         margin-left: 100px;
+        width: 100%;
     }
 
     .heure {
         margin-left: 100px;
+        width: 90%!important;
     }
 
     .social-footer {

@@ -1,3 +1,4 @@
+<?php include('connectbdd.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -34,34 +35,23 @@
 
     <!--bloc descriptif de la rubrique-->
     <div class="bloc-page container">
+    <?php $servicecarrosserie= $bdd->prepare("SELECT * FROM services");
+                  $servicecarrosserie->execute();
+
+                  while($carrosserie=$servicecarrosserie->fetch()) {
+            ?>
         <div class="photo_travaux col-md- ">
-            <img src="../images/garage2.jpg" class="photo_rubrique" alt="photo_rubrique-travaux">
+            <img src="../images/<?=$promotion['image_service'] ?>" class="photo_rubrique" alt="photo_rubrique-travaux">
         </div>
         <div class="bloc_texte_travaux col-md-8 col-sm-10">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled it to make a type
-                   specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                     the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                      and more recently with desktop publishing software like Aldus PageMaker including
-                      versions of Lorem Ipsum.
+            <p><?=$promotion['texte1_service'] ?>Notre garage vous propose divers travaux de carrosserie, que ce soit des petits ou bien de gros Travaux
+                notre garage mettra tout en oeuvre pour vous satisfaire.
             </p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                  when an unknown printer took a galley of type and scrambled it to make a type
-                   specimen book. It has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged. It was popularised in
-                     the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                      and more recently with desktop publishing software like Aldus PageMaker including
-                      versions of Lorem Ipsum.
-            </p>
+            <p><?=$promotion['texte2_service'] ?>Tout les travaux effectués sur votre véhicule est réalisé par une équipe de professionnel et avec l'accord du client.
 
-            <!--tableau des traif de la rubrique-->
-            <div class="tableaux-tarif">
-                <!--insertion du tableaux des tarifs--><p>test test test</p>
-            </div>
+            </p>
         </div>
+        <?php } $servicecarrosserie->closeCursor(); ?>
     </div>
 
     <hr class="barre_dessous_tavaux">

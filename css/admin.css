@@ -36,6 +36,42 @@ h1 {
     text-shadow: 2px 2px black;
 }
 
+.titre-rubrique {
+    color: rgb(212, 212, 212);
+    text-shadow: 4px 4px 3px black;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.rubrique  {
+    background-size: cover;
+    height: 300px;
+    margin-bottom: 100px!important;
+    box-shadow: 4px 3px 1px rgb(80, 80, 80);
+}
+
+.card-title {
+    margin-top: auto;
+    margin-bottom: auto!important;
+    color: rgb(204, 204, 204);
+}
+
+.navigation {
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
+
+.admin-nav {
+    background-size: cover;
+    height: 200px;
+
+}
+
+.lien-card {
+    margin-top: auto;
+    margin-bottom: auto!important;
+}
+
 .fond_tableau {
     background-color: rgba(240, 255, 255, 0.664);
 }

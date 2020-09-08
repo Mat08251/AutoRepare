@@ -61,176 +61,31 @@ if(isset($pseudo)){?>
       <?php } 
     } ?>
 <center><a href="../Index.php" class="lien-admin  mb-5">Revenir à l'accueil</a></center>
-    <center><a href="admin.php" class="lien-admin  mt-5 mb-5">Accès à l'accueil admin</a></center>
     <center><a href="traitement/deco_admin.php"><button type="button" class="boutondeco btn btn-outline">Deconnexion</button></a></center>
     
     <h3 class="lien-admin   mt-4 "><center><?=$pseudo?></center></h3>
         
 
-    <h3 class="lien-admin font-weight-light  mt-4 mb-5"><center>Promotion page accueil</center></h3>
+    <div class="card_rubrique">
+        <div class="container">
+            <h2 class="titre-rubrique text-center">Rubrique du site</h2>
 
-    <center><a href="traitement/insert_promoIndex.php" class="lien-admin">Ajouter une promotion<i class="fas fa-plus-circle mb-4"></i></a></center>
-  
-    <div class="table-responsive container mt-2">
-    <table class="table">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col">Descriptif</th>
-          <th scope="col" class="modif">Modifier</th> 
-          <th scope="col">Supprimer</th>
-        </tr>
-      </thead>
-      <tbody>
-
-
-      <?php
-          $promo= $bdd->prepare("SELECT * FROM promotions");
-          $promo->execute();
-
-          while($promotionIndex= $promo->fetch())
-      { ?>
-      <tr class="fond_tableau">
-        <td><?= substr($promotionIndex['text_promo'], 0, 20); ?>...</td>
-        <td><a href="traitement/edit_promoIndex.php?id=<?=$promotionIndex['id_promo'] ?>" class="text-muted"><i
-              class="icon fas fa-user-edit"></i></a></td>
-        <td><a href="traitement/delete_promoIndex.php?id=<?=$promotionIndex['id_promo'] ?>" class="text-muted"><i
-              class="icon fas fa-trash-alt"></i></a></td>
-      </tr>
-      <?php
-      }
-      $promo->closecursor();
-      ?>
-      </tbody>
-    </table>
-  </div>
-
-    <h3 class="lien-admin font-weight-light  mt-4 mb-5"><center>Voitures</center></h3>
-
-    <center><a href="traitement/insert_voiture.php" class="lien-admin ">Ajouter une voiture <i class="fas fa-plus-circle mb-4"></i></a></center>
-
-    <div class="table-responsive container mt-2">
-    <table class="table">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col">Nom</th>
-          <th scope="col">Caractéristiques</th>
-          <th scope="col">Descriptif</th>
-          <th scope="col">Prix</th>
-          <th scope="col" class="text-center">Image</th>
-          <th scope="col" class="modif">Modifier</th> 
-          <th scope="col">Supprimer</th>
-        </tr>
-      </thead>
-      <tbody>
-
-
-        <?php
-            $voiture= $bdd->prepare("SELECT * FROM vehicule");
-            $voiture->execute();
-
-            while($voitureVente= $voiture->fetch())
-        { ?>
-        <tr class="fond_tableau">
-          <th scope="row"><?= $voitureVente['nom_voiture']; ?></th>
-          <td><?= substr($voitureVente['caracteristique_voiture'], 0, 20); ?>...</td>
-          <td><?= substr($voitureVente['descriptif_voiture'], 0, 20); ?>...</td>
-          <td><?= $voitureVente['prix_voiture']; ?></td>
-          <td class="text-center"><img style="width: auto; height: 120px;" src="../images/<?= $voitureVente['image_voiture'] ?>"</td>
-          <td><a href="traitement/edit_voiture.php?id=<?=$voitureVente['id_voiture'] ?>" class="text-muted"><i
-                class="icon fas fa-user-edit"></i></a></td>
-          <td><a href="traitement/delete_voiture.php?id=<?=$voitureVente['id_voiture'] ?>" class="text-muted"><i
-                class="icon fas fa-trash-alt"></i></a></td>
-        </tr>
-        <?php
-}
-$voiture->closecursor();
-?>
-      </tbody>
-    </table>
-  </div>
-
-
-  <h3 class="lien-admin font-weight-light  mt-4 mb-5"><center>Produits</center></h3>
-
-    <center><a href="traitement/insert_produit.php" class="lien-admin ">Ajouter un produit <i class="fas fa-plus-circle mb-4"></i></a></center>
-  
-    <div class="table-responsive container mt-2">
-    <table class="table">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col">Nom</th>
-          <th scope="col">Descriptif</th>
-          <th scope="col">Prix</th>
-          <th scope="col" class="text-center">Image</th>
-          <th scope="col" class="modif">Modifier</th> 
-          <th scope="col">Supprimer</th>
-        </tr>
-      </thead>
-      <tbody>
-
-
-      <?php
-          $produits= $bdd->prepare("SELECT * FROM vente_produit");
-          $produits->execute();
-
-          while($produit= $produits->fetch())
-      { ?>
-      <tr class="fond_tableau">
-        <th scope="row"><?= $produit['titre_produit']; ?></th>
-        <td><?= substr($produit['texte_produit'], 0, 20); ?>...</td>
-        <td><?= $produit['prix_produit']; ?></td>
-        <td class="text-center"><img style="width: auto; height: 120px;" src="../images/<?= $produit['image_produit'] ?>"</td>
-        <td><a href="traitement/edit_produit.php?id=<?=$produit['id_produit'] ?>" class="text-muted"><i
-              class="icon fas fa-user-edit"></i></a></td>
-        <td><a href="traitement/delete_produit.php?id=<?=$produit['id_produit'] ?>" class="text-muted"><i
-              class="icon fas fa-trash-alt"></i></a></td>
-      </tr>
-      <?php
-      }
-      $produits->closecursor();
-      ?>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 class="lien-admin font-weight-light  mt-4 mb-5"><center>Promotion page vente</center></h3>
-
-    <center><a href="traitement/insert_promoVente.php" class="lien-admin ">Ajouter une promotionIndex <i class="fas fa-plus-circle mb-4"></i></a></center>
-  
-    <div class="table-responsive container mt-2">
-    <table class="table">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col">Descriptif</th>
-          <th scope="col" class="text-center">Image</th>
-          <th scope="col" class="modif">Modifier</th> 
-          <th scope="col">Supprimer</th>
-        </tr>
-      </thead>
-      <tbody>
-
-
-      <?php
-          $promovente= $bdd->prepare("SELECT * FROM promo_vente");
-          $promovente->execute();
-
-          while($promo= $promovente->fetch())
-      { ?>
-      <tr class="fond_tableau">
-        <td><?= substr($promo['texte_promoVente'], 0, 20); ?>...</td>
-        <td class="text-center"><img style="width: auto; height: 120px;"  src="../images/<?= $promo['image_promoVente'] ?>"</td>
-        <td><a href="traitement/edit_promoVente.php?id=<?=$promo['id_promoVente'] ?>" class="text-muted"><i
-              class="icon fas fa-user-edit"></i></a></td>
-        <td><a href="traitement/delete_promoVente.php?id=<?=$promo['id_promoVente'] ?>" class="text-muted"><i
-              class="icon fas fa-trash-alt"></i></a></td>
-      </tr>
-      <?php
-      }
-      $promovente->closecursor();
-      ?>
-      </tbody>
-    </table>
-  </div>
+            <div class="card-deck">
+                <div class="rubrique card col-sm-6" style="background-image: url(../images/garage6mini.jpg ); ">
+                    <a href="promoIndex.php" class="lien-card"><h5 class="card-title text-center">Promotion Accueil</h5></a> 
+                </div>
+                <div class="rubrique card col-sm-6" style="background-image: url(../images/vidange.jpg); ">
+                <a href="voitures.php" class="lien-card"><h5 class="card-title text-center">Voitures</h5></a>
+                </div>
+                <div class="rubrique card col-sm-6" style="background-image: url(../images/controleTechnique.jpg); ">
+                <a href="produits.php" class="lien-card"><h5 class="card-title text-center">Produits</h5></a>
+                </div>
+                <div class="rubrique card col-sm-6" style="background-image: url(../images/garage1mini.jpg); ">
+                <a href="promotionVente.php" class="lien-card"><h5 class="card-title text-center">Promotion page vente produit</h5></a> 
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <?php }else{
   header('location: Index.php');

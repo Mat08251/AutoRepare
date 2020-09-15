@@ -3,6 +3,7 @@ include('../php/connectbdd.php');
 session_start();
 $pseudo = $_SESSION['pseudo'];
 $mdp = $_SESSION['mdp'];
+$statut = $_SESSION['statut'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,10 +22,10 @@ $mdp = $_SESSION['mdp'];
     <div class="navigation col-md-6">
         <div class="container">  
             <div class="card-deck">
-                <div class="admin-nav card col-sm-6 " style="background-image: url(../images/garage6mini.jpg ); ">
+                <div class="admin-nav card col-sm-6 " style="background-image: url(../images/cardajout-promo.png ); ">
                 <a href="admin.php" class="lien-card"><h5 class="card-title text-center">Accès à l'accueil admin</h5></a> 
                 </div>
-                <div class="admin-nav card col-sm-6 " style="background-image: url(../images/vidange.jpg); ">
+                <div class="admin-nav card col-sm-6 " style="background-image: url(../images/voituremini.jpg); ">
                     <a href="traitement/insert_voiture.php" class="lien-card"><h5 class="card-title text-center">Ajouter une voiture</h5></a>
                 </div>
             </div>
@@ -41,8 +42,11 @@ $mdp = $_SESSION['mdp'];
                     <th scope="col">Descriptif</th>
                     <th scope="col">Prix</th>
                     <th scope="col" class="text-center">Image</th>
+                    <?php
+                    if ($statut == 0) {?>
                     <th scope="col" class="modif">Modifier</th> 
                     <th scope="col">Supprimer</th>
+                    <?php }?>
                 </tr>
             </thead>
         <tbody>
@@ -60,10 +64,13 @@ $mdp = $_SESSION['mdp'];
             <td><?= substr($voitureVente['descriptif_voiture'], 0, 20); ?>...</td>
             <td><?= $voitureVente['prix_voiture']; ?></td>
             <td class="text-center"><img style="width: auto; height: 120px;" src="../images/<?= $voitureVente['image_voiture'] ?>"</td>
+            <?php
+                    if ($statut == 0) {?>
             <td><a href="traitement/edit_voiture.php?id=<?=$voitureVente['id_voiture'] ?>" class="text-muted"><i
                 class="icon fas fa-user-edit"></i></a></td>
             <td><a href="traitement/delete_voiture.php?id=<?=$voitureVente['id_voiture'] ?>" class="text-muted"><i
                 class="icon fas fa-trash-alt"></i></a></td>
+            <?php }?>
         </tr>
         <?php
     }

@@ -41,15 +41,11 @@
                   while($carrosserie=$servicecarrosserie->fetch()) {
             ?>
         <div class="photo_travaux col-md- ">
-            <img src="../images/<?=$promotion['image_service'] ?>" class="photo_rubrique" alt="photo_rubrique-travaux">
+            <img src="../images/<?=$carrosserie['image_service'] ?>" class="photo_rubrique" alt="photo_rubrique-travaux">
         </div>
         <div class="bloc_texte_travaux col-md-8 col-sm-10">
-            <p><?=$promotion['texte1_service'] ?>Notre garage vous propose divers travaux de carrosserie, que ce soit des petits ou bien de gros Travaux
-                notre garage mettra tout en oeuvre pour vous satisfaire.
-            </p>
-            <p><?=$promotion['texte2_service'] ?>Tout les travaux effectués sur votre véhicule est réalisé par une équipe de professionnel et avec l'accord du client.
-
-            </p>
+            <p><?=$carrosserie['texte1_service'] ?></p>
+            <p><?=$carrosserie['texte2_service'] ?></p>
         </div>
         <?php } $servicecarrosserie->closeCursor(); ?>
     </div>

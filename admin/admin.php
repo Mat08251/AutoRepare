@@ -3,6 +3,7 @@ include('../php/connectbdd.php');
 session_start();
 $pseudo = $_SESSION['pseudo'];
 $mdp = $_SESSION['mdp'];
+$statut = $_SESSION['statut'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -64,24 +65,27 @@ if(isset($pseudo)){?>
     <center><a href="traitement/deco_admin.php"><button type="button" class="boutondeco btn btn-outline">Deconnexion</button></a></center>
     
     <h3 class="lien-admin   mt-4 "><center><?=$pseudo?></center></h3>
-        
 
     <div class="card_rubrique">
         <div class="container">
             <h2 class="titre-rubrique text-center">Rubrique du site</h2>
 
             <div class="card-deck">
-                <div class="rubrique card col-sm-6" style="background-image: url(../images/garage6mini.jpg ); ">
+                
+                <div class="rubrique card col-sm-6" style="background-image: url(../images/imagecard1.jpg ); ">
                     <a href="promoIndex.php" class="lien-card"><h5 class="card-title text-center">Promotion Accueil</h5></a> 
                 </div>
-                <div class="rubrique card col-sm-6" style="background-image: url(../images/vidange.jpg); ">
-                <a href="voitures.php" class="lien-card"><h5 class="card-title text-center">Voitures</h5></a>
+                <div class="rubrique card col-sm-6" style="background-image: url(../images/garage3.jpg ); ">
+                    <a href="service.php" class="lien-card"><h5 class="card-title text-center">Services</h5></a> 
                 </div>
-                <div class="rubrique card col-sm-6" style="background-image: url(../images/controleTechnique.jpg); ">
-                <a href="produits.php" class="lien-card"><h5 class="card-title text-center">Produits</h5></a>
+                <div class="rubrique card col-sm-6" style="background-image: url(../images/garage6mini.jpg); ">
+                  <a href="voitures.php" class="lien-card"><h5 class="card-title text-center">Voitures</h5></a>
                 </div>
-                <div class="rubrique card col-sm-6" style="background-image: url(../images/garage1mini.jpg); ">
-                <a href="promotionVente.php" class="lien-card"><h5 class="card-title text-center">Promotion page vente produit</h5></a> 
+                <div class="rubrique card col-sm-6" style="background-image: url(../images/gammeProduitmini.jpg); ">
+                  <a href="produits.php" class="lien-card"><h5 class="card-title text-center">Produits</h5></a>
+                </div>
+                <div class="rubrique card col-sm-6" style="background-image: url(../images/produit2mini.jpg); ">
+                  <a href="promotionVente.php" class="lien-card"><h5 class="card-title text-center">Promotion page vente produit</h5></a> 
                 </div>
             </div>
         </div>

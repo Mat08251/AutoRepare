@@ -3,6 +3,7 @@ include('../php/connectbdd.php');
 session_start();
 $pseudo = $_SESSION['pseudo'];
 $mdp = $_SESSION['mdp'];
+$statut = $_SESSION['statut'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,11 +22,11 @@ $mdp = $_SESSION['mdp'];
     <div class="navigation col-md-6">
         <div class="container">  
             <div class="card-deck">
-                <div class="admin-nav card col-sm-6 " style="background-image: url(../images/garage6mini.jpg ); ">
+                <div class="admin-nav card col-sm-6 " style="background-image: url(../images/cardajout-promo.png ); ">
                 <a href="admin.php" class="lien-card"><h5 class="card-title text-center">Accès à l'accueil admin</h5></a> 
                 </div>
-                <div class="admin-nav card col-sm-6 " style="background-image: url(../images/vidange.jpg); ">
-                    <a href="traitement/insert_promoVente.php" class="lien-card"><h5 class="card-title text-center">Ajouter une promotionIndex</h5></a>
+                <div class="admin-nav card col-sm-6 " style="background-image: url(../images/ajoutpromoVente.png); ">
+                    <a href="traitement/insert_promoVente.php" class="lien-card"><h5 class="card-title text-center">Ajouter une promotionVente</h5></a>
                 </div>
             </div>
         </div>
@@ -38,8 +39,11 @@ $mdp = $_SESSION['mdp'];
                 <tr>
                     <th scope="col">Descriptif</th>
                     <th scope="col" class="text-center">Image</th>
+                    <?php
+                    if ($statut == 0) {?>
                     <th scope="col" class="modif">Modifier</th> 
                     <th scope="col">Supprimer</th>
+                    <?php }?>
                 </tr>
             </thead>
         <tbody>
@@ -54,10 +58,13 @@ $mdp = $_SESSION['mdp'];
             <tr class="fond_tableau">
                 <td><?= substr($promo['texte_promoVente'], 0, 20); ?>...</td>
                 <td class="text-center"><img style="width: auto; height: 120px;"  src="../images/<?= $promo['image_promoVente'] ?>"</td>
+                <?php
+                    if ($statut == 0) {?>
                 <td><a href="traitement/edit_promoVente.php?id=<?=$promo['id_promoVente'] ?>" class="text-muted"><i
                     class="icon fas fa-user-edit"></i></a></td>
                 <td><a href="traitement/delete_promoVente.php?id=<?=$promo['id_promoVente'] ?>" class="text-muted"><i
                     class="icon fas fa-trash-alt"></i></a></td>
+                <?php }?>
             </tr>
             <?php
             }

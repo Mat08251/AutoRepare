@@ -50,6 +50,7 @@
                   $voitures->execute();
 
                   while($voiture=$voitures->fetch()) {
+                if ($voiture['statut'] == 0) {
             ?>
                   
             <div class="card text-white">
@@ -61,7 +62,11 @@
                         </div>
                     </div>
             </div>
-                  <?php } $voitures->closeCursor(); ?>
+                  <?php 
+                 } else {
+                     
+                 }
+                } $voitures->closeCursor(); ?>
         </div>
     </div>
 

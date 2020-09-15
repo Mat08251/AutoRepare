@@ -33,7 +33,7 @@ h1 {
 
 .lien-admin {
     color: white;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px 4px black;
 }
 
 .titre-rubrique {
@@ -47,7 +47,16 @@ h1 {
     background-size: cover;
     height: 300px;
     margin-bottom: 100px!important;
-    box-shadow: 4px 3px 1px rgb(80, 80, 80);
+    box-shadow: 4px 6px 10px rgba(143, 143, 143, 0.74), 0 0 6px rgba(129, 129, 129, 0.637);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 14px 80px 18px 36px;
+  cursor: pointer;
+  transition-duration: 1.5s;
+}
+
+.rubrique:hover {
+    transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.473), 0 4px 8px rgba(0, 0, 0, 0.795);
 }
 
 .card-title {
@@ -62,14 +71,49 @@ h1 {
 }
 
 .admin-nav {
-    background-size: cover;
-    height: 200px;
+    background-size: 100%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    height: 160px;
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.74), 0 0 6px rgba(90, 90, 90, 0.637);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+padding: 14px 80px 18px 36px;
+cursor: pointer;
+transition-duration: 1.5s;
+margin-bottom: 80px!important;
+}
 
+.admin-nav:hover {
+    transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.473), 0 4px 8px rgba(0, 0, 0, 0.795);
+}
+
+.admin-nav-service {
+    background-size: 100%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    height: 100px;
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.74), 0 0 6px rgba(90, 90, 90, 0.637);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+padding: 14px 80px 18px 36px;
+cursor: pointer;
+transition-duration: 1.5s;
+margin-bottom: 80px!important;
+}
+
+.admin-nav-service:hover {
+    transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.473), 0 4px 8px rgba(0, 0, 0, 0.795);
 }
 
 .lien-card {
     margin-top: auto;
     margin-bottom: auto!important;
+    text-decoration: none!important;
+}
+
+.lien-card:hover {
+    text-shadow: 2px 2px 2px black;
 }
 
 .fond_tableau {
@@ -105,5 +149,11 @@ h1 {
     .container {
         padding-right: 0%!important;
         padding-left: 0%!important;
+    }
+
+    .rubrique {
+        width: 80%!important;
+        margin-right: auto;
+        margin-left: auto;
     }
 }

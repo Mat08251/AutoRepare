@@ -39,6 +39,14 @@
             <label for="exampleFormControlTextarea1">Prix du véhicule</label>
             <input class="form-control mx-auto type="number" name="prix" required value="<?=$data['prix_voiture'] ?>">
         </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Statut du véhicule</label>
+            <select name="option_vente" id="option_vente">
+                <option value="" disabled>--Choisissez une option de vente--</option>
+                <option value="0">en vente</option>
+                <option value="1">vendu</option>
+            </select>
+        </div>
             
         <button class="btn " type="submit">valider</button>
         

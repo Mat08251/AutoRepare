@@ -3,6 +3,7 @@ include('../php/connectbdd.php');
 session_start();
 $pseudo = $_SESSION['pseudo'];
 $mdp = $_SESSION['mdp'];
+$statut = $_SESSION['statut'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,10 +23,10 @@ $mdp = $_SESSION['mdp'];
 <div class="navigation col-md-6">
   <div class="container">  
     <div class="card-deck">
-        <div class="admin-nav card col-sm-6 " style="background-image: url(../images/garage6mini.jpg ); ">
+        <div class="admin-nav card col-sm-6 " style="background-image: url(../images/cardajout-promo.png );   ">
            <a href="admin.php" class="lien-card"><h5 class="card-title text-center">Accès à l'accueil admin</h5></a> 
         </div>
-        <div class="admin-nav card col-sm-6 " style="background-image: url(../images/vidange.jpg); ">
+        <div class="admin-nav card col-sm-6 " style="background-image: url(../images/cardajout-promo.png); ">
             <a href="traitement/insert_promoIndex.php" class="lien-card"><h5 class="card-title text-center">Ajouter une promotion</h5></a>
         </div>
     </div>
@@ -38,8 +39,11 @@ $mdp = $_SESSION['mdp'];
       <thead class="thead-light">
         <tr>
           <th scope="col">Descriptif</th>
+          <?php
+          if ($statut == 0) {?>
           <th scope="col" class="modif">Modifier</th> 
           <th scope="col">Supprimer</th>
+         <?php }?>
         </tr>
       </thead>
       <tbody>
@@ -53,10 +57,13 @@ $mdp = $_SESSION['mdp'];
       { ?>
       <tr class="fond_tableau">
         <td><?= substr($promotionIndex['text_promo'], 0, 20); ?>...</td>
+        <?php
+          if ($statut == 0) {?>
         <td><a href="traitement/edit_promoIndex.php?id=<?=$promotionIndex['id_promo'] ?>" class="text-muted"><i
               class="icon fas fa-user-edit"></i></a></td>
         <td><a href="traitement/delete_promoIndex.php?id=<?=$promotionIndex['id_promo'] ?>" class="text-muted"><i
               class="icon fas fa-trash-alt"></i></a></td>
+              <?php }?>
       </tr>
       <?php
       }

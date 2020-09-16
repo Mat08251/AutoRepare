@@ -1,5 +1,5 @@
 <?php 
-    include('../../php/connectbdd.php');
+    include('../../../php/connectbdd.php');
 
     $descriptif= $_POST['descriptif'];
 
@@ -12,7 +12,7 @@
     ));
 
     $promoIndex->closeCursor();
-    header('location:../admin.php?success=10');
+    header('location:../../admin.php?success=10');
 
 
 ?>

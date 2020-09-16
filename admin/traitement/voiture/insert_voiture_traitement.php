@@ -1,12 +1,12 @@
 <?php 
-    include('../../php/connectbdd.php');
+    include('../../../php/connectbdd.php');
 
     $nom= $_POST['nom'];
     $caracteristique= $_POST['caracteristique'];
     $descriptif= $_POST['descriptif'];
     $prix= $_POST['prix'];
 
-    $dossier = '../../images/';
+    $dossier = '../../../images/';
     $fichier = basename($_FILES['image']['name']);
     $taille_maxi = 3000000;
     $taille = filesize($_FILES['image']['tmp_name']);
@@ -43,7 +43,7 @@
     ));
 
     $voiture->closeCursor();
-    header('location:../admin.php?success=1');
+    header('location:../../admin.php?success=1');
 
 }
 else //Sinon (la fonction renvoie FALSE).

@@ -1,5 +1,5 @@
 <?php 
-    include('../../php/connectbdd.php');
+    include('../../../php/connectbdd.php');
 
   
     $texte1= $_POST['descriptif1'];
@@ -16,5 +16,5 @@
     ));
 
     $edit->closeCursor();
-    header('location:../admin.php?success=3');
+    header('location:../../admin.php?success=3');
 ?>

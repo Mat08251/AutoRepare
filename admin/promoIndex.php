@@ -27,7 +27,7 @@ $statut = $_SESSION['statut'];
            <a href="admin.php" class="lien-card"><h5 class="card-title text-center">Accès à l'accueil admin</h5></a> 
         </div>
         <div class="admin-nav card col-sm-6 " style="background-image: url(../images/cardajout-promo.png); ">
-            <a href="traitement/insert_promoIndex.php" class="lien-card"><h5 class="card-title text-center">Ajouter une promotion</h5></a>
+            <a href="traitement/promoIndex/insert_promoIndex.php" class="lien-card"><h5 class="card-title text-center">Ajouter une promotion</h5></a>
         </div>
     </div>
   </div>
@@ -59,9 +59,9 @@ $statut = $_SESSION['statut'];
         <td><?= substr($promotionIndex['text_promo'], 0, 20); ?>...</td>
         <?php
           if ($statut == 0) {?>
-        <td><a href="traitement/edit_promoIndex.php?id=<?=$promotionIndex['id_promo'] ?>" class="text-muted"><i
+        <td><a href="traitement/promoIndex/edit_promoIndex.php?id=<?=$promotionIndex['id_promo'] ?>" class="text-muted"><i
               class="icon fas fa-user-edit"></i></a></td>
-        <td><a href="traitement/delete_promoIndex.php?id=<?=$promotionIndex['id_promo'] ?>" class="text-muted"><i
+        <td><a href="traitement/promoIndex/delete_promoIndex.php?id=<?=$promotionIndex['id_promo'] ?>" class="text-muted"><i
               class="icon fas fa-trash-alt"></i></a></td>
               <?php }?>
       </tr>

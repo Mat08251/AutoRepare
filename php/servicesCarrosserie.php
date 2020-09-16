@@ -27,19 +27,19 @@
     </div>
 
     <!--titre de la rubrique-->
+    <?php $servicecarrosserie= $bdd->prepare("SELECT * FROM services");
+                  $servicecarrosserie->execute();
+
+                  while($carrosserie=$servicecarrosserie->fetch()) {
+            ?>
     <div class="titre-travaux col-md-8 col-sm-12">
-        <h2>Travaux de carrosserie</h2>
+        <h2><?=$carrosserie['nom_service'] ?></h2>
     </div>
 
     <hr class="barre_travaux">
 
     <!--bloc descriptif de la rubrique-->
     <div class="bloc-page container">
-    <?php $servicecarrosserie= $bdd->prepare("SELECT * FROM services");
-                  $servicecarrosserie->execute();
-
-                  while($carrosserie=$servicecarrosserie->fetch()) {
-            ?>
         <div class="photo_travaux col-md- ">
             <img src="../images/<?=$carrosserie['image_service'] ?>" class="photo_rubrique" alt="photo_rubrique-travaux">
         </div>

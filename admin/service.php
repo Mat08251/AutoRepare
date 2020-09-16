@@ -27,25 +27,25 @@ $statut = $_SESSION['statut'];
                 </div>
                 <div class="admin-nav-service card col-sm-6 " style="background-image: url(../images/service.png); ">
                 <?php
-            $service= $bdd->prepare("SELECT * FROM services");
-            $service->execute();
+                    $service= $bdd->prepare("SELECT * FROM services");
+                    $service->execute();
 
-            $services= $service->fetch();
-        { ?>
-                    <a href="traitement/edit_service-carrosserie.php?id=<?=$services['id_services'] ?>" class="lien-card"><h5 class="card-title text-center">Modifier la page entretien du véhicule</h5></a>
-                    <?php
-    }
-    $service->closecursor();
-    ?>
+                    $services= $service->fetch();
+                { ?>
+                    <a href="traitement/service/edit_service-carrosserie.php?id=<?=$services['id_services'] ?>" class="lien-card"><h5 class="card-title text-center">Modifier la page entretien du véhicule</h5></a>
+                <?php
+                }
+                    $service->closecursor();
+                ?>
                 </div>
                 <div class="admin-nav-service card col-sm-6 " style="background-image: url(../images/service.png); ">
-                    <a href="traitement/insert_service.php" class="lien-card"><h5 class="card-title text-center">Modifier la page vidange du véhicule</h5></a>
+                    <a href="traitement/service/insert_service.php" class="lien-card"><h5 class="card-title text-center">Modifier la page vidange du véhicule</h5></a>
                 </div>
                 <div class="admin-nav-service card col-sm-6 " style="background-image: url(../images/service.png); ">
-                    <a href="traitement/insert_service.php" class="lien-card"><h5 class="card-title text-center">Modifier la page contrôle technique</h5></a>
+                    <a href="traitement/service/insert_service.php" class="lien-card"><h5 class="card-title text-center">Modifier la page contrôle technique</h5></a>
                 </div>
                 <div class="admin-nav-service card col-sm-6 " style="background-image: url(../images/service.png); ">
-                    <a href="traitement/insert_service.php" class="lien-card"><h5 class="card-title text-center">Modifier la page réparation du véhicule</h5></a>
+                    <a href="traitement/service/insert_service.php" class="lien-card"><h5 class="card-title text-center">Modifier la page réparation du véhicule</h5></a>
                 </div>
             </div>
         </div>
@@ -56,6 +56,7 @@ $statut = $_SESSION['statut'];
         <table class="table">
             <thead class="thead-light">
                 <tr>
+                    <th scope="col">nom du service</th>
                     <th scope="col">Paragraphe 1</th>
                     <th scope="col">Paragraphe 2</th>
                     <th scope="col" class="text-center">Image</th>
@@ -71,7 +72,8 @@ $statut = $_SESSION['statut'];
             while($services= $service->fetch())
         { ?>
         <tr class="fond_tableau">
-            <th scope="row"><?=substr($services['texte1_service'], 0, 20); ?></th>
+            <th scope="row"><?=substr($services['nom_service'], 0, 20); ?></th>
+            <td><?= substr($services['texte1_service'], 0, 20); ?>...</td>
             <td><?= substr($services['texte2_service'], 0, 20); ?>...</td>
             <td class="text-center"><img style="width: auto; height: 120px;" src="../images/<?= $services['image_service'] ?>"</td>
         </tr>

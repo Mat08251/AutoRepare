@@ -26,7 +26,7 @@ $statut = $_SESSION['statut'];
                 <a href="admin.php" class="lien-card"><h5 class="card-title text-center">Accès à l'accueil admin</h5></a> 
                 </div>
                 <div class="admin-nav card col-sm-6 " style="background-image: url(../images/voituremini.jpg); ">
-                    <a href="traitement/insert_voiture.php" class="lien-card"><h5 class="card-title text-center">Ajouter une voiture</h5></a>
+                    <a href="traitement/voiture/insert_voiture.php" class="lien-card"><h5 class="card-title text-center">Ajouter une voiture</h5></a>
                 </div>
             </div>
         </div>
@@ -66,9 +66,9 @@ $statut = $_SESSION['statut'];
             <td class="text-center"><img style="width: auto; height: 120px;" src="../images/<?= $voitureVente['image_voiture'] ?>"</td>
             <?php
                     if ($statut == 0) {?>
-            <td><a href="traitement/edit_voiture.php?id=<?=$voitureVente['id_voiture'] ?>" class="text-muted"><i
+            <td><a href="traitement/voiture/edit_voiture.php?id=<?=$voitureVente['id_voiture'] ?>" class="text-muted"><i
                 class="icon fas fa-user-edit"></i></a></td>
-            <td><a href="traitement/delete_voiture.php?id=<?=$voitureVente['id_voiture'] ?>" class="text-muted"><i
+            <td><a href="traitement/voiture/delete_voiture.php?id=<?=$voitureVente['id_voiture'] ?>" class="text-muted"><i
                 class="icon fas fa-trash-alt"></i></a></td>
             <?php }?>
         </tr>

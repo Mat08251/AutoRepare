@@ -26,7 +26,7 @@ $statut = $_SESSION['statut'];
                 <a href="admin.php" class="lien-card"><h5 class="card-title text-center">Accès à l'accueil admin</h5></a> 
                 </div>
                 <div class="admin-nav card col-sm-6 " style="background-image: url(../images/produit5mini.jpg); ">
-                    <a href="traitement/insert_produit.php" class="lien-card"><h5 class="card-title text-center">Ajouter un produit</h5></a>
+                    <a href="traitement/produit/insert_produit.php" class="lien-card"><h5 class="card-title text-center">Ajouter un produit</h5></a>
                 </div>
             </div>
         </div>
@@ -64,9 +64,9 @@ $statut = $_SESSION['statut'];
             <td class="text-center"><img style="width: auto; height: 120px;" src="../images/<?= $produit['image_produit'] ?>"</td>
             <?php
                     if ($statut == 0) {?>
-            <td><a href="traitement/edit_produit.php?id=<?=$produit['id_produit'] ?>" class="text-muted"><i
+            <td><a href="traitement/produit/edit_produit.php?id=<?=$produit['id_produit'] ?>" class="text-muted"><i
                 class="icon fas fa-user-edit"></i></a></td>
-            <td><a href="traitement/delete_produit.php?id=<?=$produit['id_produit'] ?>" class="text-muted"><i
+            <td><a href="traitement/produit/delete_produit.php?id=<?=$produit['id_produit'] ?>" class="text-muted"><i
                 class="icon fas fa-trash-alt"></i></a></td>
             <?php }?>
         </tr>

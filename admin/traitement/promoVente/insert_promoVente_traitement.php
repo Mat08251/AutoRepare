@@ -1,11 +1,9 @@
 <?php 
-    include('../../php/connectbdd.php');
+    include('../../../php/connectbdd.php');
 
-    $nom= $_POST['nom'];
     $descriptif= $_POST['descriptif'];
-    $prix= $_POST['prix'];
 
-    $dossier = '../../images/';
+    $dossier = '../../../images/';
     $fichier = basename($_FILES['image']['name']);
     $taille_maxi = 3000000;
     $taille = filesize($_FILES['image']['tmp_name']);
@@ -31,17 +29,15 @@
      if(move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
      {
 
-    $produit= $bdd->prepare("INSERT INTO vente_produit (titre_produit, texte_produit, prix_produit, image_produit)
-    VALUES (:titre_produit, :texte_produit, :prix_produit, :image)");
-    $produit->execute(array(
-        'titre_produit' => $nom,
-        'texte_produit' => $descriptif,
-        'prix_produit' => $prix,
+    $promotion= $bdd->prepare("INSERT INTO promo_vente ( texte_promoVente,  image_promoVente)
+    VALUES (:texte_promoVente,  :image)");
+    $promotion->execute(array(
+        'texte_promoVente' => $descriptif,
         'image' => $fichier
     ));
 
-    $produit->closeCursor();
-    header('location:../admin.php?success=4');
+    $promotion->closeCursor();
+    header('location:../../admin.php?success=7');
 
 }
 else //Sinon (la fonction renvoie FALSE).

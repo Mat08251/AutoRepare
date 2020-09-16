@@ -26,7 +26,7 @@ $statut = $_SESSION['statut'];
                 <a href="admin.php" class="lien-card"><h5 class="card-title text-center">Accès à l'accueil admin</h5></a> 
                 </div>
                 <div class="admin-nav card col-sm-6 " style="background-image: url(../images/ajoutpromoVente.png); ">
-                    <a href="traitement/insert_promoVente.php" class="lien-card"><h5 class="card-title text-center">Ajouter une promotionVente</h5></a>
+                    <a href="traitement/promoVente/insert_promoVente.php" class="lien-card"><h5 class="card-title text-center">Ajouter une promotionVente</h5></a>
                 </div>
             </div>
         </div>
@@ -60,9 +60,9 @@ $statut = $_SESSION['statut'];
                 <td class="text-center"><img style="width: auto; height: 120px;"  src="../images/<?= $promo['image_promoVente'] ?>"</td>
                 <?php
                     if ($statut == 0) {?>
-                <td><a href="traitement/edit_promoVente.php?id=<?=$promo['id_promoVente'] ?>" class="text-muted"><i
+                <td><a href="traitement/promoVente/edit_promoVente.php?id=<?=$promo['id_promoVente'] ?>" class="text-muted"><i
                     class="icon fas fa-user-edit"></i></a></td>
-                <td><a href="traitement/delete_promoVente.php?id=<?=$promo['id_promoVente'] ?>" class="text-muted"><i
+                <td><a href="traitement/promoVente/delete_promoVente.php?id=<?=$promo['id_promoVente'] ?>" class="text-muted"><i
                     class="icon fas fa-trash-alt"></i></a></td>
                 <?php }?>
             </tr>

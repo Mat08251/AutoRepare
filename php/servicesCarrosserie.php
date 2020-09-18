@@ -1,4 +1,13 @@
-<?php include('connectbdd.php'); ?>
+<?php include('connectbdd.php');
+    $id= $_GET['id'];
+
+    $service= $bdd->prepare("SELECT * FROM services WHERE id_services='$id'");
+    $service->execute();
+
+    while($servicepropose=$service->fetch()) {
+
+   
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -27,13 +36,8 @@
     </div>
 
     <!--titre de la rubrique-->
-    <?php $servicecarrosserie= $bdd->prepare("SELECT * FROM services");
-                  $servicecarrosserie->execute();
-
-                  while($carrosserie=$servicecarrosserie->fetch()) {
-            ?>
     <div class="titre-travaux col-md-8 col-sm-12">
-        <h2><?=$carrosserie['nom_service'] ?></h2>
+        <h2><?=$servicepropose['nom_service'] ?></h2>
     </div>
 
     <hr class="barre_travaux">
@@ -41,15 +45,13 @@
     <!--bloc descriptif de la rubrique-->
     <div class="bloc-page container">
         <div class="photo_travaux col-md- ">
-            <img src="../images/<?=$carrosserie['image_service'] ?>" class="photo_rubrique" alt="photo_rubrique-travaux">
+            <img src="../images/<?=$servicepropose['image_service'] ?>" class="photo_rubrique" alt="photo_rubrique-travaux">
         </div>
         <div class="bloc_texte_travaux col-md-8 col-sm-10">
-            <p><?=$carrosserie['texte1_service'] ?></p>
-            <p><?=$carrosserie['texte2_service'] ?></p>
+            <p><?=$servicepropose['texte1_service'] ?></p>
+            <p><?=$servicepropose['texte2_service'] ?></p>
         </div>
-        <?php } $servicecarrosserie->closeCursor(); ?>
     </div>
-
     <hr class="barre_dessous_tavaux">
 
      <!--bouton de contact-->
@@ -65,3 +67,4 @@
     <script src="../javascript/servicesCarrosserie.js"></script>
 </body>
 </html>
+    <?php }$service->closeCursor(); ?>

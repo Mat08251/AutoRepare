@@ -1,3 +1,4 @@
+<?php include('connectbdd.php'); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -46,18 +47,18 @@
         <h4 class="titreRubrique">Se que notre Garage vous propose en type de réparation de votre véhicule</h4>
         <div class="rubrique col-md-12">
             <div class="proposition col-md-6">
+                <?php $services= $bdd->prepare("SELECT * FROM services");
+                    $services->execute();
+
+                    while($service=$services->fetch()) {
+                    
+                ?>
                 <i class="fas fa-caret-right">Nous réalisons l'entretien de votre véhicule (révision)</i><p>
-                <a href="../php/servicesCarrosserie.php" class="lien-visite">Se renseigner</a>
+                <a href="../php/servicesCarrosserie.php?id=<?=$service['id_services']?>" class="lien-visite">Se renseigner</a>
                 </p>
-                <i class="fas fa-caret-right">Nous réalisons la vidange de votre véhicule</i><p>
-                <a href="" class="lien-visite">Se renseigner</a>
-                </p>
-                <i class="fas fa-caret-right">Nous réalisons le contrôle technique de votre véhicule</i><p>
-                <a href="" class="lien-visite">Se renseigner</a>
-                </p>
-                <i class="fas fa-caret-right">Nous réalisons les petites comme les grosses réparations de votre véhicule</i><p>
-                <a href="" class="lien-visite">Se renseigner</a>
-                </p>
+                <?php 
+                 
+                } $services->closeCursor(); ?>
             </div>
             <div class="photo col-md-6">
                 <img src="placeholder 350x150" alt="">

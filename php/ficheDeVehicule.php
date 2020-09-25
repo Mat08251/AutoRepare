@@ -35,6 +35,7 @@
     </div>
 
     <div class="container">
+        <!--affichage des données de la base de données-->
         <h5 class="titre_voiture col-sm-12 col-md-4  text-center"><?=$fichevoiture['nom_voiture'] ?></h5>
 
         <div class="descriptif-vehicule container col-sm-12 col-md-12 ">
@@ -49,6 +50,8 @@
         <p><?=$fichevoiture['descriptif_voiture'] ?></p><br>
         <?=$fichevoiture['prix_voiture'] ?>€
     </div>
+
+    <!--on ferme la requête-->
     <?php } $fiche->closeCursor(); ?>
     <hr class="barre_separation text-center">
 

@@ -1,6 +1,7 @@
 <?php 
     include('../../../php/connectbdd.php');
 
+    //on récupére les données du formulaire
     $nom= $_POST['nom'];
     $caracteristique= $_POST['caracteristique'];
     $descriptif= $_POST['descriptif'];
@@ -42,6 +43,7 @@
         'image' => $fichier
     ));
 
+    //on ferme le requête et on redirige vers la page admin
     $voiture->closeCursor();
     header('location:../../admin.php?success=1');
 

@@ -82,6 +82,13 @@ body {
 
 .card {
     box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.534);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+    transition-duration: 1.5s;
+}
+
+.card:hover {
+    transform: scale(1.2);
 }
 
 

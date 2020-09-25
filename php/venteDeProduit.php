@@ -56,11 +56,14 @@
 
         <!--cards des produits en vente-->
         <div class="row row-cols-1 row-cols-md-3">
+            <!--on prépare et on execute une requête pour sélectionner toute la table produit-->
         <?php $produits= $bdd->prepare("SELECT * FROM vente_produit");
                   $produits->execute();
 
                   while($produit=$produits->fetch()) {
             ?>
+
+            <!--affichage des données de la base de données-->
             <div class="col mb-4">
                 <div class="card">
                 <img src="../images/<?=$produit['image_produit'] ?>" class="card-img-top" alt="...">
@@ -70,6 +73,7 @@
                 </div>
                 </div>
             </div> 
+            <!--on ferme la requête-->
             <?php } $produits->closeCursor(); ?> 
         </div>
     </div>

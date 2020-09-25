@@ -1,6 +1,7 @@
 <?php 
     include('../../../php/connectbdd.php');
 
+     //on récupére les données du formulaire
     $nom= $_POST['nom'];
     $texte1= $_POST['descrptif1'];
     $texte2= $_POST['descriptif2'];
@@ -41,6 +42,7 @@
         'image' => $fichier
     ));
 
+    //on ferme le requête et on redirige vers la page admin
     $service->closeCursor();
     header('location:../../admin.php?success=13');
 

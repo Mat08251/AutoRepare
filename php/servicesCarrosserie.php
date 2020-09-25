@@ -45,6 +45,7 @@
     <!--bloc descriptif de la rubrique-->
     <div class="bloc-page container">
         <div class="photo_travaux col-md- ">
+        <!--affichage des données de la base de données-->
             <img src="../images/<?=$servicepropose['image_service'] ?>" class="photo_rubrique" alt="photo_rubrique-travaux">
         </div>
         <div class="bloc_texte_travaux col-md-8 col-sm-10">
@@ -67,4 +68,5 @@
     <script src="../javascript/servicesCarrosserie.js"></script>
 </body>
 </html>
+    <!--on ferme la requête-->
     <?php }$service->closeCursor(); ?>

@@ -47,17 +47,19 @@
         <h4 class="titreRubrique">Se que notre Garage vous propose en type de réparation de votre véhicule</h4>
         <div class="rubrique col-md-12">
             <div class="proposition col-md-6">
+                <!--on prépare et on execute une requête pour sélectionner toute la table service-->
                 <?php $services= $bdd->prepare("SELECT * FROM services");
                     $services->execute();
 
                     while($service=$services->fetch()) {
                     
                 ?>
+                <!--affichage des données de la base de données-->
                 <i class="fas fa-caret-right">Nous réalisons <?=$service['nom_service']?> de votre véhicule </i><p>
                 <a href="../php/servicesCarrosserie.php?id=<?=$service['id_services']?>" class="lien-visite">Se renseigner</a>
                 </p>
                 <?php 
-                 
+                 //on ferme la requête
                 } $services->closeCursor(); ?>
             </div>
             <div class="photo col-md-6">

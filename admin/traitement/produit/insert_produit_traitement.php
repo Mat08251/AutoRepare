@@ -1,6 +1,7 @@
 <?php 
     include('../../../php/connectbdd.php');
 
+    //on récupére les données du formulaire
     $nom= $_POST['nom'];
     $descriptif= $_POST['descriptif'];
     $prix= $_POST['prix'];
@@ -40,6 +41,7 @@
         'image' => $fichier
     ));
 
+    //on ferme le requête et on redirige vers la page admin
     $produit->closeCursor();
     header('location:../../admin.php?success=4');
 

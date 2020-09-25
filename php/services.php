@@ -53,7 +53,7 @@
                     while($service=$services->fetch()) {
                     
                 ?>
-                <i class="fas fa-caret-right">Nous réalisons l'entretien de votre véhicule (révision)</i><p>
+                <i class="fas fa-caret-right">Nous réalisons <?=$service['nom_service']?> de votre véhicule </i><p>
                 <a href="../php/servicesCarrosserie.php?id=<?=$service['id_services']?>" class="lien-visite">Se renseigner</a>
                 </p>
                 <?php 

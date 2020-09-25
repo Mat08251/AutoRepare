@@ -22,7 +22,11 @@
 </head>
 <body>
   <h2 class="text-center titre_formulaire">Formulaire de modification de la page service carrosserie</h2>
-    <form class="text-center mx-auto" action="edit_service-carrosserie_traitement.php?id=<?=$data['id_services'] ?>" method="POST">
+    <form class="text-center mx-auto" action="edit_service-traitement.php?id=<?=$data['id_services'] ?>" method="POST">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">nom du service</label>
+            <input class="form-control mx-auto type="text" name="nom" required value="<?=$data['nom_service'] ?>">
+        </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Paragraphe 1</label>
             <textarea class="form-control mx-auto type="text" name="descriptif1" rows="5" cols="30" required><?=$data['texte1_service'] ?></textarea>

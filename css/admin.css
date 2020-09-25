@@ -88,24 +88,7 @@ margin-bottom: 80px!important;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.473), 0 4px 8px rgba(0, 0, 0, 0.795);
 }
 
-.admin-nav-service {
-    background-size: 100%;
-    background-position-y: center;
-    background-repeat: no-repeat;
-    height: 100px;
-    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.74), 0 0 6px rgba(90, 90, 90, 0.637);
-    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-padding: 14px 80px 18px 36px;
-cursor: pointer;
-transition-duration: 1.5s;
-margin-bottom: 80px!important;
 
-}
-
-.admin-nav-service:hover {
-    transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.473), 0 4px 8px rgba(0, 0, 0, 0.795);
-}
 
 .lien-card {
     margin-top: auto;
@@ -124,10 +107,14 @@ margin-bottom: 80px!important;
 .icon {
     color: rgba(0, 0, 0, 0.589);
     margin-left: 34px;
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+    transition-duration: 1.5s;
 }
 
 .icon:hover {
     color: rgb(0, 45, 129);
+    transform: scale(1.5);
 }
 
 .modif {

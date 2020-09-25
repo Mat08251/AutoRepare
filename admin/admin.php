@@ -60,6 +60,15 @@ if(isset($pseudo)){?>
       elseif($_GET['success']==12) { ?>
         <center><div class="alert alert-success">promotion page accueil supprimée</div></center>
       <?php } 
+      elseif($_GET['success']==13) { ?>
+        <center><div class="alert alert-success">Service ajouté</div></center>
+      <?php } 
+      elseif($_GET['success']==14) { ?>
+        <center><div class="alert alert-success">Service modifié</div></center>
+      <?php } 
+      elseif($_GET['success']==15) { ?>
+        <center><div class="alert alert-success">Service supprimée</div></center>
+      <?php } 
     } ?>
 <center><a href="../Index.php" class="lien-admin  mb-5">Revenir à l'accueil</a></center>
     <center><a href="traitement/deco_admin.php"><button type="button" class="boutondeco btn btn-outline">Deconnexion</button></a></center>

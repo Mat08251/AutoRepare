@@ -3,7 +3,7 @@
 }
 
 .index {
-  background-color: rgba(129, 129, 129, 0.548)!important;
+  background-color: rgba(87, 87, 87, 0.548)!important;
 }
 
 input {
@@ -17,6 +17,7 @@ input {
 
 .btn {
   color: white;
+  box-shadow: 2px 2px 4px black;
 }
 
 .btn:hover {

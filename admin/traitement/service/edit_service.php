@@ -22,7 +22,7 @@
     <title>Document</title>
 </head>
 <body>
-  <h2 class="text-center titre_formulaire">Formulaire de modification de la page service carrosserie</h2>
+  <h2 class="text-center titre_formulaire">Formulaire de modification de la page service </h2>
     <form class="text-center mx-auto" action="edit_service-traitement.php?id=<?=$data['id_services'] ?>" method="POST">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">nom du service</label>

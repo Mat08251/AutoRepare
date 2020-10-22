@@ -48,7 +48,9 @@
         <div class="rubrique col-md-12">
             <div class="proposition col-md-6">
                 <!--on prépare et on execute une requête pour sélectionner toute la table service-->
-                <?php $services= $bdd->prepare("SELECT * FROM services");
+                <?php 
+                try {
+                $services= $bdd->prepare("SELECT * FROM services");
                     $services->execute();
 
                     while($service=$services->fetch()) {
@@ -60,7 +62,11 @@
                 </p>
                 <?php 
                  //on ferme la requête
-                } $services->closeCursor(); ?>
+                } }
+                catch(PDOException $e) {
+                    die('Erreur : ' . $e->getMessage());
+                }
+                $services->closeCursor(); ?>
             </div>
         </div>
 

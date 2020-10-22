@@ -1,17 +1,19 @@
 <?php 
     session_start();
     include('../php/connectbdd.php');
-    $pseudo= $_POST['pseudo'];
-    $mdp= $_POST['mdp'];
+    $pseudo= htmlspecialchars ($_POST['pseudo']);
+    $mdp= htmlspecialchars ($_POST['mdp']);
 
-    $verif= $bdd->prepare("SELECT pseudo, mdp, statut FROM administrateur WHERE pseudo='$pseudo' AND mdp='$mdp'");
-    $verif->execute();
+    $verif= $bdd->prepare("SELECT pseudo, mdp, statut FROM administrateur WHERE pseudo='$pseudo'");
+    $verif->execute(array(
+        'pseudo' => $pseudo));
     $result = $verif->fetch();
-    $total= $verif->rowCount();
-    if($total==1) {
+
+    $Password_Correct = password_verify($_POST['mdp'], $result['mdp']);
+    
+    if($Password_Correct) {
         session_start();
         $_SESSION['pseudo'] = $pseudo;
-        $_SESSION['mdp'] = $mdp;
         $_SESSION['statut'] = $result['statut'];
         header('location: admin.php');
     }

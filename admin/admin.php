@@ -1,8 +1,9 @@
 <?php
-include('../php/connectbdd.php');
 session_start();
+include('../php/connectbdd.php');
+
 $pseudo = $_SESSION['pseudo'];
-$mdp = $_SESSION['mdp'];
+
 $statut = $_SESSION['statut'];
 ?>
 <!DOCTYPE html>
@@ -73,7 +74,7 @@ if(isset($pseudo)){?>
 <center><a href="../Index.php" class="lien-admin  mb-5">Revenir à l'accueil</a></center>
     <center><a href="traitement/deco_admin.php"><button type="button" class="boutondeco btn btn-outline">Deconnexion</button></a></center>
     
-    <h3 class="lien-admin   mt-4 "><center><?=$pseudo?></center></h3>
+    <h3 class="lien-admin   mt-4 "><center><?php echo $_SESSION['pseudo']?></center></h3>
 
     <div class="card_rubrique">
         <div class="container">

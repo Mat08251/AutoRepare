@@ -2,10 +2,10 @@
     include('../../../php/connectbdd.php');
 
     //on récupére les données du formulaire
-    $nom= $_POST['nom'];
-    $caracteristique= $_POST['caracteristique'];
-    $descriptif= $_POST['descriptif'];
-    $prix= $_POST['prix'];
+    $nom= htmlspecialchars ($_POST['nom']);
+    $caracteristique= htmlspecialchars ($_POST['caracteristique']);
+    $descriptif= htmlspecialchars ($_POST['descriptif']);
+    $prix= htmlspecialchars ($_POST['prix']);
 
     $dossier = '../../../images/';
     $fichier = basename($_FILES['image']['name']);

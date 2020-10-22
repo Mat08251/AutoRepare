@@ -62,9 +62,6 @@
                  //on ferme la requête
                 } $services->closeCursor(); ?>
             </div>
-            <div class="photo col-md-6">
-                <img src="placeholder 350x150" alt="">
-            </div>
         </div>
 
         <!--description des services-->

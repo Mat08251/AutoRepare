@@ -10,6 +10,7 @@
 
     $id= $_GET['id'];
 //on prépare la requête pour mettre à jour la table voiture
+try {
     $edit= $bdd->prepare("UPDATE vehicule SET nom_voiture=:nom, caracteristique_voiture=:caracteristique, descriptif_voiture=:descriptif, prix_voiture=:prix, statut=:statut WHERE id_voiture='$id'");
     $edit->execute(array(
         'nom'=> $nom,
@@ -18,6 +19,10 @@
         'prix'=>  $prix,
         'statut' => $statut
     ));
+}
+catch(PDOException $e) {
+    die('Erreur : ' . $e->getMessage());
+}
 //on redirige vers la page admin
     $edit->closeCursor();
     header('location:../../admin.php?success=3');

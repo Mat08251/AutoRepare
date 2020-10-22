@@ -51,10 +51,12 @@ $statut = $_SESSION['statut'];
 
 
             <?php
+            try {
                 $promovente= $bdd->prepare("SELECT * FROM promo_vente");
                 $promovente->execute();
 
                 while($promo= $promovente->fetch())
+            
             { ?>
             <tr class="fond_tableau">
                 <td><?= substr($promo['texte_promoVente'], 0, 20); ?>...</td>
@@ -68,6 +70,9 @@ $statut = $_SESSION['statut'];
                 <?php }?>
             </tr>
             <?php
+            } }
+            catch(PDOException $e) {
+                die('Erreur : ' . $e->getMessage());
             }
             $promovente->closecursor();
             ?>

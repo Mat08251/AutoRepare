@@ -3,6 +3,7 @@
 
     $id= $_GET['id'];
 
+    try {
     $editpromoVente= $bdd->prepare("SELECT * FROM promo_vente WHERE id_promoVente= '$id'");
     $editpromoVente->execute();
 
@@ -33,6 +34,10 @@
 
 
     </form>
-    <?php } $editpromoVente->closeCursor(); ?>
+    <?php } }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+    $editpromoVente->closeCursor(); ?>
 </body>
 </html>

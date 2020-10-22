@@ -3,6 +3,7 @@
 
     $id= $_GET['id'];
 
+    try {
     $editpromoIndex= $bdd->prepare("SELECT * FROM promotions WHERE id_promo= '$id'");
     $editpromoIndex->execute();
 
@@ -33,6 +34,10 @@
 
 
     </form>
-    <?php } $editpromoIndex->closeCursor(); ?>
+    <?php } }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+     $editpromoIndex->closeCursor(); ?>
 </body>
 </html>

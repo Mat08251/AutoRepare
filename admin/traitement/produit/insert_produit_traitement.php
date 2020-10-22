@@ -32,6 +32,7 @@
      if(move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
      {
 
+        try {
     $produit= $bdd->prepare("INSERT INTO vente_produit (titre_produit, texte_produit, prix_produit, image_produit)
     VALUES (:titre_produit, :texte_produit, :prix_produit, :image)");
     $produit->execute(array(
@@ -40,7 +41,10 @@
         'prix_produit' => $prix,
         'image' => $fichier
     ));
-
+}
+catch(PDOException $e) {
+    die('Erreur : ' . $e->getMessage());
+}
     //on ferme le requête et on redirige vers la page admin
     $produit->closeCursor();
     header('location:../../admin.php?success=4');

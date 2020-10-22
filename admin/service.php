@@ -50,10 +50,12 @@ $statut = $_SESSION['statut'];
 
 
         <?php
+        try {
             $service= $bdd->prepare("SELECT * FROM services");
             $service->execute();
 
             while($services= $service->fetch())
+       
         { ?>
         <tr class="fond_tableau">
             <th scope="row"><?=substr($services['nom_service'], 0, 20); ?></th>
@@ -65,7 +67,10 @@ $statut = $_SESSION['statut'];
                 class="icon fas fa-trash-alt"></i></a></td>
         </tr>
         <?php
-    }
+    }  }
+    catch(PDOException $e) {
+    die('Erreur : ' . $e->getMessage());
+}
     $service->closecursor();
     ?>
         </tbody>

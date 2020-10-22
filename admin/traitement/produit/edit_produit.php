@@ -3,6 +3,7 @@
 
     $id= $_GET['id'];
 
+    try {
     $editproduit= $bdd->prepare("SELECT * FROM vente_produit WHERE id_produit= '$id'");
     $editproduit->execute();
 
@@ -41,6 +42,10 @@
 
 
     </form>
-    <?php } $editproduit->closeCursor(); ?>
+    <?php } }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+     $editproduit->closeCursor(); ?>
 </body>
 </html>

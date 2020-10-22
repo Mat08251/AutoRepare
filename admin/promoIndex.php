@@ -51,6 +51,7 @@ $statut = $_SESSION['statut'];
 
 
       <?php
+      try {
           $promo= $bdd->prepare("SELECT * FROM promotions");
           $promo->execute();
 
@@ -67,6 +68,9 @@ $statut = $_SESSION['statut'];
               <?php }?>
       </tr>
       <?php
+      } }
+      catch(PDOException $e) {
+          die('Erreur : ' . $e->getMessage());
       }
       $promo->closecursor();
       ?>

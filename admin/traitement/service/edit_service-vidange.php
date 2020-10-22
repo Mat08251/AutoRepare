@@ -3,6 +3,7 @@
 
     $id= $_GET['id'];
 
+    try {
     $editservices= $bdd->prepare("SELECT * FROM services WHERE id_services= '$id'");
     $editservices->execute();
 
@@ -37,6 +38,10 @@
 
 
     </form>
-    <?php } $editservices->closeCursor(); ?>
+    <?php } }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+    $editservices->closeCursor(); ?>
 </body>
 </html>

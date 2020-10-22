@@ -1,6 +1,7 @@
 <?php include('connectbdd.php');
     $id= $_GET['id'];
 
+    try {
     $service= $bdd->prepare("SELECT * FROM services WHERE id_services='$id'");
     $service->execute();
 
@@ -69,4 +70,8 @@
 </body>
 </html>
     <!--on ferme la requête-->
-    <?php }$service->closeCursor(); ?>
+    <?php } }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+    $service->closeCursor(); ?>

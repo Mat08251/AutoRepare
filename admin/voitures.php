@@ -54,10 +54,12 @@ $statut = $_SESSION['statut'];
 
 
         <?php
+        try {
             $voiture= $bdd->prepare("SELECT * FROM vehicule");
             $voiture->execute();
 
             while($voitureVente= $voiture->fetch())
+       
         { ?>
         <tr class="fond_tableau">
             <th scope="row"><?= $voitureVente['nom_voiture']; ?></th>
@@ -74,6 +76,9 @@ $statut = $_SESSION['statut'];
             <?php }?>
         </tr>
         <?php
+    } }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
     }
     $voiture->closecursor();
     ?>

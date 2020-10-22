@@ -3,9 +3,13 @@
 
     $id= $_GET['id'];
 
+    try {
     $editservices= $bdd->prepare("SELECT * FROM services WHERE id_services= '$id'");
     $editservices->execute();
-
+    }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
     while($data= $editservices->fetch()) {
 
     

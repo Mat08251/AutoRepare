@@ -41,9 +41,13 @@ if(isset($_GET['success'])) {
                     <form action="connexionadmin.php" method="POST">
                         <div class="form-group mt-4"><label class="text">Pseudo</label><input class="form-control" id="pseudo" name="pseudo" type="text" required=""></div>
                         <div class="form-group"><label class="text">Mot de passe</label><input class="form-control" id="mdp" name="mdp" type="password" required=""></div><center>
-                        <button class="btn btn-lg mt-2" style="background-color: rgb(0, 0, 158);" type="submit">connexion</button></center></form>
+                        <button class="btn btn-lg mt-2" style="background-color: rgb(0, 0, 158);" name="envoyer" type="submit">connexion</button></center></form>
                     </form>
+                    <div class="forgot">
+                        <span><a href="#">Mot de passe oublié</a></span>
+                    </div>
                 </div>
+                
             </div>
             <div class="col-lg-6 d-flex align-items-end" id="bg-block" style="background-image:url(&quot;../images/image3admin.jpg&quot;);background-size:cover;background-position:center center;">
                 <p class="ml-auto small text-dark mb-2"><em>Photo by&nbsp;</em><a class="text-dark" href="https://unsplash.com/photos/v0zVmWULYTg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank"><em>Duguet Mathieu</em></a><br></p>

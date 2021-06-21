@@ -23,7 +23,7 @@ if(isset($pseudo)){?>
 <body class="fond">
     
 <img class="logo" src="../images/logo.png"><h1 class="text-center font-weight-bold font-italic mt-4 mb-5">Bienvenue dans votre interface Administrateur</h1>
-    <?php 
+<?php 
     if(isset($_GET['success'])) {
       if($_GET['success']==1) { ?>
         <center><div class="alert alert-success">Voiture ajoutée</div></center>

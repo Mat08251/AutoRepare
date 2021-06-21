@@ -1,10 +1,11 @@
 <?php
 session_start();
 include('../php/connectbdd.php');
+if (empty($_SESSION['id_admin']) AND empty($_SESSION['pseudo']) AND empty($_SESSION['statut']))
+{
+    header('location:../index.php');
+}
 
-$pseudo = $_SESSION['pseudo'];
-
-$statut = $_SESSION['statut'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">

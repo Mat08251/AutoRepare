@@ -1,5 +1,10 @@
 <?php 
-     include('../php/connectbdd.php');
+     session_start();
+if(isset($_GET['success'])) {
+    if($_GET['success']==1) {
+        echo 'l\'adresse e-mail rentré n\'est pas correct';
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">

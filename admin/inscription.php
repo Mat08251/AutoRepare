@@ -19,6 +19,10 @@ if(isset($_GET['success'])) {
             <input type="password" class="form-control" name="mdp" id="exampleInputPassword1">
         </div>
         <div class="form-group">
+            <label for="exampleFormControlTextarea1">confirmer votre mot de passe</label>
+            <input type="password" class="form-control" name="mdp_confirm" id="exampleInputPassword1">
+        </div>
+        <div class="form-group">
             <label for="exampleFormControlTextarea1">email</label>
             <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>

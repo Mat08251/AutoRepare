@@ -32,6 +32,6 @@
         }
     }
     else {
-        header('location: ../php/contact.php');
+        header('location: ../index.php');
     }
 ?>

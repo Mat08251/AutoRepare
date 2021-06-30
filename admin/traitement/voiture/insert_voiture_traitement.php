@@ -1,10 +1,15 @@
 <?php 
     include('../../../php/connectbdd.php');
+    if (empty($_SESSION['id_admin']) AND empty($_SESSION['pseudo']) AND empty($_SESSION['statut']))
+{
+    header('location:../../../index.php');
+}
 
-    $nom= $_POST['nom'];
-    $caracteristique= $_POST['caracteristique'];
-    $descriptif= $_POST['descriptif'];
-    $prix= $_POST['prix'];
+    //on récupére les données du formulaire
+    $nom= htmlspecialchars ($_POST['nom']);
+    $caracteristique= htmlspecialchars ($_POST['caracteristique']);
+    $descriptif= htmlspecialchars ($_POST['descriptif']);
+    $prix= htmlspecialchars ($_POST['prix']);
 
     $dossier = '../../../images/';
     $fichier = basename($_FILES['image']['name']);
@@ -32,6 +37,7 @@
      if(move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
      {
 
+    try {
     $voiture= $bdd->prepare("INSERT INTO vehicule (nom_voiture, caracteristique_voiture, descriptif_voiture, prix_voiture, image_voiture)
     VALUES (:nom_voiture, :caracteristique_voiture, :descriptif_voiture, :prix_voiture, :image)");
     $voiture->execute(array(
@@ -41,7 +47,12 @@
         'prix_voiture' => $prix,
         'image' => $fichier
     ));
+    }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
 
+    //on ferme le requête et on redirige vers la page admin
     $voiture->closeCursor();
     header('location:../../admin.php?success=1');
 

@@ -1,9 +1,11 @@
 <?php
-include('../php/connectbdd.php');
 session_start();
-$pseudo = $_SESSION['pseudo'];
-$mdp = $_SESSION['mdp'];
-$statut = $_SESSION['statut'];
+include('../php/connectbdd.php');
+if (empty($_SESSION['id_admin']) AND empty($_SESSION['pseudo']) AND empty($_SESSION['statut']))
+{
+    header('location:../index.php');
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -42,7 +44,7 @@ $statut = $_SESSION['statut'];
                     <th scope="col">Prix</th>
                     <th scope="col" class="text-center">Image</th>
                     <?php
-                    if ($statut == 0) {?>
+                    if ($_SESSION['statut'] == 0) {?>
                     <th scope="col" class="modif">Modifier</th> 
                     <th scope="col">Supprimer</th>
                     <?php }?>
@@ -52,10 +54,12 @@ $statut = $_SESSION['statut'];
 
 
         <?php
+        try {
             $produits= $bdd->prepare("SELECT * FROM vente_produit");
             $produits->execute();
 
             while($produit= $produits->fetch())
+        
         { ?>
         <tr class="fond_tableau">
             <th scope="row"><?= $produit['titre_produit']; ?></th>
@@ -63,7 +67,7 @@ $statut = $_SESSION['statut'];
             <td><?= $produit['prix_produit']; ?></td>
             <td class="text-center"><img style="width: auto; height: 120px;" src="../images/<?= $produit['image_produit'] ?>"</td>
             <?php
-                    if ($statut == 0) {?>
+                    if ($_SESSION['statut'] == 0) {?>
             <td><a href="traitement/produit/edit_produit.php?id=<?=$produit['id_produit'] ?>" class="text-muted"><i
                 class="icon fas fa-user-edit"></i></a></td>
             <td><a href="traitement/produit/delete_produit.php?id=<?=$produit['id_produit'] ?>" class="text-muted"><i
@@ -71,6 +75,9 @@ $statut = $_SESSION['statut'];
             <?php }?>
         </tr>
         <?php
+        } }
+        catch(PDOException $e) {
+            die('Erreur : ' . $e->getMessage());
         }
         $produits->closecursor();
         ?>

@@ -1,5 +1,9 @@
 <?php 
     include('../../../php/connectbdd.php');
+    if (empty($_SESSION['id_admin']) AND empty($_SESSION['pseudo']) AND empty($_SESSION['statut']))
+{
+    header('location:../../../index.php');
+}
 
     $descriptif= $_POST['descriptif'];
 
@@ -29,12 +33,17 @@
      if(move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
      {
 
+    try {
     $promotion= $bdd->prepare("INSERT INTO promo_vente ( texte_promoVente,  image_promoVente)
     VALUES (:texte_promoVente,  :image)");
     $promotion->execute(array(
         'texte_promoVente' => $descriptif,
         'image' => $fichier
     ));
+    }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
 
     $promotion->closeCursor();
     header('location:../../admin.php?success=7');

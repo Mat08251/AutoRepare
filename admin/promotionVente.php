@@ -1,9 +1,10 @@
 <?php
-include('../php/connectbdd.php');
 session_start();
-$pseudo = $_SESSION['pseudo'];
-$mdp = $_SESSION['mdp'];
-$statut = $_SESSION['statut'];
+include('../php/connectbdd.php');
+if (empty($_SESSION['id_admin']) AND empty($_SESSION['pseudo']) AND empty($_SESSION['statut']))
+{
+    header('location:../index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -40,7 +41,7 @@ $statut = $_SESSION['statut'];
                     <th scope="col">Descriptif</th>
                     <th scope="col" class="text-center">Image</th>
                     <?php
-                    if ($statut == 0) {?>
+                    if ($_SESSION['statut'] == 0) {?>
                     <th scope="col" class="modif">Modifier</th> 
                     <th scope="col">Supprimer</th>
                     <?php }?>
@@ -50,16 +51,18 @@ $statut = $_SESSION['statut'];
 
 
             <?php
+            try {
                 $promovente= $bdd->prepare("SELECT * FROM promo_vente");
                 $promovente->execute();
 
                 while($promo= $promovente->fetch())
+            
             { ?>
             <tr class="fond_tableau">
                 <td><?= substr($promo['texte_promoVente'], 0, 20); ?>...</td>
                 <td class="text-center"><img style="width: auto; height: 120px;"  src="../images/<?= $promo['image_promoVente'] ?>"</td>
                 <?php
-                    if ($statut == 0) {?>
+                    if ($_SESSION['statut'] == 0) {?>
                 <td><a href="traitement/promoVente/edit_promoVente.php?id=<?=$promo['id_promoVente'] ?>" class="text-muted"><i
                     class="icon fas fa-user-edit"></i></a></td>
                 <td><a href="traitement/promoVente/delete_promoVente.php?id=<?=$promo['id_promoVente'] ?>" class="text-muted"><i
@@ -67,6 +70,9 @@ $statut = $_SESSION['statut'];
                 <?php }?>
             </tr>
             <?php
+            } }
+            catch(PDOException $e) {
+                die('Erreur : ' . $e->getMessage());
             }
             $promovente->closecursor();
             ?>

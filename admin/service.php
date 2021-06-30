@@ -1,9 +1,10 @@
 <?php
-include('../php/connectbdd.php');
 session_start();
-$pseudo = $_SESSION['pseudo'];
-$mdp = $_SESSION['mdp'];
-$statut = $_SESSION['statut'];
+include('../php/connectbdd.php');
+if (empty($_SESSION['id_admin']) AND empty($_SESSION['pseudo']) AND empty($_SESSION['statut']))
+{
+    header('location:../index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -41,30 +42,41 @@ $statut = $_SESSION['statut'];
                     <th scope="col">Paragraphe 1</th>
                     <th scope="col">Paragraphe 2</th>
                     <th scope="col" class="text-center">Image</th>
+                    <?php
+                    if ($_SESSION['statut'] == 0) {?>
                     <th scope="col" class="modif">Modifier</th>
                     <th scope="col">Supprimer</th>
+                    <?php }?>
                 </tr>
             </thead>
         <tbody>
 
 
         <?php
+        try {
             $service= $bdd->prepare("SELECT * FROM services");
             $service->execute();
 
             while($services= $service->fetch())
+       
         { ?>
         <tr class="fond_tableau">
             <th scope="row"><?=substr($services['nom_service'], 0, 20); ?></th>
             <td><?= substr($services['texte1_service'], 0, 20); ?>...</td>
             <td><?= substr($services['texte2_service'], 0, 20); ?>...</td>
             <td class="text-center"><img style="width: auto; height: 120px;" src="../images/<?= $services['image_service'] ?>"</td>
+            <?php
+                    if ($_SESSION['statut'] == 0) {?>
             <td> <a href="traitement/service/edit_service.php?id=<?=$services['id_services']  ?>" ><i class="icon fas fa-user-edit"></i></a></td>
             <td><a href="traitement/service/delete_service.php?id=<?=$services['id_services'] ?>" class="text-muted"><i
                 class="icon fas fa-trash-alt"></i></a></td>
+            <?php }?>
         </tr>
         <?php
-    }
+    }  }
+    catch(PDOException $e) {
+    die('Erreur : ' . $e->getMessage());
+}
     $service->closecursor();
     ?>
         </tbody>

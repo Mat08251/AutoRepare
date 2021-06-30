@@ -1,9 +1,10 @@
 <?php
-include('../php/connectbdd.php');
 session_start();
-$pseudo = $_SESSION['pseudo'];
-$mdp = $_SESSION['mdp'];
-$statut = $_SESSION['statut'];
+include('../php/connectbdd.php');
+if (empty($_SESSION['id_admin']) AND empty($_SESSION['pseudo']) AND empty($_SESSION['statut']))
+{
+    header('location:../index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -40,7 +41,7 @@ $statut = $_SESSION['statut'];
         <tr>
           <th scope="col">Descriptif</th>
           <?php
-          if ($statut == 0) {?>
+          if ($_SESSION['statut'] == 0) {?>
           <th scope="col" class="modif">Modifier</th> 
           <th scope="col">Supprimer</th>
          <?php }?>
@@ -50,6 +51,7 @@ $statut = $_SESSION['statut'];
 
 
       <?php
+      try {
           $promo= $bdd->prepare("SELECT * FROM promotions");
           $promo->execute();
 
@@ -58,7 +60,7 @@ $statut = $_SESSION['statut'];
       <tr class="fond_tableau">
         <td><?= substr($promotionIndex['text_promo'], 0, 20); ?>...</td>
         <?php
-          if ($statut == 0) {?>
+          if ($_SESSION['statut'] == 0) {?>
         <td><a href="traitement/promoIndex/edit_promoIndex.php?id=<?=$promotionIndex['id_promo'] ?>" class="text-muted"><i
               class="icon fas fa-user-edit"></i></a></td>
         <td><a href="traitement/promoIndex/delete_promoIndex.php?id=<?=$promotionIndex['id_promo'] ?>" class="text-muted"><i
@@ -66,6 +68,9 @@ $statut = $_SESSION['statut'];
               <?php }?>
       </tr>
       <?php
+      } }
+      catch(PDOException $e) {
+          die('Erreur : ' . $e->getMessage());
       }
       $promo->closecursor();
       ?>

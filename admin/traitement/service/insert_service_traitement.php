@@ -1,6 +1,11 @@
 <?php 
     include('../../../php/connectbdd.php');
+    if (empty($_SESSION['id_admin']) AND empty($_SESSION['pseudo']) AND empty($_SESSION['statut']))
+{
+    header('location:../../../index.php');
+}
 
+     //on récupére les données du formulaire
     $nom= $_POST['nom'];
     $texte1= $_POST['descrptif1'];
     $texte2= $_POST['descriptif2'];
@@ -31,7 +36,7 @@
      $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
      if(move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
      {
-
+try {
     $service= $bdd->prepare("INSERT INTO services (nom_service, texte1_service, texte2_service,  image_service)
     VALUES (:nom_service, :texte1_service, :texte2_service, :image)");
     $service->execute(array(
@@ -40,7 +45,11 @@
         'texte2_service' => $texte2,
         'image' => $fichier
     ));
-
+}
+catch(PDOException $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+    //on ferme le requête et on redirige vers la page admin
     $service->closeCursor();
     header('location:../../admin.php?success=13');
 

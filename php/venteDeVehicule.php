@@ -46,13 +46,15 @@
     <div class="bloc_vehicule container">
         <div class="row">
 
+        <!--on prépare et on execute une requête pour sélectionner toute la table véhicule-->
             <?php $voitures= $bdd->prepare("SELECT * FROM vehicule");
                   $voitures->execute();
 
                   while($voiture=$voitures->fetch()) {
                 if ($voiture['statut'] == 0) {
             ?>
-                  
+        
+        <!--affichage des données de la base de données-->
             <div class="card text-white">
                     <div class="back card-img-overlay" style="background-image:url('../images/<?=$voiture['image_voiture'] ?>');">
                         <div class="essai">
@@ -65,7 +67,7 @@
                   <?php 
                  } else {
                      
-                 }
+                 }//on ferme la requête
                 } $voitures->closeCursor(); ?>
         </div>
     </div>

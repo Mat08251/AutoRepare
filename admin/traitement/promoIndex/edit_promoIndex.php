@@ -1,8 +1,13 @@
 <?php 
     include('../../../php/connectbdd.php');
+    if (empty($_SESSION['id_admin']) AND empty($_SESSION['pseudo']) AND empty($_SESSION['statut']))
+{
+    header('location:../../../index.php');
+}
 
     $id= $_GET['id'];
 
+    try {
     $editpromoIndex= $bdd->prepare("SELECT * FROM promotions WHERE id_promo= '$id'");
     $editpromoIndex->execute();
 
@@ -33,6 +38,10 @@
 
 
     </form>
-    <?php } $editpromoIndex->closeCursor(); ?>
+    <?php } }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+     $editpromoIndex->closeCursor(); ?>
 </body>
 </html>

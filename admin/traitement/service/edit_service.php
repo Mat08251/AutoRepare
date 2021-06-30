@@ -1,8 +1,13 @@
 <?php 
     include('../../../php/connectbdd.php');
+    if (empty($_SESSION['id_admin']) AND empty($_SESSION['pseudo']) AND empty($_SESSION['statut']))
+{
+    header('location:../../../index.php');
+}
 
     $id= $_GET['id'];
 
+    try {
     $editservices= $bdd->prepare("SELECT * FROM services WHERE id_services= '$id'");
     $editservices->execute();
 
@@ -21,7 +26,7 @@
     <title>Document</title>
 </head>
 <body>
-  <h2 class="text-center titre_formulaire">Formulaire de modification de la page service carrosserie</h2>
+  <h2 class="text-center titre_formulaire">Formulaire de modification de la page service </h2>
     <form class="text-center mx-auto" action="edit_service-traitement.php?id=<?=$data['id_services'] ?>" method="POST">
         <div class="form-group">
             <label for="exampleFormControlTextarea1">nom du service</label>
@@ -41,6 +46,10 @@
 
 
     </form>
-    <?php } $editservices->closeCursor(); ?>
+    <?php } }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+    $editservices->closeCursor(); ?>
 </body>
 </html>

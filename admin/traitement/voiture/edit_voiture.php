@@ -1,8 +1,13 @@
 <?php 
     include('../../../php/connectbdd.php');
+    if (empty($_SESSION['id_admin']) AND empty($_SESSION['pseudo']) AND empty($_SESSION['statut']))
+{
+    header('location:../../../index.php');
+}
 
     $id= $_GET['id'];
 
+    try {
     $editvoiture= $bdd->prepare("SELECT * FROM vehicule WHERE id_voiture= '$id'");
     $editvoiture->execute();
 
@@ -53,6 +58,10 @@
 
 
     </form>
-    <?php } $editvoiture->closeCursor(); ?>
+    <?php } }
+    catch(PDOException $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+     $editvoiture->closeCursor(); ?>
 </body>
 </html>

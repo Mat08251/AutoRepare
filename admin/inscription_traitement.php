@@ -11,6 +11,25 @@
         $email= htmlspecialchars ($_POST['email']);
         $statut= htmlspecialchars ($_POST['statut']);
 
+
+        $verif= $bdd->prepare("SELECT pseudo, mdp, statut FROM administrateur WHERE  pseudo= :pseudo");
+        $verif->execute(array(
+        'pseudo' => $pseudo));
+        $result = $verif->fetch();
+        $row = $verif->rowCount();
+
+        if($row == 0)
+        {
+
+        }
+        else { header('Location: inscription.php');}
+
+
+
+
+
+
+
         //Vérification si l'email est correct
         if (preg_match("#^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$#", $email))
         {

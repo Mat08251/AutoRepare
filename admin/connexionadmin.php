@@ -1,5 +1,6 @@
 <?php 
     include('../php/connectbdd.php');
+    if(isset($_POST['pseudo']) && isset($_POST['mdp'])){
     
         $pseudo= htmlspecialchars ($_POST['pseudo']);
         $mdp= htmlspecialchars ($_POST['mdp']);
@@ -15,7 +16,7 @@
     
     if (!$result)
     {
-        echo 'Mauvais identifiant ou mot de passe';
+        header('location: index.php?success=1');
     }
     else 
     {
@@ -30,4 +31,6 @@
             header('location: index.php?success=1');
         }
     }
+
+} else { header('location: ../index.php'); }
 ?>

@@ -38,18 +38,18 @@
                         'email' => $email,
                         'statut' => $statut  
                         ));
-                        header('location: ../index.php');
+                        header('location: inscription.php?reg_err=success');
 
                     }else { header('Location: inscription.php?reg_err=mdp'); }
                 }
                 else
                 {
-                    header('location: inscription.php?success=1');
+                    header('location: inscription.php?reg_err=email');
                 }
                }else { header('Location: inscription.php?reg_err=email_length'); }
             }else { header('Location: inscription.php?reg_err=pseudo_length'); }
         }
-        else { header('Location: inscription.php');}     
+        else { header('Location: inscription.php?reg_err=already');}     
     }
     else {
         header('location: ../index.php');

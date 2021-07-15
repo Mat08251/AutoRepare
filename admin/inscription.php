@@ -20,6 +20,7 @@ if(isset($_GET['success'])) {
 </head>
 <body>
 <?php
+    //gestion des erreurs lors de l'inscription 
     if(isset($_GET['reg_err']))
     {
         $err = htmlspecialchars($_GET['reg_err']);
@@ -28,7 +29,7 @@ if(isset($_GET['success'])) {
         {
             case 'success' :
                 ?>
-                <div class="alert alert-success mx-auto col-4 mt-4">
+                <div class="alert alert-success mx-auto col-4 mt-5">
                     <strong>Succès</strong> inscription réussie
                 </div>
             <?php
@@ -36,7 +37,7 @@ if(isset($_GET['success'])) {
 
             case 'mdp' :
                 ?>
-                <div class="alert alert-danger mx-auto col-4 mt-4">
+                <div class="alert alert-danger mx-auto col-4 mt-5">
                     <strong>Erreur</strong> mot de passe différent
                 </div>
             <?php
@@ -44,7 +45,7 @@ if(isset($_GET['success'])) {
 
             case 'email' :
                 ?>
-                <div class="alert alert-danger mx-auto col-4 mt-4">
+                <div class="alert alert-danger mx-auto col-4 mt-5">
                     <strong>Erreur</strong> email non valide
                 </div>
             <?php
@@ -52,7 +53,7 @@ if(isset($_GET['success'])) {
 
             case 'email_length' :
                 ?>
-                <div class="alert alert-danger mx-auto col-4 mt-4">
+                <div class="alert alert-danger mx-auto col-4 mt-5">
                     <strong>Erreur</strong> email trop long
                 </div>
             <?php
@@ -60,7 +61,7 @@ if(isset($_GET['success'])) {
 
             case 'pseudo_length' :
                 ?>
-                <div class="alert alert-danger mx-auto col-4 mt-4">
+                <div class="alert alert-danger mx-auto col-4 mt-5">
                     <strong>Erreur</strong> pseudo trop long
                 </div>
             <?php
@@ -68,7 +69,7 @@ if(isset($_GET['success'])) {
 
             case 'already' :
                 ?>
-                <div class="alert alert-danger mx-auto col-4 mt-4">
+                <div class="alert alert-danger mx-auto col-4 mt-5">
                     <strong>Erreur</strong> compte deja existant
                 </div>
             <?php

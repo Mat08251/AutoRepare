@@ -29,7 +29,7 @@ if(isset($_GET['success'])) {
         {
             case 'success' :
                 ?>
-                <div class="alert alert-success mx-auto col-4 mt-4">
+                <div class="alert alert-success mx-auto col-3 mt-5">
                     <strong>Succès</strong> inscription réussie
                 </div>
             <?php
@@ -37,7 +37,7 @@ if(isset($_GET['success'])) {
 
             case 'mdp' :
                 ?>
-                <div class="alert alert-danger mx-auto col-4 mt-4">
+                <div class="alert alert-danger mx-auto col-3 mt-5">
                     <strong>Erreur</strong> mot de passe différent
                 </div>
             <?php
@@ -45,7 +45,7 @@ if(isset($_GET['success'])) {
 
             case 'email' :
                 ?>
-                <div class="alert alert-danger mx-auto col-4 mt-4">
+                <div class="alert alert-danger mx-auto col-3 mt-5">
                     <strong>Erreur</strong> email non valide
                 </div>
             <?php
@@ -53,7 +53,7 @@ if(isset($_GET['success'])) {
 
             case 'email_length' :
                 ?>
-                <div class="alert alert-danger mx-auto col-4 mt-4">
+                <div class="alert alert-danger mx-auto col-3 mt-5">
                     <strong>Erreur</strong> email trop long
                 </div>
             <?php
@@ -61,7 +61,7 @@ if(isset($_GET['success'])) {
 
             case 'pseudo_length' :
                 ?>
-                <div class="alert alert-danger mx-auto col-4 mt-4">
+                <div class="alert alert-danger mx-auto col-3 mt-5">
                     <strong>Erreur</strong> pseudo trop long
                 </div>
             <?php
@@ -69,7 +69,7 @@ if(isset($_GET['success'])) {
 
             case 'already' :
                 ?>
-                <div class="alert alert-danger mx-auto col-4 mt-4">
+                <div class="alert alert-danger mx-auto col-3 mt-5">
                     <strong>Erreur</strong> compte deja existant
                 </div>
             <?php
@@ -79,7 +79,7 @@ if(isset($_GET['success'])) {
 
 ?>  <div class="container formulaire-inscription">
         <form class="formu" action="inscription_traitement.php" method="POST" >
-            <div class="form-group">
+            <div class="form-group mt-5">
                 <label for="exampleFormControlTextarea1">pseudo</label>
                 <input class="form-control col-3 mx-auto" type="text" name="pseudo" required>
             </div>
@@ -104,7 +104,7 @@ if(isset($_GET['success'])) {
         </select>
         </div>
 
-            <button class="btn btn-primary mt-2 mb-2" type="submit">valider</button>
+            <button class="btn btn-primary mt-2 mb-4" type="submit">valider</button>
             
 
 

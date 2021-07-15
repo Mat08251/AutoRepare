@@ -1,11 +1,16 @@
 .formulaire-inscription {
-    background-color: #1b2768f1;
+    background-color: #2b2a55de;
     margin-top: 100px;
-    width: 50%;
+    width: 30%;
     border-radius: 5%;
-   
+    border: solid #3b3b3b;
 }
 .formu {
   text-align: center;
+  color: beige;
 
+}
+
+.form-group {
+    margin-top: 30px;
 }
